@@ -68,7 +68,7 @@ http://gh.pycon.org
 
   10. python manage.py runserver   # Run the server.
   
-  NOTE: You can use any text editor or any IDE of your choice. 
+  NOTE: You can use any text editor or IDE of your choice. 
   ```
 * Copy the IP address provided once your server has completed building the site. (It will say something like >> Serving at 127.0.0.1....).
 * Open the address in the browser
