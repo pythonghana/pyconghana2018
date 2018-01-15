@@ -52,21 +52,21 @@ http://gh.pycon.org
   
   2. Open the command prompt and navigate the project folder
   
-  3. virtualenv PyConGhana-env   # Creates a virtual environment for the project with it's own packages.
+  3. virtualenv PyConGhana-env   # Create a virtual environment for the project with it's own packages.
   
-  4. cd PyConGhana-env     # Moves into the virtual environment folder.
+  4. cd PyConGhana-env     # Move into the virtual environment folder.
   
-  5. cd Scripts/ activate  # Activates the virtual environment.
+  5. cd Scripts/ activate  # Activate the virtual environment.
 
-  6. cd ..   # moves back into main project folder.
+  6. cd ..   # move back into main project folder.
   
-  7. cd PyConGhana    # Moves into main project folder.
+  7. cd PyConGhana    # Move into main project folder.
 
-  8. python manage.py makemigrations   # Prepares database migrations.
+  8. python manage.py makemigrations   # Prepare database migrations.
 
-  9. python manage.py migrate   # Migrates the data into the database.
+  9. python manage.py migrate   # Migrate the data into the database.
 
-  10. python manage.py runserver   # Runs the server.
+  10. python manage.py runserver   # Run the server.
   
   NOTE: You can use any text editor or any IDE of your choice. 
   ```
