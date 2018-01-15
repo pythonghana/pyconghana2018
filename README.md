@@ -1,40 +1,83 @@
-pyGhana
+http://gh.pycon.org
 
-This is the source code for the http://gh.pycon.org website.
+# [pyConGhana](http://gh.pycon.org)
 
-Running the site locally
-Requirments
+    This is the source code for the http://gh.pycon.org website.
 
-    Python 3.6.3
-    Django 2.0.1
-    Virtualenv
-    
+# Running the site locally
 
-Installation
+## Requirments
 
-    Follow the guide here on how to clone or fork a repo
+* [Python 3.6.3](https://python.org)
+* [Django 2.0.1](https://www.djangoproject.com/)
+* [virtualenv](https://virtualenv.pypa.io/en/stable/) or [Virtualenvwrapper](https://virtualenvwrapper.readthedocs.io)
 
-    Follow the guide here on how to create virtualenv
+## Installation on Linux
 
-    To create a normal virtualenv (example myvenv) and activate it (see Code below).
+* [Follow the guide here](https://help.github.com/articles/fork-a-repo) on how to clone or fork a repo
+* [Follow the guide here](http://simononsoftware.com/virtualenv-tutorial/) on how to create virtualenv
 
-    sudo apt-get install python-virtualenv
+* To create a normal virtualenv (example _myvenv_) and activate it (see Code below).
 
-    virtualenv --python=python3.6.3 myvenv
+  ```
+  sudo apt-get install python-virtualenv
+  
+  virtualenv --python=python3.6.3 myvenv
+  
+  source myvenv/bin/activate
 
-    source myvenv/bin/activate
+  (myvenv) $ pip install -r requirements.txt
 
-    (myvenv) $ pip install -r requirements.txt
+  (myvenv) $ python manage.py makemigrations
 
-    (myvenv) $ python manage.py makemigrations
+  (myvenv) $ python manage.py migrate
 
-    (myvenv) $ python manage.py migrate
+  (myvenv) $ python manage.py runserver
+  ```
+* Copy the IP address provided once your server has completed building the site. (It will say something like >> Serving at 127.0.0.1....).
+* Open the address in the browser
+* Don't forget to Change ALLOWED_HOSTS = ['127.0.0.1'] in settings.py
+* `Note`: It is important that when you create your virtualenv, do not create it in the same folder as the code you downloaded.
 
-    (myvenv) $ python manage.py runserver
 
-    Copy the IP address provided once your server has completed building the site. (It will say something like >> Serving at 127.0.0.1....).
+## Installation on Windows
 
-    Open the address in the browser
+* [Follow the guide here](https://help.github.com/articles/fork-a-repo) on how to clone or fork a repo
+* [Follow the guide here](http://pymote.readthedocs.io/en/latest/install/windows_virtualenv.html) on how to create virtualenv
+
+* To create a normal virtualenv (example _myvenv_) and activate it (see Code below).
+
+  ```
+  1. Create main project folder with name of your choice (eg. PyConGhana)
+  
+  2. Open the command prompt and navigate the project folder
+  
+  3. virtualenv PyConGhana-env   # Creates a virtual environment for the project with it's own packages.
+  
+  4. cd PyConGhana-env     # Moves into the virtual environment folder.
+  
+  5. cd Scripts/ activate  # Activates the virtual environment.
+
+  6. cd ..   # moves back into main project folder.
+  
+  7. cd PyConGhana    # Moves into main project folder.
+
+  8. python manage.py makemigrations   # Prepares database migrations.
+
+  9. python manage.py migrate   # Migrates the data into the database.
+
+  10. python manage.py runserver   # Runs the server.
+  
+  NOTE: You can use any text editor or any IDE of your choice. 
+  ```
+* Copy the IP address provided once your server has completed building the site. (It will say something like >> Serving at 127.0.0.1....).
+* Open the address in the browser
+* Don't forget to Change ALLOWED_HOSTS = ['127.0.0.1'] in settings.py
+* `Note`: It is important that when you create your virtualenv, do not create it in the same folder as the code you downloaded.
+
+# Contributing
+
+Read our [Contributing Guide](./CONTRIBUTING.md) on how to contribute to the project.
 
     Don't forget to Change ALLOWED_HOSTS = ['127.0.0.1'] in settings.py
 
