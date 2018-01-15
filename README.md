@@ -79,10 +79,4 @@ http://gh.pycon.org
 
 Read our [Contributing Guide](./CONTRIBUTING.md) on how to contribute to the project.
 
-    Don't forget to Change ALLOWED_HOSTS = ['127.0.0.1'] in settings.py
 
-    Note: It is important that when you create your virtualenv, do not create it in the same folder as the code you downloaded.
-
-Contributing
-
-Read our Contributing Guide on how to contribute to the project.
