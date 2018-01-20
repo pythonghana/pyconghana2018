@@ -26,6 +26,5 @@ urlpatterns = [
     path('support_us/', include('support_us.urls', namespace='support_us')),
     path('sponsors/', include('sponsors.urls', namespace='sponsors')),
     path('talks/', include('talks.urls', namespace='talks')),
-    path('about/', include('about.urls', namespace='about')),
     path('admin/', admin.site.urls),
 ]
