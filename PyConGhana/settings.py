@@ -121,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Accra/Africa'
+TIME_ZONE = 'Africa/Accra'
 
 USE_I18N = True
 
