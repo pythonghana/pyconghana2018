@@ -1,0 +1,30 @@
+{% extends "registration/registration_base.html" %}
+{% load i18n crispy_forms_tags %}
+
+{% block title %}{% trans "Register for an account" %}{% endblock %}
+
+{% block content %}
+    <section>
+
+                            <div class="col-md-6 col-md-offset-3"><h3>Register your Account</h3>
+                                    <div class="thumbnail wow fadeInUp">
+                                        <div class="caption">
+                                           <div class="row">
+                                                    <div class="col-md-3">
+
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                
+                                                <br>
+                                                  <form method="post" action="">
+                                                    {% csrf_token %}
+                                                    {{ form|crispy }}
+                                                    <input class="btn btn-success btn-lg" type="submit" value="{% trans 'Submit' %}" />
+                                                </form>
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+    </section>
+{% endblock %}

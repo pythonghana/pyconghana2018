@@ -1,0 +1,28 @@
+{% extends "base2.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+							<div class=" form-group"><h2>Update your Profile </h2>
+                                    <div class="thumbnail wow fadeInUp">
+                                        <div class="caption"><br><br><br><br>
+                                           <div class="row">
+												    <div class="col-md-3">
+
+												    </div>
+												    <div class="col-md-6">
+												
+												<br>
+
+												<form action="" method=post>
+												 {% crispy form form.helper %}
+												        {% csrf_token %}
+												</form>
+
+												      </div>
+											</div>
+                                        </div>
+                                    </div>
+                            </div>
+
+
+{% endblock %}

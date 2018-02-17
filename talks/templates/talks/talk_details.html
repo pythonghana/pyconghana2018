@@ -1,0 +1,46 @@
+{% extends "base2.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+
+        <h2>{{ talk.title }} by {{ talk.user.first_name }} {{ talk.user.last_name }}</h2>
+        <br />
+        <p><strong>Talk Type:</strong> {{ talk.talk_type }}</p>
+        <p><strong>Intended Audience</strong>: {{ talk.programming_experience }}</p>
+        <br />
+        <h3>Abstract</h3>
+        <p>{{ talk.abstract }}</p>
+        <br />
+        <hr>
+        <div>
+            <h3>Key</h3>
+            <div class="col-md-5">
+                <h4>Talk Type</h4>
+                <p><strong>Keynote</strong> - Keynote Talk - 45 mins</p>
+                <p><strong>Short Talk</strong> - Short Talk - 30 mins
+                <p><strong>Long Talk</strong> - Long Talk - 1 hour
+                <p><strong>Tutorial</strong> - Tutorial - 2 hours or more
+
+            </div>
+            <div class="col-md-5">
+                <h4>Intended Audience</h4>
+                <p><strong>Beginners</strong> - Beginners, no prior knowledge of Python required.</p>
+                <p><strong>Mid-level Programmers</strong> - Average, some prior knowledge of Python required.</p>
+                <p><strong>Senior Programmers</strong> - Sound Python knowledge required.</p>
+                <p><strong>Expert Programmers</strong> - Experienced Python programmers level.</p>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-md-1">
+
+    </div>
+</div>
+
+{% endblock %}

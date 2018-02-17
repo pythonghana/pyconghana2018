@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+
+    <!-- Page Title -->
+    <title>Pycon Ghana 2018</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Google Font : Open Sans & Montserrat -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,900" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link href="{% static 'css/plugins/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'css/plugins/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'css/plugins/magnific-popup.css' %}" rel="stylesheet">
+    <link href="{% static 'css/plugins/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'css/plugins/streamline-icons.css' %}" rel="stylesheet">
+
+    <!-- Event Style -->
+    <link href="{% static 'css/event.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/themes/red.css' %}" rel="stylesheet">
+    <!-- Modernizr -->
+    <script src="{% static 'js/modernizr.min.js' %}"></script>
+    <!-- Subtle Loading bar -->
+    <script src="{% static 'js/plugins/pace.js' %}"></script>
+    <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+
+</head>
+
+<body class="animate-page" data-spy="scroll" data-target="#navbar" data-offset="100">
+    <!--Preloader div-->
+    <div class="preloader"></div>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top reveal-menu js-reveal-menu reveal-menu-hidden">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="{% static 'images/event-logo-dark2.png' %}" alt="Gather"> </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about">About</a></li>
+                            <li><a href="blog.html">Accommodation&Travel</a></li>
+                            <li><a href="blog-single.html">Registration</a></li>
+                            <li role="separator" class="divider"></li>
+                        </ul>
+                    </li>
+                    <li><a href="/#speakers">Speakers</a></li>
+                    <li><a href="/#schedule">Schedule</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Talks <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shortcodes.html">Shortcodes</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="blog-single.html">Blog Single</a></li>
+                            <li role="separator" class="divider"></li>
+                        </ul>
+                    </li>
+                    <li><a href="/#pricing">Tickets</a></li>
+                    <li><a href="/#sponsors" class="hidden-sm">Sponsors</a></li>
+                    <li><a href="/#venue" class="hidden-sm">Venue</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                     {% if user.is_authenticated %}
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% firstof user.get_short_name user.get_username %}<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li role="separator" class="divider"></li>
+                            <li><a href="{% url 'profiles:profile_home' %}">My Profile</a></li>
+                            <li><a href="{% url 'auth_logout' %}">logout</a></li>
+                        </ul>
+                    </li>
+                    {% else %}
+                    <li><a href="{% url 'auth_login' %}">Login</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <!-- // End Fixed navbar -->
+
+{% block content %}
+
+{% endblock %}
+
+
+    <!-- 
+     Footer Call to Action
+     ====================================== -->
+
+    <section class="footer-action">
+
+        <div class="container">
+            <h2 class="headline wow fadeInDown" data-wow-delay="0.1s">JOIN THE CONFERENCE</h2>
+            <div class="footer_bottom-bg">
+                <a class="btn btn-success btn-xl wow zoomIn" data-wow-delay="0.3s" href="#" data-toggle="modal" data-target="#eventbrite-register">RESERVE MY SEAT
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- end section.footer-action -->
+
+    <footer>
+
+        <div class="social-icons">
+            <a href="#" class="wow zoomIn"> <i class="fa fa-twitter"></i> </a>
+            <a href="#" class="wow zoomIn" data-wow-delay="0.2s"> <i class="fa fa-facebook"></i> </a>
+            <a href="#" class="wow zoomIn" data-wow-delay="0.4s"> <i class="fa fa-linkedin"></i> </a>
+        </div>
+        <p> <small class="text-muted">Copyright © 2018. All rights reserved. Pycon Ghana</small></p>
+
+    </footer>
+
+    <a href="#top" class="back_to_top"><img src="{% static 'images/back_to_top.png' %}" alt="back to top"></a>
+
+    <!-- 
+     Registration Popup (Eventbrite)
+     ====================================== -->
+
+    <div class="modal fade" id="eventbrite-register" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-transparent" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+
+                    <div class="eventbrite-wrapper">
+                        <iframe src="http://pythonho.eventbrite.com" height="350"></iframe>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+     Javascripts : Nerd Stuff :)
+     ====================================== -->
+
+    <!-- jQuery Library -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- 3rd party Plugins -->
+    <script src="{% static 'js/plugins/countdown.js' %}"></script>
+    <script src="{% static 'js/plugins/wow.js' %}"></script>
+    <script src="{% static 'js/plugins/slick.js' %}"></script>
+    <script src="{% static 'js/plugins/magnific-popup.js' %}"></script>
+    <script src="{% static 'js/plugins/validate.js' %}"></script>
+    <script src="{% static 'js/plugins/appear.js' %}"></script>
+    <script src="{% static 'js/plugins/count-to.js' %}"></script>
+    <script src="{% static 'js/plugins/nicescroll.js' %}"></script>
+
+    <!-- Google Map -->
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="{% static 'js/plugins/infobox.js' %}"></script>
+    <script src="{% static 'js/plugins/google-map.js' %}"></script>
+    <script src="{% static 'js/plugins/directions.js' %}"></script>
+
+    <!-- JS Includes -->
+    <script src="{% static 'js/includes/subscribe.js' %}"></script>
+    <script src="{% static 'js/includes/contact_form.js' %}"></script>
+
+    <!-- Main Script -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
+
+

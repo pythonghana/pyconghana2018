@@ -1,0 +1,25 @@
+{% extends "base2.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8">
+
+        <h2>Edit Talk: {{ talk.title}}</h2>
+        <br />
+        <form method=post>
+            {% crispy form form.helper %}
+            {% csrf_token %}
+        </form>
+
+    </div>
+    <div class="col-md-2">
+
+    </div>
+</div>
+
+{% endblock %}

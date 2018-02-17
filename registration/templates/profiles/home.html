@@ -1,0 +1,93 @@
+{% extends "base2.html" %}
+
+{% block content %}
+<div class="row">
+                        <h3>My Profile</h3>
+
+                    <div class="col-md-6 col-md-offset-3">
+
+                            {% if user_profile %}
+
+                        <div class="row">
+
+                                {% for detail in details %}
+                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>First Name</label>
+                                    <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="first_name" placeholder="{{ user_p.first_name }}" readonly></strong></h5>
+
+                                </div>
+
+                            </div>
+                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="Last Name" placeholder="{{ detail.last_name }}" readonly></strong></h5>
+                                </div>
+                            </div>
+                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>Email Address</label>
+                                    <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="Email" placeholder="{{ detail.email }}" readonly></strong></h5>
+                                </div>
+                            </div>
+                             {% endfor %}
+
+                            {% for user_p in user_profile %}
+                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                        <label>Contact Number</label>
+                                        <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="Nos" placeholder="{{ user_p.contact_number }}" readonly></strong></h5>
+                                    </div>
+                            </div>
+                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                        <label>Date of Birth</label>
+                                        <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="DOB" placeholder="{{ user_p.birth_date }}" readonly></strong></h5>
+                                    </div>
+                            </div>
+                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                        <label>Location</label>
+                                        <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="DOB" placeholder="  " readonly></strong></h5>
+                                    </div>
+                            </div>
+                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                        <label>Twitter</label>
+                                        <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="DOB" placeholder="{{ user_p.twitter_handle }}" readonly></strong></h5>
+                                    </div>
+                            </div>
+                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                        <label>GitHub</label>
+                                        <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="DOB" placeholder="{{ user_p.github_username }}" readonly></strong></h5>
+                                    </div>
+                            </div>
+                             <div class=" form-group">
+                                    <div class="thumbnail wow fadeInUp">
+                                        <div class="caption"><br><br><br><br>
+                                            <h6>Biography</h6>
+                                            <p class="text-center">{{ user_p.bio }}</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <a href="{% url 'talks:submit_talk' %}" class="btn btn-success">Submit a Talk</a>
+                            </div>  
+                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <a href="{% url 'profiles:update' pk=user.id %}" class="btn btn-success">Update your Profile</a>
+                            </div>               
+
+                        </div>
+
+                        {% endfor %}
+                        {% else %}
+
+                                <p>You have not created a profile yet. Please click the button below to create your profile.</p>
+                                <br>
+                                <p><a class="btn btn-success" href="{% url 'profiles:create_profile' %}">Create Your Profile Now &raquo;</a></p>
+                    </div>
+                     {% endif %}
+</div>
+{% endblock %}

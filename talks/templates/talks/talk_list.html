@@ -1,0 +1,35 @@
+{% extends "base2.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+        <h2>List of your submitted talks</h2>
+        <br>
+        {% if submitted_talks %}
+
+            {% for talk in submitted_talks %}
+
+            <p><a href="{% url 'talks:edit_talk' pk=talk.pk %}">{{ talk.title }}</a></p>
+
+            {% endfor %}
+
+        {% else %}
+
+            <p>You have not submitted any talks yet.</p>
+
+        {% endif %}
+
+        <p><a class="btn btn-success btn-lg"" href="{% url 'talks:submit_talk' %}">Submit Talk! &raquo;</a></p>
+        <br />
+
+</div>
+    <div class="col-md-1">
+
+    </div>
+</div>
+
+{% endblock %}

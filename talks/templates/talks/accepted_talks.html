@@ -1,0 +1,46 @@
+{% extends "base2.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-md-10">
+        <h2>Announcing the PyCon Ghana 2018 Talk Lineup!</h2>
+        <p>We'll publish the schedule including time slots as soon as it is finalized!</p>
+        <br />
+        {% if accepted_talks %}
+            <p>Attending to PyCon Ghana 2018? Here are some of the talks to look forward to:</p>
+            {% for talk in accepted_talks %}
+                <p><a href="{% url 'talks:talk_details' pk=talk.pk %}">{{ talk.title }}  - {{ talk.user.first_name }}
+                    {{ talk.user.last_name }}</a></p>
+            {% endfor %}
+
+        <div class="pager">
+            <span class="previous">
+            {% if accepted_talks.has_previous %}
+                <a href="?page={{ accepted_talks.previous_page_number }}">&larr; Previous</a>
+            {% endif %}
+            </span>
+            <span class="current">
+                Page {{ accepted_talks.number }} of {{ accepted_talks.paginator.num_pages }}
+            </span>
+            <span class="next">
+            {% if accepted_talks.has_next %}
+                <a href="?page={{ accepted_talks.next_page_number }}" >Next &rarr;</a>
+            {% endif %}
+            </span>
+        </div>
+
+        {% else %}
+            <p>We haven't accepted any talks yet. We will update this page as soon as we have closed our CFP and
+                accepted submitted talks.</p>
+        {% endif %}
+    </div>
+
+    <div class="col-md-1">
+    </div>
+</div>
+
+{% endblock %}
