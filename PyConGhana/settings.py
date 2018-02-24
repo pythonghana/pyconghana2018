@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from .secrets import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,15 +21,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@pspnupf89kwcp0*=c=&&etw2=_r!&(_um=+xgfp=jv^o*@%4q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/profile'
 
 ALLOWED_HOSTS = []
 
+SITE_TITLE  = 'Pycon Ghana'
+GRAPPELLI_ADMIN_TITLE = "PYCON GHANA"
 
 # Application definition
 
@@ -43,6 +45,8 @@ INSTALLED_APPS = [
 # Required apps
     'crispy_forms',
     'rest_framework',
+    'jet',
+    'jet.dashboard',
 #    'markitup',
 
 # my apps
@@ -55,6 +59,8 @@ INSTALLED_APPS = [
     'sponsors',
     'support_us',
     'talks',
+    'faq',
+    'privacypolicy',
 
 ]
 
@@ -67,10 +73,16 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+# Full filesystem path to the project.
+PROJECT_APP_PATH = os.path.dirname(os.path.abspath(__file__))
+PROJECT_APP = os.path.basename(PROJECT_APP_PATH)
+PROJECT_ROOT = BASE_DIR = os.path.dirname(PROJECT_APP_PATH)
+
 
 ROOT_URLCONF = 'PyConGhana.urls'
 
 STATIC_URL = '/static/' # the path in url
+STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/static/"))
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

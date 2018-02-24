@@ -730,6 +730,12 @@ p,
  Header Video
  ------------ */
 
+.pycongh {
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+}
+
 .video-header {
     position: absolute;
     right: 0;
@@ -739,7 +745,7 @@ p,
     width: auto;
     height: auto;
     z-index: -100;
-    background: url(../video/FlagofGhana.jpg) no-repeat;
+    background: url(../video/background.png) no-repeat;
     background-size: cover;
 }
 

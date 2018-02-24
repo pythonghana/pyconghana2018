@@ -12,7 +12,6 @@
 
                                                     </div>
                                                     <div class="col-md-6">
-                                                
                                                 <br>
                                                  <form class="form col-md-12"  margin="auto" method="post" action="">
                                                     {% csrf_token %}
@@ -24,9 +23,10 @@
                                                     <div class="row">
                                                         <div class="form-group col-md-12">
                                                             <button type="submit" class="btn btn-success btn-lg" value="{% trans 'Log in' %}">Login</button>
-                                                        </div>
-                                                        <p>{% trans "Forgot your password?" %} <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>.</p>
-                                                        <p>{% trans "Not a member?" %} <a href="{% url 'registration_register' %}">{% trans "Register" %}</a>.</p>
+                                                        </div><strong>
+                                                       
+                                                        <p>{% trans "Not Registered?" %} <a href="{% url 'registration_register' %}">{% trans "SIGNUP" %}</a>.</p></strong>
+                                                         <p><a href="{% url 'auth_password_reset' %}">{% trans "reset password" %}</a>.</p>
                                                     </div>
                                                 </form>
 

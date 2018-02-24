@@ -6,7 +6,7 @@ from django.template import RequestContext
 
 
 # Create your views here.
-def about(request):
+def faqs(request):
     context = {}
-    template = 'about.html'
+    template = 'faq.html'
     return render(request, template, context)
