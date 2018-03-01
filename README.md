@@ -1,6 +1,6 @@
 http://gh.pycon.org
 
-# [pyConGhana](http://gh.pycon.org)
+# [PyConGhana](http://gh.pycon.org)
 
     This is the source code for the http://gh.pycon.org website.
 
@@ -52,7 +52,7 @@ http://gh.pycon.org
   
   2. Create second folder in the root or main folder called PyConGhana and clone (git clone url) the project into that folder.
   
-  2. Open the command prompt and navigate the project folder
+  2. Open the command prompt and navigate the project folder (PyCon Ghana)
   
   3. virtualenv PyConGhana-env   # Create a virtual environment for the project with it's own packages.
   
