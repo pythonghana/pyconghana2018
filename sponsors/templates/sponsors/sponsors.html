@@ -1,0 +1,105 @@
+{% extends "base2.html" %}
+{% load i18n static %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Sponsors | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+
+{% block content %}
+<header id="top" class="sub-header">
+        <div class="container">
+            <h3 class="page-title wow fadeInDown">Our Sponsors<br><small>Sponsors and Supporters of PyCon Ghana 2018</small></h3>
+        </div>
+        <!-- end .container -->
+    </header><br><br>
+    <!-- end .sub-header -->
+
+<section>
+        <div class="container"> 
+            <div class="row ">
+                <div class="col-xs-12">
+                    <p>
+                      Python Conference Ghana is generously sponsored by organisations that support its aim
+                    </p>
+                    <p>Would you like to join them? <a href="/sponsors-us"><b>See How to sponsor PyCon Ghana.</b></a></p><br><br>
+
+
+             {% if diamond %}
+           
+            <h3 style="color: #000; text-shadow: 2px 2px 3px #b9f2ff"><b>Diamond Sponsors</b></h3>
+            <br><br>
+             <div class="container-fluid">
+               {% for sponsor in diamond %}
+                    <div class="col-xs-2">
+                        <a href="{{ sponsor.website }}" target="_blank"><img src="{{ sponsor.logo.url }}" class='img-responsive'></a>
+                    </div>
+                {% endfor %}
+                  </div>
+            {% endif %}
+
+
+
+
+            <br><br>
+
+             {% if gold %}
+            <h4 style="color: #000; text-shadow: 2px 2px 3px #FFD700"><b>Gold Sponsors</b></h4>
+            <br />
+            <div class="container">
+            {% for sponsor in gold %}
+                <div class="col-xs-2">
+                    <a href="{{ sponsor.website }}" target="_blank"><img src="{{ sponsor.logo.url }}" class='img-responsive'></a>
+                </div>
+                {% endfor %}
+                </div>
+            {% endif %}
+
+            <br /><br>
+
+             {% if silver %}
+            <h5 style="color: #000; text-shadow: 2px 2px 3px #C0C0C0"><b>Silver Sponsors<b></h5>
+            <br />
+            <div class="container">
+            {% for sponsor in silver %}
+                <div class="col-xs-2">
+                    <a href="{{ sponsor.website }}" target="_blank"><img src="{{ sponsor.logo.url }}" class='img-responsive'></a>
+                </div>
+                {% endfor %}
+                </div>
+            {% endif %}
+
+
+            <br><br>
+
+                 {% if bronze %}
+            <h6 style="color: #000; text-shadow: 2px 2px 3px #cd7f32"><b>Bronze Sponsors</b></h6>
+            <br />
+            <div class="container">
+            {% for sponsor in bronze %}
+                <div class="col-xs-3">
+                    <a href="{{ sponsor.website }}" target="_blank"><img src="{{ sponsor.logo.url }}" class='img-responsive'></a>
+                </div>
+                {% endfor %}
+                </div>
+            {% endif %}
+
+
+             <br><br>
+            <hr>
+            <h6 style="color: #000; text-shadow: 2px 2px 3px "><b>Individual Sponsors</b></h6>
+            <div class="container-fluid">
+                <div class="row">
+                    {% if individuals %}
+                        {% for individual in individuals %}
+                        <div class="col-xs-3">
+                            <h6><a href="{{ individual.website }}" target="_blank">{{ individual.name }}</a></h6>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            <br><br>
+            <hr>
+
+                </div>
+            </div>
+        </div>
+</section>
+{% endblock %}

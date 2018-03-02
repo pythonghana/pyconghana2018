@@ -1,24 +1,21 @@
 {% extends "base2.html" %}
-{% load crispy_forms_tags %}
+{% load crispy_forms_tags i18n %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Create Profile | Pycon Ghana 2018" %}{% endif %}{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-3">
-
-    </div>
-    <div class="col-md-6">
-<h2>Create your profile </h2>
-<br>
-
-<form action="{% url 'profiles:create_profile' %}" method=post>
-    {% crispy form form.helper %}
-          {% csrf_token %}
-</form>
-
+<header id="top" class="sub-header">
+        <div class="container">
+            <h3 class="page-title wow fadeInDown">Create your Profile {% firstof user.get_short_name user.get_username %}<br></small></h3>
+        </div>
+        <!-- end .container -->
+    </header><br><br>
+<section>
+        <div class="container"> 
+			<form action="{% url 'profiles:create_profile' %}" enctype='multipart/form-data' method='Post'>{% csrf_token %}
+			    {% crispy form form.helper %}
+			         
+			</form>
       </div>
-    <div class="col-md-3">
-
-    </div>
-</div>
+</section>
 
 {% endblock %}

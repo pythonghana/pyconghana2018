@@ -1,15 +1,17 @@
 {% extends "base2.html" %}
 {% load i18n %}
-{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "About | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "FAQ | Pycon Ghana 2018" %}{% endif %}{% endblock %}
 
 
 {% block content %}
+<header id="top" class="sub-header">
+        <div class="container">
+            <h3 class="page-title wow fadeInDown">Frequently Asked Questions<br><small> </small></h3>
+        </div>
+        <!-- end .container -->
+    </header><br><br>
 <section>
         <div class="container"> 
-            <div class="nav-center bottom-space-lg">
-                <h4>Frequently Asked Questions</h4>
-            </div>
-
 		    <section class="faq">
 
 		        <div class="container">
@@ -33,7 +35,9 @@
 		                    <p>All payments are processed via EventBrite. You may also pay at the time of event. But please reserve your seat by contacting us directly.</p>
 
 		                    <h6 class="faq-title">Can I get a refund on my tickets?</h6>
-		                    <p>Yes you can, although all tickets refunds would be 60% of the price unless the event is cancelled by us, in which case we will always make a full refund.</p>
+		                    <p>Yes you can, although all tickets refunds would be 60% of the price unless the event is cancelled by us, in which case we will always make a full refund.</p><br><br>
+
+		                    <p>You can contact <b><a href="mailto:gather@eventwebsite.com">organizers@pyconghana.org</a></b> for further inquiries.</p>
 
 		                </div>
 		            </div>

@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base2.html" %}
+{% load i18n %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Support Us | Pycon Ghana 2018" %}{% endif %}{% endblock %}
 
-</body>
-</html>
+
+{% block content %}
+<header id="top" class="sub-header">
+        <div class="container">
+            <h3 class="page-title wow fadeInDown">Support Us</h3>
+            <p></p>
+        </div>
+        <!-- end .container -->
+    </header><br><br>
+<section>
+        <div class="container"> 
+		    <section class="faq">
+
+		        <div class="container">
+		        	<p>
+		        		
+		        	</p>
+		            
+		            
+		            
+		        </div>
+		    </section>
+
+        </div>
+</section>
+
+{% endblock %}

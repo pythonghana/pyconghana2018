@@ -1,15 +1,11 @@
 from __future__ import unicode_literals
-
 from django.contrib.auth.models import User
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit
-
 from .models import Profile
-
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
 from django.utils.translation import ugettext_lazy as _
-
 from .users import UserModel
 from .users import UsernameField
 

@@ -1,10 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base2.html" %}
+{% load i18n %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Schedule | Pycon Ghana 2018" %}{% endif %}{% endblock %}
 
-</body>
-</html>
+{% block content %}
+<header id="top" class="sub-header">
+        <div class="container">
+            <h3 class="page-title wow fadeInDown">PyCon Ghana Schedule</h3>
+            <p></p>
+        </div>
+        <!-- end .container -->
+    </header><br><br>
+    <!-- end .sub-header -->
+    <!-- 
+     Our Schedule
+     ====================================== -->
+
+    <section class="schedule" id="schedule">
+
+        <div class="container">
+            <div class="nav-center">
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills" role="tablist" id="schedule-tabs">
+                    <li role="presentation" class="active"><a href="#day1" aria-controls="day1" role="tab" data-toggle="tab">Day One</a></li>
+                    <li role="presentation"><a href="#day2" aria-controls="day2" role="tab" data-toggle="tab">Day Two</a></li>
+                    <!-- <li role="presentation"><a href="#day3" aria-controls="messages" role="tab" data-toggle="tab">Day Three</a></li> -->
+                </ul>
+
+            </div>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="day1">
+
+                    <!-- ########## Schedule Timeline DAY 01 Starts ########### -->
+
+                    <section class="timeline">
+
+                         {% for talks in schedule_one %}
+                        <!-- timeline-block -->
+                        <div class="timeline-block">
+                            <div class="timeline-bullet wow zoomIn" data-wow-delay="0s">
+
+                            </div>
+                            <!-- timeline-bullet -->
+
+                            <div class="timeline-content">
+                                <h2 class="wow flipInX" data-wow-delay="0.3s">{{ talks.talk.title }}</h2>
+                                <p class="wow flipInX" data-wow-delay="0.3s"><b>by {{ talks.talk.user.first_name }} {{ talks.talk.user.last_name }}</b><br>{{ talks.talk.talk_type }}</p>
+                                <span class="date wow flipInX" data-wow-delay="0.3s">{{ talks.start_time.time }} - {{ talks.end_time.time }}<br>Venue: {{ talks.room }}</span>
+                            </div>
+                            <!-- timeline-content -->
+                        </div>
+                       {% endfor %}
+                    </section>
+                    <!-- timeline -->
+
+                    <!-- ########### End Schedule Timeline  DAY 01  ########### -->
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="day2">
+
+                    <!-- ########## Schedule Timeline  DAY 02 Starts ########### -->
+                    <section class="timeline">
+                        <!-- timeline-block -->
+                         {% for talks in schedule_two %}
+
+                        <div class="timeline-block">
+                            <div class="timeline-bullet">
+
+                            </div>
+                            <!-- timeline-bullet -->
+
+                            <div class="timeline-content">
+                                <h2 class="wow flipInX" data-wow-delay="0.3s">{{ talks.talk.title }}</h2>
+                                <p class="wow flipInX" data-wow-delay="0.3s"><b>by {{ talks.talk.user.first_name }} {{ talks.talk.user.last_name }}</b><br>{{ talks.talk.talk_type }}</p>
+                                <span class="date wow flipInX" data-wow-delay="0.3s">{{ talks.start_time.time }} - {{ talks.end_time.time }}<br>Venue: {{ talks.room }}</span>
+                            </div>
+                            <!-- timeline-content -->
+                        </div>
+                        <!-- timeline-block -->
+                       {% endfor %}
+                    </section>
+                    <!-- timeline -->
+                    <!-- ########### End Schedule Timeline  DAY 02 ########### -->
+
+                </div>
+                <!-- <div role="tabpanel" class="tab-pane" id="day3">..33333.</div> -->
+            </div>
+
+        </div>
+        <!-- end .container -->
+
+    </section>
+    <!-- end section.schedule -->
+
+
+{% endblock %}

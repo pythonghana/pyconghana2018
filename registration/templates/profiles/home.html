@@ -1,16 +1,28 @@
 {% extends "base2.html" %}
+{% load i18n static %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans " Profile | Pycon Ghana 2018" %}{% endif %}{% endblock %}
 
 {% block content %}
-<div class="row">
-                        <h3>My Profile</h3>
 
-                    <div class="col-md-6 col-md-offset-3">
+<header id="top" class="sub-header">
+        <div class="container">
+            <h3 class="page-title wow fadeInDown">{% firstof user.get_short_name user.get_username %}'s Profile<br><small>You are Welcome</small></h3>
+        </div>
+        <!-- end .container -->
+    </header><br><br>
 
-                            {% if user_profile %}
+<section>
+        <div class="container"> 
+               {% if user_profile %}
 
                         <div class="row">
 
                                 {% for detail in details %}
+                                <div class="speaker-info wow fadeIn" data-wow-delay="0.1s">
+                                    
+                                    <img src="{{ user.profile.image.url }}" alt="avatar" style="width:140px;height:140px;" class="img-responsive center-block">
+                                    
+                                </div>
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <div class="form-group">
                                     <label>First Name</label>
@@ -66,7 +78,7 @@
                             </div>
                              <div class=" form-group">
                                     <div class="thumbnail wow fadeInUp">
-                                        <div class="caption"><br><br><br><br>
+                                        <div class="caption">
                                             <h6>Biography</h6>
                                             <p class="text-center">{{ user_p.bio }}</p>
                                         </div>
@@ -89,5 +101,10 @@
                                 <p><a class="btn btn-success" href="{% url 'profiles:create_profile' %}">Create Your Profile Now &raquo;</a></p>
                     </div>
                      {% endif %}
-</div>
+            
+        </div>
+</section>
+
+
+                         
 {% endblock %}
