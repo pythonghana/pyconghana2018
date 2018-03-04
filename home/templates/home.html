@@ -14,7 +14,11 @@
 
                     <div class="header_top-bg wow fadeInDown img">
                         <div class="img">
-                            <a href="#about"><img class="img-fluid" src="{% static 'images/pycon3a.png' %}" srcset="{% static 'images/pycon3.png' %}" alt=""></a>
+                            <picture>
+                              <source media="(min-width: 650px)" srcset="{% static 'images/pycon3.png' %}">
+                              <source media="(min-width: 465px)" srcset="{% static 'images/pycon3a.png' %}">
+                              <img src="{% static 'images/pycon3a.png' %}" alt="" style="width:auto;">
+                            </picture>
                         </div>
                     </div>
 

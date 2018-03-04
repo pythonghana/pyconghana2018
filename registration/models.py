@@ -699,6 +699,7 @@ class SupervisedRegistrationProfile(RegistrationProfile):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='speakers',null=True, default = 'media/avatar.jpg', help_text="Your photo (not an illustration nor avatar), It will be published on the website. Ideal photo is: a head shot, shows only you, has no “filters” applied and is as large and uncompressed as possible. We might crop it and change contrast, brightness etc. to fit our visual style.", blank=True)
     bio = models.TextField(max_length=500, help_text="Tell us a bit about yourself and your work with Python", blank=False)
     city = models.CharField(max_length=30, blank=False)
     country = models.CharField(max_length=30, blank=False)
@@ -708,7 +709,10 @@ class Profile(models.Model):
     twitter_handle = models.CharField(max_length=15, blank=True, null=True) #made this optional
     github_username = models.CharField(max_length=32, blank=True, null=True) #made this optional
 
+@property
+def image_url(self):
+    if self.image and hasattr(self.image, 'url'):
+        return self.image.url
 
     def __str__(self):
         return u'%s' % self.user
-

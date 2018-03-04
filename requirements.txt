@@ -17,6 +17,7 @@ isort==4.2.15
 Markdown==2.6.11
 mccabe==0.6.1
 oauthlib==2.0.6
+Pillow==5.0.0
 pluggy==0.6.0
 psycopg2==2.7.3.2
 py==1.5.2

@@ -1,10 +1,23 @@
 {% extends "base2.html" %}
-
 {% load crispy_forms_tags %}
 
-
 {% block content %}
-                            <div class="col-md-6 col-md-offset-3"><h3>SUBMIT A TALK</h3>
+
+    <header id="top" class="sub-header">
+        <div class="container">
+
+            <h3 class="page-title wow fadeInDown">Submit your talk below, {% firstof user.get_short_name user.get_username %}</small></h3>
+        </div>
+        <!-- end .container -->
+    </header><br><br>
+    <!-- end .sub-header -->
+
+
+<section>
+        <div class="container"> 
+            <div class="nav-center bottom-space-lg">
+              
+                             </div>
                                     <div class="thumbnail wow fadeInUp">
                                         <div class="caption">
                                            <div class="row">
@@ -21,5 +34,6 @@
                                         </div>
                                     </div>
                             </div>
+</section>
 
 {% endblock %}

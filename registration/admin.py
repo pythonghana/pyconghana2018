@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.translation import ugettext_lazy as _
 
-from .models import RegistrationProfile
+from .models import RegistrationProfile, Profile
 from .users import UsernameField
 
 
@@ -45,3 +45,9 @@ class RegistrationAdmin(admin.ModelAdmin):
 
 
 admin.site.register(RegistrationProfile, RegistrationAdmin)
+
+
+class PersonalAdmin(admin.ModelAdmin):
+    list_display = ('user', 'twitter_handle', 'github_username', 'contact_number', 'city', 'country')
+
+admin.site.register(Profile, PersonalAdmin)
