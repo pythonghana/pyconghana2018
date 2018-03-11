@@ -21,7 +21,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = 'cue4(^a=z(=c4dh00iuctyop#ltj9dx3mvih-&hk9*z8lj*z_-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
@@ -30,7 +29,7 @@ DEBUG = True
 LOGIN_REDIRECT_URL = '/profile'
 LOGOUT_REDIRECT_URL = '/'
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = []
 
 SITE_TITLE  = 'Pycon Ghana'
 GRAPPELLI_ADMIN_TITLE = "PYCON GHANA"
