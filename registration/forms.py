@@ -4,7 +4,7 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit
 from .models import Profile
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
+from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm, UserChangeForm
 from django.utils.translation import ugettext_lazy as _
 from .users import UserModel
 from .users import UsernameField
@@ -107,7 +107,7 @@ class ResendActivationForm(forms.Form):
 class UpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ('bio', 'birth_date', 'twitter_handle', 'github_username', 'contact_number', 'website', 'city', 'country',)
+        fields = ('name', 'surname', 'image_url', 'bio', 'twitter_handle', 'github_username', 'contact_number', 'website', 'city', 'country',)
 
     def __init__(self, *args, **kwargs):
         super(UpdateForm, self).__init__(*args, **kwargs)
