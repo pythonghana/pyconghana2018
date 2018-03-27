@@ -16,7 +16,7 @@ class Sponsor(models.Model):
     category = models.CharField(max_length=15, choices=SPONSOR_PACKAGES)
     logo = models.ImageField(max_length=255, blank=True, null=True)
     type = models.CharField("sponsor type", max_length=1, choices=SPONSOR_TYPE)
-    website = models.URLField("website URL/ Twitter handle", max_length=200, blank=True, null=True)
+    website = models.URLField(default='',help_text="website URL/ Twitter handle", max_length=200, blank=True, null=True)
 
     class Meta:
         managed = True
