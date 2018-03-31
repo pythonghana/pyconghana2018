@@ -11,17 +11,10 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from .secrets import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-
-# SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = True
 
@@ -36,8 +29,8 @@ GRAPPELLI_ADMIN_TITLE = "PYCON GHANA"
 # Application definition
 
 INSTALLED_APPS = [
-    'jet.dashboard',   
     'jet',
+    'jet.dashboard',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,10 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-# Third party apps
+# Required apps
     'crispy_forms',
     'rest_framework',
-    #'markitup',
+    
+#    'markitup',
 
 # my apps
     'home',
@@ -167,6 +161,7 @@ EMAIL_HOST_PASSWORD = 'mys3cr3tp4ssw0rd'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'TestSite Team <noreply@example.com>'
 
+
 JET_THEMES = [
     {
         'theme': 'default',  # theme folder name
@@ -198,4 +193,3 @@ JET_THEMES = [
         'color': '#222',
         'title': 'Light Gray'
     }
-]
