@@ -698,12 +698,14 @@ class SupervisedRegistrationProfile(RegistrationProfile):
 
 
 class Profile(models.Model):
+    name = models.CharField(max_length=30, default='', blank=False)
+    surname = models.CharField(max_length=30, default='', blank=False)
     user = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='speakers',null=True, default = 'media/avatar.jpg', help_text="Your photo (not an illustration nor avatar), It will be published on the website. Ideal photo is: a head shot, shows only you, has no “filters” applied and is as large and uncompressed as possible. We might crop it and change contrast, brightness etc. to fit our visual style.", blank=True)
+    image_url = models.URLField(default='', help_text='A link to your Photo, Your photo (not an illustration nor avatar):')
     bio = models.TextField(max_length=500, help_text="Tell us a bit about yourself and your work with Python", blank=False)
     city = models.CharField(max_length=30, blank=False)
     country = models.CharField(max_length=30, blank=False)
-    birth_date = models.DateField(null=True, help_text="YYYY-MM-DD", blank=True)
     contact_number = models.CharField(max_length=16, help_text="Please include your country code.", blank=False, null=True)
     website = models.CharField(max_length=255, help_text="Your website/blog URL.", null=True, blank=True)#made this optional
     twitter_handle = models.CharField(max_length=15, blank=True, null=True) #made this optional
