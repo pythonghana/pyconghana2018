@@ -19,6 +19,7 @@
                                                     {% csrf_token %}
                                                     {{ form|crispy }}
                                                     <input class="btn btn-success btn-lg" type="submit" value="{% trans 'Submit' %}" />
+                                                    <strong><p>{% trans "Already have an account?" %} <a href="{% url 'auth_login' %}">{% trans "Login" %}</a>.</p></strong>
                                                 </form>
                                                </div>
                                             </div>
