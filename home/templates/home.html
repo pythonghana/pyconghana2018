@@ -108,75 +108,6 @@
 
     </section>
     <!-- end section.highlight -->
-
-    <!-- 
-     Our Speakers
-     ====================================== -->
-
-    <section class="speakers" id="speakers">
-        <div class="container">
-
-            <div class="section-title wow fadeInUp">
-                <h4>OUR SPEAKERS</h4>
-            </div>
-
-            <div class="speaker-slider" align="center">
-
-                <div class="speaker-info wow fadeIn" data-wow-delay="0s">
-                    <img src="{% static 'images/avatar_2.png' %}" alt="avatar" class="img-responsive center-block">
-                    <p>Speaker</p>
-                    <span>Computer Scientist</span>
-                </div>
-                <!-- end .speaker-info -->
-
-                <div class="speaker-info wow fadeIn" data-wow-delay="0.1s">
-                    <img src="{% static 'images/avatar_2.png' %}" alt="avatar" class="img-responsive center-block">
-                    <p>Speaker</p>
-                    <span>PSF</span>
-                </div>
-                <!-- end .speaker-info -->
-
-                <div class="speaker-info wow fadeIn" data-wow-delay="0.2s">
-                    <img src="{% static 'images/avatar_3.png' %}" alt="avatar" class="img-responsive center-block">
-                    <p>Speaker</p>
-                    <span>Consultant</span>
-                </div>
-                <!-- end .speaker-info -->
-
-                <div class="speaker-info wow fadeIn" data-wow-delay="0.3s">
-                    <img src="{% static 'images/avatar_4.png' %}" alt="avatar" class="img-responsive center-block">
-                    <p>Speaker</p>
-                    <span>Python GH</span>
-                </div>
-                <!-- end .speaker-info -->
-
-            </div>
-
-        </div>
-        <!-- end .container -->
-    </section>
-    <!-- end section.speakers -->
-
-    <!-- 
-     Our Schedule
-     ====================================== -->
-
-    <section class="schedule highlight" id="schedule">
-
-        <div class="container">
-            <div class="section-title wow fadeInUp">
-                <h4>THE SCHEDULE</h4>
-            </div>
-
-            <!-- Tab panes -->
-            <div class="tab-content">
-                         <p>The Schedule would be annouced once our Topics have been chosen </p>
-        </div>
-        <!-- end .container -->
-
-    </section>
-    <!-- end section.schedule -->
-
     <!-- 
      What to Expect : Benefits
      ====================================== -->
@@ -232,103 +163,46 @@
     </section>
     <!-- end section.benefits -->
 
-    <!-- 
-     Embeded Twitter Testimonials
-     ====================================== -->
-    <!-- 
-     Accommodation
+<!-- 
+     Our Speakers
      ====================================== -->
 
-    <section class="highlight accommodation">
-
+    <section class="speakers" id="speakers">
         <div class="container">
-            <div class="section-title wow fadeInUp">
-                <h4>Where to stay</h4>
-                <p>Finding a good hotel can be tricky. So here are some of our favorite hotels nearby the event location</p>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                 <div class="section-title wow fadeInUp">
+                    <h4>Want to be a Speaker?</h4>
+                 </div>
+                <div class="panel panel-danger wow fadeInLeft">      
+                        <div class="panel-body">
+                            <p>The Python community in Ghana is a relatively new community with an audience of diverse Python experience; from beginners to expert developers. We are therefore looking for talks that will benefit our diverse audience. This means we welcome proposals suitable for beginners, people with somewhat knowledge of Python, very good programmers and expert programmers.</p> 
+                            <p>We are looking for talks and workshops which address the following domains:Django Web Framework,Python in Data Science,Python Community,Python in Education and Python Application in various industries.</p>
+                            <button type="submit" class="btn btn-success btn-lg" value="{% trans 'Log in' %}">Submit a Proposal</button>
+                        </div>
+
+                </div>
             </div>
 
-            <div class="row">
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail wow fadeInUp">
-                        <img src="{% static 'images/hotel.jpg' %}" alt="Atholl Palace Hotel">
-                        <div class="caption">
-                            <h6 class="caption-title">******* Hostel</h6>
-                            <p class="caption-text">From GHC*** per night</p>
-                            <p class="text-center"><a href="#" class="btn btn-outline" role="button">Visit Website</a> </p>
-                        </div>
+            <div class="col-sm-12 col-md-6">
+                    <div class="section-title wow fadeInUp">
+                        <h4>Want to be a Sponsor?</h4>
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail wow fadeInUp" data-wow-delay="0.3s">
-                        <img src="{% static 'images/hotel.jpg' %}" alt="The Four Seasons Hotel">
-                        <div class="caption">
-                            <h6 class="caption-title">******* Hotel</h6>
-                            <p class="caption-text">From GHC*** per night</p>
-                            <p class="text-center"><a href="#" class="btn btn-outline" role="button">Visit Website</a> </p>
-                        </div>
+                    <div class="panel panel-warning wow fadeInRight">   
+                            <div class="panel-body">
+                                <p>The conference has raised Namibia's profile internationally. PyCon Namibia inspired the creation Python programming conferences in Zimbabwe and Nigeria, and travellers from other African nations to learn how the PyCon model can benefit their own programmers and software industries.</p>
+                                <p>PyCon NA brings programmers and software experts from all over the world to Namibia. Attendees come from Brazil, Britain, Canada, Germany, Ghana, Greece, Italy, Mozambique, the Netherlands, Nigeria, South Africa, the USA, Zambia, Zimbabwe.</p>
+                                 <button type="submit" class="btn btn-success btn-lg" value="{% trans 'Log in' %}">Support Us</button>
+                            </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0">
-                    <div class="thumbnail wow fadeInUp" data-wow-delay="0.6s">
-                        <img src="{% static 'images/hotel.jpg' %}" alt="The Gleneagles Hotel">
-                        <div class="caption">
-                            <h6 class="caption-title">******* Hotel</h6>
-                            <p class="caption-text">From GHC*** per night</p>
-                            <p class="text-center"><a href="#" class="btn btn-outline" role="button">Visit Website</a> </p>
-                        </div>
-                    </div>
-                </div>
             </div>
 
         </div>
+        </div>
         <!-- end .container -->
     </section>
-    <!-- end section.accommodation -->
+    <!-- end section.speakers -->
 
-    <!-- 
-     Pricing
-     ====================================== -->
-
-    <section class="pricing" id="pricing">
-
-        <div class="container">
-
-            <div class="section-title">
-                <h4>Registration</h4>
-                <p>Registration is now open!</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="pricing-item  wow zoomIn" data-wow-duration="2s">
-                        <div class="plan-name">Student</div>
-                        <div class="price"> <span class="curr">GHC</span>***</div>
-                        <a class="btn btn-outline btn-lg" href="#">Register</a>
-                    </div>
-
-                </div>
-                <div class="col-md-4">
-                    <div class="pricing-item highlighted-plan wow zoomIn" data-wow-delay="0.3s" data-wow-duration="2s">
-                        <div class="plan-name">Individual</div>
-                        <div class="price"> <span class="curr">GHC</span>***</div>
-                        <a class="btn btn-success btn-lg" href="#">Register</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="pricing-item wow zoomIn" data-wow-delay="0.6s" data-wow-duration="2s">
-                        <div class="plan-name">Corporate</div>
-                        <div class="price"> <span class="curr">GHC</span>***</div>
-                        <a class="btn btn-outline btn-lg" href="#">Register</a>
-                    </div>
-                </div>
-                 </div>
-            </div>
-    </section>
-    <!-- end section.pricing -->
-    <!-- 
-     Pricing
-     ====================================== -->
-  
 
     <!-- 
      Location Map
@@ -409,42 +283,6 @@
     </section>
     <!-- ::: END MAP ::: -->
 
-    <!-- 
-     Contact us
-     ====================================== -->
-
-    <div class="highlight">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="contact-box">
-                        <img src="{% static 'images/location-icon.png' %}" alt="location icon" class="wow zoomIn">
-                        <h5>ADDRESS</h5>
-                        <p>Would be given soon,
-                            <br>
-                            <br> Accra, Ghana
-                            <br>
-                            <br>             </p>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="contact-box">
-                        <img src="{% static 'images/email-icon.png' %}" alt="email icon" class="wow zoomIn" data-wow-delay="0.3s">
-                        <h5>CONTACT</h5>
-                        <p><a href="mailto:gather@eventwebsite.com">hello@pyconghana.org</a>
-                            <br> <a href="mailto:sponsor@thisevent.com">sponsor@pyconghana.org</a>
-                            <br>
-                            <br> 
-                            <br> 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!--  // end .row -->
-        </div>
-    </div>
-    <!-- //  end .highlight -->
 
 <!-- 
      Mailchimp Subscribe
