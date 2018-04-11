@@ -35,7 +35,6 @@ def submit_talk(request):
             obj = Proposal()  # gets new object
             obj.user_id = request.user.pk
             obj.title = form.cleaned_data['title']
-            obj.proposal = form.cleaned_data['proposal']
             obj.talk_type = form.cleaned_data['talk_type']
             obj.programming_experience = form.cleaned_data['programming_experience']
             obj.notes = form.cleaned_data['notes']
@@ -142,6 +141,7 @@ class TalkDetailView(TemplateView):
         context['year'] = datetime.now().year
         context['talk'] = Proposal.objects.get(pk=self.kwargs['pk'])
         return context
+
 
 def home(request):
     documents = Document.objects.all()

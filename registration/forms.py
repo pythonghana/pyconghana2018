@@ -28,10 +28,7 @@ class RegistrationForm(UserCreationForm):
     """
     required_css_class = 'required'
     email = forms.EmailField(label=_("E-mail"))
-    captcha = ReCaptchaField(
-        public_key='6Ldbq1IUAAAAAGLKryi-oZs8tE1D4DAXQx6hFzAf',
-        private_key='6Ldbq1IUAAAAABhyiq30Ur9ySQgsM_Mnc7rNk3Y7',
-    )
+    captcha = ReCaptchaField()
 
     class Meta:
         model = User
@@ -110,10 +107,8 @@ class ResendActivationForm(forms.Form):
 
 
 class UpdateForm(forms.ModelForm):
-    captcha = ReCaptchaField(
-        public_key='6Ldbq1IUAAAAAGLKryi-oZs8tE1D4DAXQx6hFzAf',
-        private_key='6Ldbq1IUAAAAABhyiq30Ur9ySQgsM_Mnc7rNk3Y7',
-    )
+    captcha = ReCaptchaField()
+
     class Meta:
         model = Profile
         fields = ('name', 'surname', 'image_url', 'bio', 'twitter_handle', 'github_username', 'contact_number', 'website', 'city', 'country',)
@@ -128,10 +123,8 @@ class UpdateForm(forms.ModelForm):
 
 
 class UserForm(forms.ModelForm):
-    captcha = ReCaptchaField(
-        public_key='6Ldbq1IUAAAAAGLKryi-oZs8tE1D4DAXQx6hFzAf',
-        private_key='6Ldbq1IUAAAAABhyiq30Ur9ySQgsM_Mnc7rNk3Y7',
-    )
+    captcha = ReCaptchaField()
+
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email',)
@@ -146,10 +139,7 @@ class UserForm(forms.ModelForm):
 
 
 class PasswordForm(PasswordChangeForm):
-    captcha = ReCaptchaField(
-        public_key='6Ldbq1IUAAAAAGLKryi-oZs8tE1D4DAXQx6hFzAf',
-        private_key='6Ldbq1IUAAAAABhyiq30Ur9ySQgsM_Mnc7rNk3Y7',
-    )
+    captcha = ReCaptchaField()
 
     def __init__(self, user, *args, **kwargs):
         self.user = user

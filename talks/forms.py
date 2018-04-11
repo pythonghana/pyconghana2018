@@ -7,10 +7,7 @@ from captcha.fields import ReCaptchaField
 
 
 class ProposalForm(forms.ModelForm):
-    captcha = ReCaptchaField(
-        public_key='6Ldbq1IUAAAAAGLKryi-oZs8tE1D4DAXQx6hFzAf',
-        private_key='6Ldbq1IUAAAAABhyiq30Ur9ySQgsM_Mnc7rNk3Y7',
-    )
+    captcha = ReCaptchaField()
 
     class Meta:
         model = Proposal
@@ -25,10 +22,7 @@ class ProposalForm(forms.ModelForm):
 
 
 class DocumentForm(forms.ModelForm):
-    captcha = ReCaptchaField(
-        public_key='6Ldbq1IUAAAAAGLKryi-oZs8tE1D4DAXQx6hFzAf',
-        private_key='6Ldbq1IUAAAAABhyiq30Ur9ySQgsM_Mnc7rNk3Y7',
-    )
+    captcha = ReCaptchaField()
 
     class Meta:
         model = Document
