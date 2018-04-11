@@ -45,9 +45,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
 # Third party apps
+    'captcha',
     'crispy_forms',
     'rest_framework',
-    #'markitup',
+    # 'markitup',
+
 
 # my apps
     'home',
@@ -198,3 +200,8 @@ JET_THEMES = [
         'title': 'Light Gray'
     }
 ]
+
+RECAPTCHA_PRIVATE_KEY = '6Ldbq1IUAAAAABhyiq30Ur9ySQgsM_Mnc7rNk3Y7'
+RECAPTCHA_PUBLIC_KEY = '6Ldbq1IUAAAAAGLKryi-oZs8tE1D4DAXQx6hFzAf'
+
+NOCAPTCHA = True
