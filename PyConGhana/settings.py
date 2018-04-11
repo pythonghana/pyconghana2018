@@ -43,11 +43,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
 # Third party apps
     'captcha',
     'crispy_forms',
     'rest_framework',
+     'tinymce',
+    'sorl.thumbnail',
+    'newsletter',
     # 'markitup',
 
 
@@ -201,5 +205,19 @@ JET_THEMES = [
     }
 ]
 
+# Add the keys Google reCAPTCHA have given you
+RECAPTCHA_PRIVATE_KEY = ''
+RECAPTCHA_PUBLIC_KEY = ''
 
+# Using the new No Captcha reCaptcha
 NOCAPTCHA = True
+
+
+# All requested actions will be performed without email confirmation.
+NEWSLETTER_CONFIRM_EMAIL = False
+
+# Using django-tinymce
+NEWSLETTER_RICHTEXT_WIDGET = "tinymce.widgets.TinyMCE"
+
+# Sets the default site
+SITE_ID = 1

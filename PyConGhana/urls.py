@@ -33,6 +33,8 @@ urlpatterns = [
     path('prospectus/', include('sponsors.urls', namespace='Prospectus')),
     path('talks/', include('talks.urls', namespace='talks')),
     path('privacypolicy/', include('privacypolicy.urls', namespace='privacypolicy')),
+    path('newsletter/', include('newsletter.urls')),
+    path('tinymce/', include('tinymce.urls')),
     path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
     path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
     path('faq/', include('faq.urls', namespace='faqs')),
