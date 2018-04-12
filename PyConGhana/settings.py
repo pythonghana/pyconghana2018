@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'captcha',
     'crispy_forms',
     'rest_framework',
-     'tinymce',
+    'tinymce',
     'sorl.thumbnail',
     'newsletter',
     # 'markitup',
@@ -204,6 +204,10 @@ JET_THEMES = [
         'title': 'Light Gray'
     }
 ]
+
+# Path to Google Analytics client_secrets.json
+JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(BASE_DIR, 'client_secrets.json')
+
 
 # Add the keys Google reCAPTCHA have given you
 RECAPTCHA_PRIVATE_KEY = ''
