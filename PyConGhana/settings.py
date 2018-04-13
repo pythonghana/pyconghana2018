@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from .secrets import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,6 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEBUG = True
 
 LOGIN_REDIRECT_URL = '/profile'
+SIGNUP_REDIRECT_URL = '/profile'
 LOGOUT_REDIRECT_URL = '/'
 
 ALLOWED_HOSTS = []
