@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-from .secrets import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,12 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-
+SECRET_KEY = '0hl14(&0l)7=rcft0!!op7+7^1((d!^j$lnu6b9cyh30_$l71g'
 
 DEBUG = True
 
 LOGIN_REDIRECT_URL = '/profile'
-SIGNUP_REDIRECT_URL = '/profile'
 LOGOUT_REDIRECT_URL = '/'
 
 ALLOWED_HOSTS = []
@@ -212,8 +210,8 @@ JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(BASE_DIR, 'client
 
 
 # Add the keys Google reCAPTCHA have given you
-RECAPTCHA_PRIVATE_KEY = ''
-RECAPTCHA_PUBLIC_KEY = ''
+RECAPTCHA_PRIVATE_KEY = '6Ldbq1IUAAAAABhyiq30Ur9ySQgsM_Mnc7rNk3Y7'
+RECAPTCHA_PUBLIC_KEY = '6Ldbq1IUAAAAAGLKryi-oZs8tE1D4DAXQx6hFzAf'
 
 # Using the new No Captcha reCaptcha
 NOCAPTCHA = True

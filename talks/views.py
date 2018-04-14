@@ -35,10 +35,7 @@ def submit_talk(request):
             obj = Proposal()  # gets new object
             obj.user_id = request.user.pk
             obj.title = form.cleaned_data['title']
-<<<<<<< HEAD
-=======
             obj.Tell_the_audience_about_your_talk = form.cleaned_data['Tell_the_audience_about_your_talk']
->>>>>>> d7a155eca8adb5668db80fa39e79e86609e39de0
             obj.talk_type = form.cleaned_data['talk_type']
             obj.programming_experience = form.cleaned_data['programming_experience']
             obj.notes = form.cleaned_data['notes']
@@ -59,6 +56,7 @@ def submit_talk(request):
                 'form': form,
             }
         )
+
 
 def model_form_upload(request):
     if request.method == 'POST':

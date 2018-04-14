@@ -18,7 +18,6 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 from jet.dashboard.dashboard_modules import google_analytics_views
-from jet.dashboard.dashboard_modules import yandex_metrika_views
 
 urlpatterns = [
     path('', include('home.urls', namespace='home')),

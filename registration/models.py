@@ -711,10 +711,5 @@ class Profile(models.Model):
     twitter_handle = models.CharField(max_length=15, blank=True, null=True) #made this optional
     github_username = models.CharField(max_length=32, blank=True, null=True) #made this optional
 
-@property
-def image_url(self):
-    if self.image and hasattr(self.image, 'url'):
-        return self.image.url
-
     def __str__(self):
         return u'%s' % self.user
