@@ -24,7 +24,7 @@ urlpatterns = [
     path('about/', include('about.urls', namespace='about')),
     #path('accounts/', include('registration.backends.default.urls')),
     path('accounts/', include('registration.backends.simple.urls')),
-    path('profile/', include('registration.urls', namespace='profiles')),
+    path('profile/', include('registration.urls')),
     # path('accounts/', include('accounts.urls', namespace='accounts')),
     path('coc/', include('coc.urls', namespace='coc')),
     # path('contact/', include('contact.urls', namespace='contact')),
@@ -39,6 +39,7 @@ urlpatterns = [
     path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
     path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
     path('faq/', include('faq.urls', namespace='faqs')),
+    path('', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
 ]
 

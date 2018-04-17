@@ -9,34 +9,56 @@
             <h3 class="page-title wow fadeInDown">{% firstof user.get_short_name user.get_username %}'s Profile<br><small>You are Welcome</small></h3>
         </div>
         <!-- end .container -->
-    </header><br><br>
+    </header>
 
-<section>
-        <div class="container"> 
-               {% if user_profile %}
+<section class="speakers" id="speakers">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                    <div class="section-title wow fadeInUp">
+                        <h4>   </h4>
+                    </div>
+                    <div class="panel panel-warning wow fadeInRight">   
+                            <div class="panel-body">
+                               <div class="row">
+                                        <div class="col-md-10">
+                                            <ul>
+                                                <p><a href="/talks/talk_list"class="btn warn">My Submitted Talks</a></p>
+                                                <p><a href="{% url 'profiles:update' pk=user.id %}"class="btn warn">Update my Profile</a></p>
+                                                <p><a href="{% url 'talks:submit_talk' %}"class="btn warn">Submit a Talk</a></p>
+                                            </ul>
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                 <div class="section-title wow fadeInUp">
+                    <h4>  </h4>
+                 </div>
+                <div class="panel panel-danger wow fadeInLeft">      
+                        <div class="panel-body">
+                            {% if user_profile %}
 
                         <div class="row">
-
+                            
+                            {% for user_p in user_profile %}
                                 {% for detail in details %}
                                 <div class="speaker-info wow fadeIn" data-wow-delay="0.1s">
                                     
                                     <img src="{{ user.profile.image.url }}" alt="avatar" style="width:140px;height:140px;" class="img-responsive center-block">
                                     
                                 </div>
+
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <div class="form-group">
-                                    <label>First Name</label>
-                                    <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="first_name" placeholder="{{ user_p.name }}" readonly></strong></h5>
+                                    <label>Full Name</label>
+                                    <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="first_name" placeholder=" {{ user_p.surname }}  {{ user_p.name }}" readonly></strong></h5>
 
                                 </div>
 
                             </div>
-                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                                <div class="form-group">
-                                    <label>Last Name</label>
-                                    <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="Last Name" placeholder="{{ user_p.surname }}" readonly></strong></h5>
-                                </div>
-                            </div>
+                            
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <div class="form-group">
                                     <label>Email Address</label>
@@ -44,20 +66,14 @@
                                 </div>
                             </div>
                              {% endfor %}
-
-                            {% for user_p in user_profile %}
+                            
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <div class="form-group">
                                         <label>Contact Number</label>
                                         <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="Nos" placeholder="{{ user_p.contact_number }}" readonly></strong></h5>
                                     </div>
                             </div>
-                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                                <div class="form-group">
-                                        <label>Date of Birth</label>
-                                        <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="DOB" placeholder="{{ user_p.birth_date }}" readonly></strong></h5>
-                                    </div>
-                            </div>
+                            
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <div class="form-group">
                                         <label>Location</label>
@@ -75,7 +91,7 @@
                                         <label>GitHub</label>
                                         <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="DOB" placeholder="{{ user_p.github_username }}" readonly></strong></h5>
                                     </div>
-                            </div>
+                            </div><br>
                              <div class=" form-group">
                                     <div class="thumbnail wow fadeInUp">
                                         <div class="caption">
@@ -84,13 +100,6 @@
                                         </div>
                                     </div>
                             </div>
-                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                                <a href="{% url 'talks:submit_talk' %}" class="btn btn-success">Submit a Talk</a>
-                            </div>  
-                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                                <a href="{% url 'profiles:update' pk=user.id %}" class="btn btn-success">Update your Profile</a>
-                            </div>               
-
                         </div>
 
                         {% endfor %}
@@ -101,9 +110,15 @@
                                 <p><a class="btn btn-success" href="{% url 'profiles:create_profile' %}">Create Your Profile Now &raquo;</a></p>
                     </div>
                      {% endif %}
-            
+                        </div>
+
+                </div>
+            </div>
+
         </div>
-</section>
+        <!-- end .container -->
+    </section>
+    <!-- end section.speakers -->
 
 
                          
