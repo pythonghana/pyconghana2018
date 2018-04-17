@@ -28,8 +28,8 @@
                     </div>
 
                     <div class="header_bottom-bg">
-                <a class="btn btn-default btn-xl wow zoomIn" data-wow-delay="0.3s" href="#" data-toggle="modal" data-target="#eventbrite-register">RESERVE MY SEAT</a>
-                 <!-- <p class="cta_urgency wow fadeIn" data-wow-delay="0.5s"><small>Hurry up, Only few seats are available</small></p>  -->
+                <!-- <a class="btn btn-default btn-xl wow zoomIn" data-wow-delay="0.3s" href="#" data-toggle="modal" data-target="#eventbrite-register">RESERVE MY SEAT</a>  -->
+                 <b><p class="cta_urgency wow fadeIn" data-wow-delay="0.5s"><small>A place where Pythonista's meet!</small></p></b>
             </div>
 
                 </div>
@@ -40,6 +40,7 @@
             <video autoplay loop class="fillWidth video-header">
                 <source src="{% static 'video/background.mp4' %}" type="video/mp4" />
                 <source src="{% static 'video/background.webm' %}" type="video/webm" />
+                <source src="video/background.ogg" type="video/ogg" />
             </video>
             <div class="poster hidden">
                 <img src="{% static 'video/background.jpg' %}" alt="event video poster">
@@ -95,7 +96,7 @@
                         <span class="end">08/11/2018 06:00 PM</span>
                         <span class="timezone">Africa/Accra</span>
                         <span class="title">PyCon Ghana 2018</span>
-                        <span class="description">The Conference for the Python programming community in Ghana is organized by Volunteers and Python enthusiasts from the python programming community in Ghana.</span>
+                        <span class="description">The Conference for the Python Programming Community in Ghana is organized by Volunteers and Python enthusiasts from the python programming community in Ghana.</span>
                         <span class="location">Accra, Ghana</span>  
                         <span class="organizer">Python Software Community Ghana</span>
                         <span class="organizer_email">hello@pyconghana.org</span>
@@ -119,7 +120,7 @@
                         <div><br>
                             <img src="{% static 'images/register_icon.png' %}">
                             <h5>Conference Registration</h5>
-                            <p><a href="/2018/registration/" class="btn warn">Register for PyCon</a></p>
+                            <p><a href="#" data-toggle="modal" data-target="#eventbrite-register" class="btn warn">Register for PyCon</a></p>
                             <p>Registration would be opened soon!</p>
                         </div>
                     </div>
@@ -168,16 +169,18 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="benefit-item wow fadeInLeft">
-                                <div class="benefit-icon"><i class="icon icon-bubble-love-streamline-talk"> </i></div>
                                 <h6 class="benefit-title">Great Talks</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                <p>We would be expecting speakers from all over to share their experiences, ideas and much more.</p>
+                            </div><br>
+                            <div class="benefit-item wow fadeInLeft">
+                                <h6 class="benefit-title">Open Space Conference</h6>
+                                <p>Pycon Ghana would bring Pythonistas together for an informal networking forum where attendees share ideas, discuss interests, network and learn from each other.</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="benefit-item wow fadeInRight">
-                                <div class="benefit-icon"><i class="icon icon-map-pin-streamline"> </i></div>
-                                <h6 class="benefit-title">Network</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                <h6 class="benefit-title">Workshop</h6>
+                                <p>Pycon Ghana would be held alongside Django Girls Accra! Are a lady and would love to part of the Python train? <br><a href="" data-toggle="modal" data-target="#djangogirls-register" class="btn warn">Register for Django Girls Accra here</p>
                             </div>
                         </div>
                     </div>
@@ -189,44 +192,6 @@
         <!-- end .container -->
     </section>
     <!-- end section.benefits -->
-<hr>
-<!-- 
-     Our Speakers
-     ====================================== -->
-
-    <section class="speakers" id="speakers">
-        <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-6">
-                 <div class="section-title wow fadeInUp">
-                    <h4>  </h4>
-                 </div>
-                <div class="panel panel-danger wow fadeInLeft">      
-                        <div class="panel-body">
-                            <p>The Python community in Ghana is a relatively new community with an audience of diverse Python experience; from beginners to expert developers. We are therefore looking for talks that will benefit our diverse audience. This means we welcome proposals suitable for beginners, people with somewhat knowledge of Python, very good programmers and expert programmers.</p> 
-                            <p>We are looking for talks and workshops which address the following domains:Django Web Framework,Python in Data Science,Python Community,Python in Education and Python Application in various industries.</p>
-                           <!-- <button type="submit" class="btn btn-success btn-lg" value="{% trans 'Log in' %}">Submit a Proposal</button> -->
-                        </div>
-
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6">
-                    <div class="section-title wow fadeInUp">
-                        <h4>   </h4>
-                    </div>
-                    <div class="panel panel-warning wow fadeInRight">   
-                            <div class="panel-body">
-                                <p>The conference has raised Namibia's profile internationally. PyCon Namibia inspired the creation Python programming conferences in Zimbabwe and Nigeria, and travellers from other African nations to learn how the PyCon model can benefit their own programmers and software industries.</p>
-                                <p>PyCon NA brings programmers and software experts from all over the world to Namibia. Attendees come from Brazil, Britain, Canada, Germany, Ghana, Greece, Italy, Mozambique, the Netherlands, Nigeria, South Africa, the USA, Zambia, Zimbabwe.</p>
-                            </div>
-                    </div>
-            </div>
-        </div>
-        </div>
-        <!-- end .container -->
-    </section>
-    <!-- end section.speakers -->
   <hr>
 <!-- 
      Mailchimp Subscribe

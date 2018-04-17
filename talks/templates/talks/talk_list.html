@@ -1,35 +1,83 @@
 {% extends "base2.html" %}
+{% load i18n static %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Submitted Talks  | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+
 
 {% block content %}
 
-<div class="row">
-    <div class="col-md-1">
+<header id="top" class="sub-header">
+        <div class="container">
+            <h3 class="page-title wow fadeInDown">   </h3>
+        </div>
+        <!-- end .container -->
+</header>
+<section class="speakers" id="speakers">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                    <div class="section-title wow fadeInUp">
+                        <h4>   </h4>
+                    </div>
+                    <div class="panel panel-warning wow fadeInRight">   
+                            <div class="panel-body">
+                               <div class="row">
+                                        <div class="col-md-10">
+                                            <ul>
+                                                <p><a href="/profile" class="btn warn">Back to My Profile</a></p>
+                                                <p><a href="{% url 'profiles:update' pk=user.id %}" class="btn warn">Update my Profile</a></p>
+                                                <p><a href="{% url 'talks:submit_talk' %}" class="btn warn">Submit a Talk</a></p>
+                                            </ul>
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                 <div class="section-title wow fadeInUp">
+                    <h4>  </h4>
+                 </div>
+                <div class="panel panel-danger wow fadeInLeft">      
+                      <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-10">
+                                                <h5> Your submitted talks</h5>
+                                                <br>
+                                                <table class="table">
+                                                    <tr>
+                                                        <th>Title</th>
+                                                        <th>Session type</th>
+                                                        <th>Intended Audience</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                        {% if submitted_talks %}
+                                                            {% for talk in submitted_talks %}
+                                                        <tr>
+                                                            <td>
+                                                            <p>{{ talk.title }}</p>
+                                                            </td>
+                                                            <td>
+                                                                {{ talk.talk_type }}
+                                                            </td>
+                                                            <td>
+                                                                {{ talk.programming_experience }}
+                                                            </td>
+                                                            <td>
+                                                                <a href="{% url 'talks:edit_talk' pk=talk.pk %}"><i class="fa fa-edit"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                            {% endfor %}
+                                                       
+                                                        {% else %}
+                                                            <p> You have not submitted any talks yet.</p>
+                                                        {% endif %}
+                                                </table>
+                                            </div>
+                                    </div>
+                                </div> 
+                </div>
+            </div>
 
-    </div>
-    <div class="col-md-10">
-        <h2>List of your submitted talks</h2>
-        <br>
-        {% if submitted_talks %}
-
-            {% for talk in submitted_talks %}
-
-            <p><a href="{% url 'talks:edit_talk' pk=talk.pk %}">{{ talk.title }}</a></p>
-
-            {% endfor %}
-
-        {% else %}
-
-            <p>You have not submitted any talks yet.</p>
-
-        {% endif %}
-
-        <p><a class="btn btn-success btn-lg"" href="{% url 'talks:submit_talk' %}">Submit Talk! &raquo;</a></p>
-        <br />
-
-</div>
-    <div class="col-md-1">
-
-    </div>
-</div>
-
+        </div>
+        <!-- end .container -->
+    </section>
 {% endblock %}
