@@ -24,7 +24,7 @@ urlpatterns = [
     path('about/', include('about.urls', namespace='about')),
     #path('accounts/', include('registration.backends.default.urls')),
     path('accounts/', include('registration.backends.simple.urls')),
-    path('profile/', include('registration.urls')),
+    path('profile/', include('registration.urls', namespace='profiles')),
     # path('accounts/', include('accounts.urls', namespace='accounts')),
     path('coc/', include('coc.urls', namespace='coc')),
     # path('contact/', include('contact.urls', namespace='contact')),
