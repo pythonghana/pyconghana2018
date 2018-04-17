@@ -225,7 +225,6 @@ class CreateProfileView(TemplateView):
             obj.bio = profile_form.cleaned_data['bio']
             obj.city = profile_form.cleaned_data['city']
             obj.country = profile_form.cleaned_data['country']
-            obj.birth_date = profile_form.cleaned_data['birth_date']
             obj.contact_number = profile_form.cleaned_data['contact_number']
             obj.website = profile_form.cleaned_data['website']
             obj.twitter_handle = profile_form.cleaned_data['twitter_handle']

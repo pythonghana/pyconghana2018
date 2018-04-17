@@ -24,7 +24,6 @@
                                         <div class="col-md-10">
                                             <ul>
                                                 <p><a href="/profile" class="btn warn">Back to My Profile</a></p>
-                                                <p><a href="{% url 'profiles:update' pk=user.id %}" class="btn warn">Update my Profile</a></p>
                                                 <p><a href="{% url 'talks:submit_talk' %}" class="btn warn">Submit a Talk</a></p>
                                             </ul>
                                         </div>
@@ -40,6 +39,9 @@
                       <div class="row">
                                         <div class="col-md-12">
                                             <div class="col-md-10">
+
+                                            {% if submitted_talks %}
+                                                {% for talk in submitted_talks %}
                                                 <h5> Your submitted talks</h5>
                                                 <br>
                                                 <table class="table">
@@ -49,8 +51,6 @@
                                                         <th>Intended Audience</th>
                                                         <th>Actions</th>
                                                     </tr>
-                                                        {% if submitted_talks %}
-                                                            {% for talk in submitted_talks %}
                                                         <tr>
                                                             <td>
                                                             <p>{{ talk.title }}</p>
@@ -62,13 +62,16 @@
                                                                 {{ talk.programming_experience }}
                                                             </td>
                                                             <td>
-                                                                <a href="{% url 'talks:edit_talk' pk=talk.pk %}"><i class="fa fa-edit"></i></a>
+                                                                <a href="{% url 'talks:edit_talk' pk=talk.pk %}"><button style="font-size:12px">Edit <i class="fa fa-edit"></i></button></a>
                                                             </td>
                                                         </tr>
                                                             {% endfor %}
                                                        
                                                         {% else %}
-                                                            <p> You have not submitted any talks yet.</p>
+                                                            <br> 
+                                                            <p> You have not submitted any talks yet, Please click the button below to create your First Proposal.</p>
+                                                            <br>
+                                                            <p><a class="btn btn-success" href="{% url 'talks:submit_talk' %}">Submit your Talk &raquo;</a></p>
                                                         {% endif %}
                                                 </table>
                                             </div>

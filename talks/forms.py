@@ -14,7 +14,7 @@ class ProposalForm(forms.ModelForm):
 
     class Meta:
         model = Proposal
-        fields = ('email', 'title', 'Tell_the_audience_about_your_talk', 'programming_experience', 'notes', 'talk_type', 'Anything_else_you_want_to_tell_us',)
+        fields = ('title', 'Tell_the_audience_about_your_talk', 'programming_experience', 'notes', 'talk_type', 'Anything_else_you_want_to_tell_us',)
 
     def __init__(self, *args, **kwargs):
         super(ProposalForm, self).__init__(*args, **kwargs)
