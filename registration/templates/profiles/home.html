@@ -1,12 +1,12 @@
 {% extends "base2.html" %}
-{% load i18n static %}
+{% load i18n avatar_tags static %}
 {% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans " Profile | Pycon Ghana 2018" %}{% endif %}{% endblock %}
 
 {% block content %}
 
 <header id="top" class="sub-header">
         <div class="container">
-            <h3 class="page-title wow fadeInDown">{% firstof user.get_short_name user.get_username %}'s Profile<br><small>You are Welcome</small></h3>
+            <h3 class="page-title wow fadeInDown">{% firstof user.get_short_name user.get_username %}'s Profile</h3>
         </div>
         <!-- end .container -->
     </header>
@@ -25,6 +25,8 @@
                                             <ul>
                                                 <p><a href="/talks/talk_list"class="btn warn">My Submitted Talks</a></p>
                                                 <p><a href="{% url 'profiles:update' pk=user.id %}"class="btn warn">Update my Profile</a></p>
+                                                <p><a href="/password_change"class="btn warn">Change Password</a></p>
+                                                
                                                 <p><a href="{% url 'talks:submit_talk' %}"class="btn warn">Submit a Talk</a></p>
                                             </ul>
                                         </div>
@@ -45,9 +47,7 @@
                             {% for user_p in user_profile %}
                                 {% for detail in details %}
                                 <div class="speaker-info wow fadeIn" data-wow-delay="0.1s">
-                                    
-                                    <img src="{{ user.profile.image.url }}" alt="avatar" style="width:140px;height:140px;" class="img-responsive center-block">
-                                    
+                                    {% avatar user 160 class="img-responsive center-block" id="user_avatar" %}
                                 </div>
 
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">

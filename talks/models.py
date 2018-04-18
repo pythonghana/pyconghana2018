@@ -18,7 +18,6 @@ class Proposal(models.Model):
 
     PROGRAMMING_EXPERIENCE = (('BP','Beginners'),
                         ('IP', 'Intermediate Programmers'),
-                        ('SP', 'Senior Programmers'),
                         ('EP', 'Expert Programmers'))
 
     
