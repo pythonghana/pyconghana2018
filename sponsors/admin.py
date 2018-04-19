@@ -6,4 +6,5 @@ class SponsorAdmin(admin.ModelAdmin):
     list_display = ("name", "category", "type")
     list_filter = ["category", "type"]
 
+
 admin.site.register(Sponsor, SponsorAdmin)
