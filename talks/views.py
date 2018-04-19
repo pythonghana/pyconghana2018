@@ -37,8 +37,8 @@ def submit_talk(request):
             obj.title = form.cleaned_data['title']
             obj.Tell_the_audience_about_your_talk = form.cleaned_data['Tell_the_audience_about_your_talk']
             obj.talk_type = form.cleaned_data['talk_type']
-            obj.programming_experience = form.cleaned_data['programming_experience']
-            obj.notes = form.cleaned_data['notes']
+            obj.intended_audience = form.cleaned_data['intended_audience']
+            obj.abstract = form.cleaned_data['abstract']
             # finally save the object in db
             obj.save()
 
@@ -149,6 +149,20 @@ def home(request):
     documents = Document.objects.all()
     return render(request, 'upload/home.html', { 'documents': documents })
 
+def submit(request):
+    context = {}
+    template = 'talks/talks.html'
+    return render(request, template, context)
+
+def recording(request):
+    context = {}
+    template = 'talks/recordings.html'
+    return render(request, template, context)
+
+def proposing(request):
+    context = {}
+    template = 'talks/proposing_a_talk.html'
+    return render(request, template, context)
 
 def simple_upload(request):
     if request.method == 'POST' and request.FILES['myfile']:

@@ -2,45 +2,63 @@
 
 {% block content %}
 
-<div class="row">
-    <div class="col-md-1">
-
-    </div>
-    <div class="col-md-10">
-
-        <h2>{{ talk.title }} by {{ talk.user.first_name }} {{ talk.user.last_name }}</h2>
-        <br />
-        <p><strong>Talk Type:</strong> {{ talk.talk_type }}</p>
-        <p><strong>Intended Audience</strong>: {{ talk.programming_experience }}</p>
-        <br />
-        <h3>Abstract</h3>
-        <p>{{ talk.abstract }}</p>
-        <br />
-        <hr>
-        <div>
-            <h3>Key</h3>
-            <div class="col-md-5">
-                <h4>Talk Type</h4>
-                <p><strong>Keynote</strong> - Keynote Talk - 45 mins</p>
-                <p><strong>Short Talk</strong> - Short Talk - 30 mins
-                <p><strong>Long Talk</strong> - Long Talk - 1 hour
-                <p><strong>Tutorial</strong> - Tutorial - 2 hours or more
-
-            </div>
-            <div class="col-md-5">
-                <h4>Intended Audience</h4>
-                <p><strong>Beginners</strong> - Beginners, no prior knowledge of Python required.</p>
-                <p><strong>Mid-level Programmers</strong> - Average, some prior knowledge of Python required.</p>
-                <p><strong>Senior Programmers</strong> - Sound Python knowledge required.</p>
-                <p><strong>Expert Programmers</strong> - Experienced Python programmers level.</p>
-            </div>
+<header id="top" class="sub-header">
+        <div class="container">
         </div>
+        <!-- end .container -->
+</header>
 
 
-    </div>
-    <div class="col-md-1">
 
-    </div>
-</div>
+<section class="speakers" id="speakers">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                    <div class="section-title wow fadeInUp">
+                        <h4>   </h4>
+                    </div>
+                    <div class="panel panel-warning wow fadeInRight">   
+                            <div class="panel-body">
+                               <div class="row">
+                                        <div class="col-md-10">
+                                            <ul>
+                                                <p><a href="/talks/talk_list" class="btn warn">Back to Submitted Talks</a></p>
+                                            </ul>
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                 <div class="section-title wow fadeInUp">
+                    <h4>  </h4>
+                 </div>
+                <div class="panel panel-danger wow fadeInLeft">      
+                      <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-10">
+                                                <h6 class="page-title wow fadeInDown">{{ talk.title }} by {{ talk.user.first_name }} {{ talk.user.last_name }}<br></h6>
+                                                 <div class="col-md-10">
+                                                    <br />
+                                                    <p><strong>Talk Type:</strong> {{ talk.talk_type }}</p>
+                                                    <p><strong>Intended Audience</strong>: {{ talk.programming_experience }}</p>
+                                                    <br />
+                                                    <h5>Abstract</h5>
+                                                    <p>{{ talk.notes }}</p>
+                                                    <br />
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div> 
+                </div>
+            </div>
+
+        </div>
+        <!-- end .container -->
+    </section>
+
+
+    
 
 {% endblock %}

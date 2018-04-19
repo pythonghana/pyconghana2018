@@ -7,7 +7,6 @@
 
 <header id="top" class="sub-header">
         <div class="container">
-            <h3 class="page-title wow fadeInDown">   </h3>
         </div>
         <!-- end .container -->
 </header>
@@ -41,7 +40,6 @@
                                             <div class="col-md-10">
 
                                             {% if submitted_talks %}
-                                                {% for talk in submitted_talks %}
                                                 <h5> Your submitted talks</h5>
                                                 <br>
                                                 <table class="table">
@@ -51,9 +49,10 @@
                                                         <th>Intended Audience</th>
                                                         <th>Actions</th>
                                                     </tr>
+                                                {% for talk in submitted_talks %}
                                                         <tr>
-                                                            <td>
-                                                            <p>{{ talk.title }}</p>
+                                                            <td><a href="{% url 'talks:talk_details' pk=talk.pk %}">
+                                                            <p>{{ talk.title }}</p></a>
                                                             </td>
                                                             <td>
                                                                 {{ talk.talk_type }}

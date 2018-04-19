@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'tinymce',
     'sorl.thumbnail',
     'newsletter',
-    #'avatar',
+    'avatar',
     # 'markitup',
 
 
@@ -218,6 +218,7 @@ RECAPTCHA_PUBLIC_KEY = ''
 NOCAPTCHA = True
 
 
+
 # All requested actions will be performed without email confirmation.
 NEWSLETTER_CONFIRM_EMAIL = False
 
@@ -226,3 +227,6 @@ NEWSLETTER_RICHTEXT_WIDGET = "tinymce.widgets.TinyMCE"
 
 # Sets the default site
 SITE_ID = 1
+
+AVATAR_MAX_AVATARS_PER_USER = 2
+

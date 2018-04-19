@@ -1,0 +1,75 @@
+{% extends "base2.html" %}
+{% load i18n %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Recording Release | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+
+{% block content %}
+ <header id="top" class="sub-header">
+        <div class="container">
+           
+        </div>
+        <!-- end .container -->
+    </header><br><br>
+    <!-- end .sub-header -->
+<section>
+	<div class="col-md-12">
+        <div class="panel panel-danger wow fadeInLeft">
+        <div class="container">
+			<div class="row ">
+				 <h5 class="page-title wow fadeInDown">PyCon Ghana Recording Release</h5><br>
+                <div class="col-xs-12">
+                    <p>Part of the motivation for PyCon Ghana is to help with Python education and advocacy in Ghana, and the world at large. Accordingly, we intend to record all PyCon presentations and release the recordings on the web</p>
+					<p>By submitting your talk, you agree to give permission to the Python
+							Software Community Ghana (&quot;Python Ghana&quot;) to record, edit, and release audio and/or video of your presentation.  We also perform interviews with poster presenters and require recording releases to publish them.</p>
+					<p>By default, the recording release checkbox is checked when submitting a proposal. If you wish to opt-out, uncheck the release checkbox, note that no recordings of your talk will be made. You cannot opt out of recording for lightning talks.</p>
+					<p>You agree to the following legalese, which certifies that you are the author of your presentation (or otherwise allowed to present it at PyCon Ghana), and which allows the Python
+							Software Community Ghana (&quot;Python Ghana&quot;)<br> 1) to perform the necessary audio and video editing needed to prepare your presentation, and <br>2) to distribute the recordings to other people, including on YouTube, or video sites. It also allows other people to watch the recordings.</p>
+					<br>
+					<div class="panel panel-danger col-xs-12">
+						<h6>Legalese:</h6>
+							<p>I certify that I,{% if user.is_authenticated %} {% firstof user.get_short_name user.get_username %} {% else %} {% endif %} the Submitter, am authorized to license this proposal
+							and its associated presentation (the &quot;User Submission&quot;) to the Python
+							Software Community Ghana (&quot;Python Ghana&quot;) for use in association with PyCon Ghana 2018.<br> Specifically,</p>
+							<p>
+							- I,{% if user.is_authenticated %} {% firstof user.get_short_name user.get_username %} {% else %} {% endif %} the Submitter, certify that I am either the copyright owner of the
+							User Submission or an authorized licensee of the copyright owner. If I
+							am an authorized licensee of the copyright owner, I certify that I have
+							sublicensable distribution rights.</p>
+							
+							<p>- I,{% if user.is_authenticated %} {% firstof user.get_short_name user.get_username %} {% else %} {% endif %} the Submitter, hereby grant the Python Software Community Ghana (&quot;Python Ghana&quot;) a worldwide, royalty-free, fully
+							paid-up, non-exclusive, perpetual (for the duration of the applicable
+							copyright), sublicensable and transferable license to exercise the rights
+							in the User Submission as follows:</p>
+							<ul>
+							<li> The Python Software Community Ghana (&quot;Python Ghana&quot;) is granted a license to reproduce the User Submission,
+							to incorporate the User Submission into one or more Collective
+						        Works, and to reproduce the User Submission as incorporated in
+						        the Collective Works;</li>
+							
+							<li> The Python Software Community Ghana (&quot;Python Ghana&quot;) is granted a license to create and reproduce Derivative
+						        Works;</li>
+
+							<li> The Python Software Community Ghana (&quot;Python Ghana&quot;) is granted a license to distribute copies or
+						        phonorecords of, display publicly, perform publicly, and
+						        perform publicly by means of a digital audio transmission the
+						        User Submission including as incorporated in Collective Works;
+						        and</li>
+							<li> The Python Software Community Ghana (&quot;Python Ghana&quot;) is granted a license to distribute copies or phonorecords of, display publicly, perform publicly, and
+						        perform publicly by means of a digital audio transmission
+						        Derivative Works.</li>
+						    </ul>
+							<p>- I,{% if user.is_authenticated %} {% firstof user.get_short_name user.get_username %} {% else %} {% endif %} the Submitter, also hereby grant each person receiving the User
+							Submission distributed by the Python Software Community Ghana (&quot;Python Ghana&quot;) a non-exclusive license to
+						 	access, use, display, and perform the User Submission in a
+							non-commercial, private context.</p>
+					</div>
+        			</div>
+            	</div>
+	        </div>
+	    </div>
+	</div>
+</section>
+
+{% endblock %}
+    
+                  
+                    
