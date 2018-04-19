@@ -29,7 +29,7 @@ class Proposal(models.Model):
     abstract = models.TextField(default='', help_text = "Your Abstract.", blank=True, null=True
                              )
     user = models.ForeignKey(User, related_name="proposals", default='', on_delete=models.CASCADE)
-    status = models.CharField(choices=STATUS, max_length=1, default='')
+    status = models.CharField(choices=STATUS, max_length=1, default='S')
     intended_audience = models.CharField(choices=PROGRAMMING_EXPERIENCE, help_text = "Your targeted audience.", max_length=30, default='')
     Anything_else_you_want_to_tell_us = models.TextField(default='', help_text = "Kindly add anything else you want to tell us?.", blank=True, null=True)
     recording_release = models.BooleanField(default=True)
