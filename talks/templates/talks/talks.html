@@ -1,0 +1,107 @@
+{% extends "base2.html" %}
+{% load i18n crispy_forms_tags %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Speak at Pycon Ghana | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+
+{% block content %}
+<header id="top" class="sub-header">
+        <div class="container">
+        </div>
+        <!-- end .container -->
+</header>
+
+<section class="speakers" id="speakers">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                    <div class="section-title wow fadeInUp">
+                        <h4>   </h4>
+                    </div>
+                    <div class="panel panel-warning wow fadeInRight">   
+                            <div class="panel-body">
+                               <div class="row">
+                                        <div class="col-md-10">
+                                            <ul>
+                                                {% if user.is_authenticated %}
+                                                 <p><a href="/profile" >Back to My Profile</a></p>
+                                                 <p><a href="{% url 'talks:submit_talk' %}" >Submit a Talk</a></p>
+                                                {% else %}
+                                                 <p><a href="{% url 'talks:submit_talk' %}" >Submit a Talk</a></p>
+                                                {% endif %}
+                                                
+                                               
+                                            </ul>
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                 <div class="section-title wow fadeInUp">
+                    <h4>  </h4>
+                 </div>
+                <div class="panel panel-danger wow fadeInLeft">      
+                      <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-12">
+                                                <h6 class="page-title wow fadeInDown">Thank you{% if user.is_authenticated %} {% firstof user.get_short_name user.get_username %} {% else %} {% endif %} for wanting to Speak at Pycon Ghana!<br><br></h6>
+                                                <p>We are seeking speakers of all experience levels and backgrounds to contribute to our conference program! If you use Python professionally, as a hobbyist, or are just excited about Python or programming and open source communities, we'd love to hear from you. We want you and your ideas at PyCon Ghana 2018!</p>
+                                                 <p>Part of our purpose is to generate materials to help with Python education and advocacy in Ghana and all over the world, so we intend to record all PyCon Ghana's presentations and release the recordings on the web/Youtube Channel. <br>For the details, see our <a href="/talks/recording" target="/" ><b>PyCon Ghana Recording Release.</b></a></p>
+
+                                                 <h6 class="page-title wow fadeInDown"><b>Where to submit your proposal</b><br></h6>
+                                                 <ul>
+                                                    <li>Sign up for a new gh.pycon.org account by <a href="{% url 'auth_login' %}" target="/" ><b>clicking here.</b></a></li>
+
+                                                    <li>Head over to your Profile available <a href="/profile" target="/" ><b>here</b></a> and create your profile if not yet created.</li>
+
+                                                    <li>Finally, return to your Profile and you should see our “Submit a new Talk” button!</li>
+                                                </ul>
+                                                <p> Due to the competitive selection process, we encourage prospective speakers to submit their proposals as early as possible as it allows for feedback prior to the CFP deadline.</p>
+
+                                                <h6 class="page-title wow fadeInDown"><b>Guidelines for Proposal Submission</b><br></h6>
+                                                 <p>The Python Community in Ghana is a relatively new community with an audience of diverse Python experience; from beginners to expert developers. We are therefore looking for talks that will benefit our diverse audience. This means we welcome proposals suitable for beginners, people with somewhat knowledge of Python, very good programmers and expert programmers. <br>
+                                                 Everyone who is interested is encouraged to submit a proposal, regardless of experience level. PyCon Ghana thrives on having talks ranging from introductory to advanced. If you are reading this, and you are interested in speaking at PyCon Ghana 2018, we want you to submit a proposal.<br>
+                                                  We are interested in a range of topics/frameworks including:
+                                                 <ul>
+                                                    <li>Web development,</li>
+                                                    <li>Design,</li>
+                                                    <li>Data Science</li>
+                                                    <li>Networks</li>
+                                                    <li>Python in Education</li>
+                                                    <li>Python Community,</li>
+                                                    <li>Python Application in various industries</li>
+                                                 </ul>  and anything else or Experience related to Python you,{% if user.is_authenticated %} {% firstof user.get_short_name user.get_username %} {% else %} {% endif %} might want to share with us.</p>
+
+                                                 <h6 class="page-title wow fadeInDown"><b>Talks</b><br></h6>
+                                                    <p>
+                                                        These are the traditional talk sessions given during conference.
+                                                    </p>
+                                                    <p>
+                                                        Most talks are 30 minutes long, but we do offer a limited number of 45-minute slots for important topics that promise to benefit from a more extensive treatment.<br>
+
+                                                        There is no official restriction on the topic that you propose for a talk session. Talks about Python or the Python community are most likely to line up with the interests of PyCon Ghana's audience, and a key consideration that the talk selection committee will be thinking about is your talk’s ability to draw an audience. We observe a limit of one talk per presenter. You may propose more than one, but the committee will ask you to choose only one talk if more than one of your proposals is accepted.
+                                                    </p>
+
+
+                                                    <p>
+                                                        PyCon Ghana is dedicated to featuring a diverse and inclusive mix of speakers in the lineup.
+                                                    </p>
+                                                    <p>All speakers are expected to have read and adhere to the conference  <a href="/coc" target="/"><b>Code of Conduct.</b></a> In particular for speakers: slide contents and spoken material should be appropriate for a professional audience including people of many different backgrounds. Sexual language and imagery are not appropriate, and neither are language or imagery that denigrate or demean people based on race, gender, religion, sexual orientation, physical appearance, disability, or body size.</p>
+
+                                                    
+
+                                                    <p>To Speak at PyCon Ghana, read the Proposing a talk page, sign up and create a speaker profile</p>
+
+                                                    <p>
+                                                        Learn more on: <a href="/talks/proposing_a_talk" target="/" class="btn warn">Proposing a Talk</a>
+                                                    </p>
+
+                                            </div>
+                                    </div>
+                                </div> 
+                </div>
+            </div>
+
+        </div>
+        <!-- end .container -->
+    </section>
+{% endblock %}

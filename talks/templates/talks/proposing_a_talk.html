@@ -1,0 +1,155 @@
+{% extends "base2.html" %}
+{% load i18n crispy_forms_tags %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Proposing a Talk | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+
+{% block content %}
+<header id="top" class="sub-header">
+        <div class="container">
+        </div>
+        <!-- end .container -->
+</header>
+
+<section class="speakers" id="speakers">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                    <div class="section-title wow fadeInUp">
+                        <h4>   </h4>
+                    </div>
+                    <div class="panel panel-warning wow fadeInRight">   
+                            <div class="panel-body">
+                               <div class="row">
+                                        <div class="col-md-10">
+                                            <ul>
+                                                {% if user.is_authenticated %}
+                                                 <p><a href="/profile" >Back to My Profile</a></p>
+                                                 <p><a href="{% url 'talks:submit_talk' %}" >Submit a Talk</a></p>
+                                                {% else %}
+                                                 <p><a href="{% url 'talks:submit_talk' %}" >Submit a Talk</a></p>
+                                                {% endif %}
+                                            </ul>
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                 <div class="section-title wow fadeInUp">
+                    <h4>  </h4>
+                 </div>
+                <div class="panel panel-danger wow fadeInLeft">      
+                      <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-12">
+                                                <h6 class="page-title wow fadeInDown"><b>Proposing a talk</b><br><br></h6>
+                                                <p>Talk proposals are due this year on 30th June 2018.<br>
+                                                We are glad you are interested in speaking at PyCon Ghana 2018!<br>
+
+                                                <b>Conference talks will be held August 10-11, 2018 in Accra, Ghana.</b></p>
+                                                <p>
+                                                    This document is a guide to help you submit the best possible proposal and offers tips to make your proposal more likely to be accepted. Please keep in mind that many more proposals are submitted for talks, tutorials, and posters than can be accepted. But following the recommendations provided here can increase your chances of acceptance.
+                                                </p>
+                                                  <h6 class="page-title wow fadeInDown"><b>Important Dates</b><br></h6>
+                                                        <ul>
+                                                            <li>
+                                                                April 23 — Our Call For Proposals opens.
+                                                            </li>
+                                                            <li>
+                                                                June 30 — Our Call For Proposals closes.
+                                                            </li>
+                                                            <li>
+                                                                July — We send acceptance and rejection emails.
+                                                            </li>
+                                                            <li>
+                                                                July — The schedule is posted here on the web site.
+                                                            </li>
+                                                            <li>
+                                                                August 10–11 — The talks are all presented at PyCon Ghana 2018.
+                                                            </li>
+                                                            <li>
+                                                                September — All talks that were recorded should be available online.
+                                                            </li>
+                                                        </ul>
+                                                    <h6 class="page-title wow fadeInDown"><b>Topics and Advice</b><br></h6>
+                                                        <p>
+                                                            What excites you about Python development or the community lately? What do you wish someone had told you when you were starting out? What has been the slowest or most frustrating thing you've had to learn over the past few years, and could you put together a talk that would assist in that process for the next Pythonista who tackles the same problem?<br><br>
+
+                                                            Recent articles, blog posts, tweets, and open source projects from the community can be a good source of talk topics and ideas, as can your own experiences as a developer.
+                                                        </p>
+                                                    <p>
+                                                        There are also International community members who have blogged about the talk proposal process. Here are a few of the most prominent resources, and a Google search will yield you several more:
+                                                        <ul>
+                                                            - <a href="https://hynek.me/articles/speaking/" target="/">[On Conference Speaking] — Hynek Schlawack (2017)</a><br>
+                                                            - <a href="http://www.njl.us/essays/pycon-talks/" target="/">[How to Get Your Talk Into PyCon] — from Ned Jackson Lovely, chair of the talk selection committee for 2016 and 2017!</a><br>
+                                                            - <a href="https://akaptur.com/blog/2014/09/11/rejected-pycon-proposals/" target="/">[Rejected PyCon Proposals] — Allison Kaptur (2014)</a><br>
+                                                            - <a href="https://rhodesmill.org/brandon/2013/example-pycon-proposals/" target="/">[Example PyCon talk proposals] — Brandon Rhodes (2013)</a><br>
+                                                            - <a href="https://www.craigkerstiens.com/2012/06/19/pro-tips-for-conference-talks/" target="/">[Pro Tips for Conference Talks] — Craig Kerstiens (2012)</a><br>
+                                                            - <a href="https://www.doughellmann.com/2011/10/18/how-i-review-a-pycon-talk-proposal.html" target="/">[How I Review a PyCon Talk Proposal] — Doug Hellmann (2011)</a><br>
+                                                        </ul>
+                                                        Another list of resources and links is maintained at the PyLadies blog:
+                                                        <ul>
+                                                            <a href="https://www.pyladies.com/blog/speaking-pycon/" target="/">http://www.pyladies.com/blog/speaking-pycon/</a><br>
+                                                            
+                                                        </ul>
+                                                    </p>
+
+                                                    <h6 class="page-title wow fadeInDown"><b>Good Ideas</b><br></h6>
+                                                    <ul>
+                                                        <li>
+                                                        Submit your proposal early. The program committee will provide feedback to talks that come into our system, and we will work with you to improve your proposal if we have issues with it, but this is only feasible if your proposal is submitted well before deadline.
+                                                        </li>
+
+                                                        <li>
+                                                            Be sure to answer some basic questions:
+                                                            <ul>
+                                                            <li>Who is the intended audience for your talk? (Be specific; "Python programmers" is not a good answer to this question.)</li>
+
+                                                            <li>What will attendees get out of your talk? When they leave the room, what will they know that they didn't know before?</li>
+                                                        </ul>
+                                                        </li>
+
+                                                        <li>Your outline should be an enumeration of what you intend to say, along with time estimates.</li>
+
+                                                            <ul>
+                                                                <li>It is not necessary to have completely written your talk already, but you should have an idea of what the points you intend to make are and roughly how long you will spend on each one.</li>
+
+                                                                <li>If you are requesting a 45-minute slot, remember that these are in very limited supply. Be sure to explain how you will change your talk if we can only offer you a 30-minute slot.</li>
+
+                                                                <li>Your time allocated slot includes 5-10 minute discussions/QA </li>
+                                                            </ul>
+
+                                                        <li>Ensure that your talk will be relevant to a non-trivial set of people. If your talk is on a particular Python package or piece of software, it should be something that a significant number of people use or want to use. If your talk is about a package that you are writing, ensure that it's gained some acceptance before submitting a talk. If a tool you're excited about is not used widely, consider shifting the focus of your talk to a related best practice or theme which will have broader applicability and a larger audience.</li>
+
+                                                        <li>Include links to source code, articles, blog posts, videos, or other resources that add context to your proposal.</li>
+
+                                                        <li>If you've given a talk, tutorial, or other presentation before, especially at an earlier PyCon or another conference, include that information as well as a link to slides or a video if they're available.</li>
+                                                    </ul><br>
+                                                <h6 class="page-title wow fadeInDown"><b>Bad Ideas</b><br></h6>
+                                                <ul>
+                                                    <li>
+                                                        Avoid infomercials.
+
+                                                        <ul>
+                                                            <li>That doesn't mean you can't talk about your work or company at PyCon. For instance, we welcome talks on how you or your company solved a problem, or notable open source projects that may benefit attendees.</li>
+
+                                                            <li>On the other hand, talks on "how to use our product" (or similar) usually aren't appropriate.</li>
+                                                        </ul>
+                                                    </li>
+
+                                                        <li>Avoid presenting a proposal for code that is incomplete. The program committee is very skeptical of "conference-driven development".</li>
+
+                                                        <li>Avoid "state of our project" talks, unless you can make a compelling argument that the talk will be well-attended and that attendees will gain value from it.</li>
+
+                                                        <li>Do not assume that everyone on the Program Committee will know who you are simply because you have presented at PyCon in the past. Everyone should submit a detailed proposal. During the first round of review, we won't even see your name on the proposal!</li>
+                                                </ul>
+
+                                            </div>
+                                    </div>
+                                </div> 
+                </div>
+            </div>
+
+        </div>
+        <!-- end .container -->
+    </section>
+{% endblock %}

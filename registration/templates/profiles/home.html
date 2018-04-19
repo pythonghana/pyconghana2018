@@ -6,7 +6,6 @@
 
 <header id="top" class="sub-header">
         <div class="container">
-            <h3 class="page-title wow fadeInDown">{% firstof user.get_short_name user.get_username %}'s Profile</h3>
         </div>
         <!-- end .container -->
     </header>
@@ -23,11 +22,10 @@
                                <div class="row">
                                         <div class="col-md-10">
                                             <ul>
-                                                <p><a href="/talks/talk_list"class="btn warn">My Submitted Talks</a></p>
                                                 <p><a href="{% url 'profiles:update' pk=user.id %}"class="btn warn">Update my Profile</a></p>
                                                 <p><a href="/password_change"class="btn warn">Change Password</a></p>
-                                                
-                                                <p><a href="{% url 'talks:submit_talk' %}"class="btn warn">Submit a Talk</a></p>
+                                                <p><a href="/talks/talk_list"class="btn warn">My Submitted Talks</a></p>
+                                                <p><a href="{% url 'talks:submit_talk' %}"class="btn warn">Submit a new Talk</a></p>
                                             </ul>
                                         </div>
                                 </div>
@@ -36,10 +34,11 @@
             </div>
             <div class="col-sm-12 col-md-8">
                  <div class="section-title wow fadeInUp">
-                    <h4>  </h4>
+                   
                  </div>
                 <div class="panel panel-danger wow fadeInLeft">      
                         <div class="panel-body">
+                            <h5 class="page-title wow fadeInDown">{% firstof user.get_short_name user.get_username %}'s Profile</h5>
                             {% if user_profile %}
 
                         <div class="row">

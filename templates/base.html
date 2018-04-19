@@ -77,11 +77,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SPEAK AT PYCON GH<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li role="separator" class="divider"></li>
-                            <li><a href="{% url 'talks:submit_talk' %}">Summit a Talk</a></li>
+                            <li><a href="/talks/submit">Summit a Talk</a></li>
                             <li role="separator" class="divider"></li>
                         </ul>
                     </li>
-                    <li><a href="/#pricing">Pricing</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sponsors<span class="caret"></span></a>
                          <ul class="dropdown-menu">
@@ -113,10 +112,13 @@
     </nav>
     <!-- // End Fixed navbar -->
     
+    <font color="black">
 
-{% block content %}
+                <!-- Nav tabs -->
+                 {% block content %}
 
-{% endblock %}
+                  {% endblock %}
+    </font>  
 
 
     <footer>

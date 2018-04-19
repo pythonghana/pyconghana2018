@@ -5,10 +5,6 @@
 {% block content %}
 
 <header id="top" class="sub-header">
-        <div class="container">
-            <h3 class="page-title wow fadeInDown">Update your Profile  {% firstof user.get_short_name user.get_username %}<br></h3>
-        </div>
-        <!-- end .container -->
 </header>
 <section class="speakers" id="speakers">
         <div class="container">
@@ -38,6 +34,7 @@
                       <div class="row">
                                         <div class="col-md-12">
                                             <div class="col-md-10">
+                                            <h5 class="page-title wow fadeInDown">Update your Profile  {% firstof user.get_short_name user.get_username %}<br></h5>
                                                 <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
                                                     <br><p><a href="/avatar/change" data-toggle="modal" data-target="#avatarC-upload" class="btn warn">Change your Avatar</a></p><br>
                                                         {% crispy form form.helper %}
