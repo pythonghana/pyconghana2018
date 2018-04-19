@@ -48,6 +48,6 @@ admin.site.register(RegistrationProfile, RegistrationAdmin)
 
 
 class PersonalAdmin(admin.ModelAdmin):
-    list_display = ('user', 'twitter_handle', 'github_username', 'contact_number', 'city', 'country')
+    list_display = ('name', 'surname', 'image_url', 'bio', 'twitter_handle', 'github_username', 'contact_number', 'website', 'city', 'country',)
 
 admin.site.register(Profile, PersonalAdmin)

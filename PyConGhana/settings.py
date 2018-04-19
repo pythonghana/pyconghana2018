@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'tinymce',
     'sorl.thumbnail',
     'newsletter',
-    'avatar',
+    #'avatar',
     # 'markitup',
 
 
