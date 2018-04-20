@@ -54,7 +54,7 @@ http://gh.pycon.org
   
   2. Open the command prompt and navigate the project folder (PyCon Ghana)
   
-  3. virtualenv PyConGhana-env   # Create a virtual environment for the project with it's own packages.
+  3. python -m venv PyConGhana-env   # Create a virtual environment for the project with it's own packages.
   
   4. PyConGhana-env\Scripts\activate    # Move into the virtual environment folder and activate the environment.
   
