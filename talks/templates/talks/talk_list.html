@@ -47,6 +47,7 @@
                                                         <th>Title</th>
                                                         <th>Session type</th>
                                                         <th>Intended Audience</th>
+                                                        <th>Status</th>
                                                         <th>Actions</th>
                                                     </tr>
                                                 {% for talk in submitted_talks %}
@@ -58,7 +59,10 @@
                                                                 {{ talk.talk_type }}
                                                             </td>
                                                             <td>
-                                                                {{ talk.programming_experience }}
+                                                                {{ talk.intended_audience }}
+                                                            </td>
+                                                            <td>
+                                                                {{ talk.status }}
                                                             </td>
                                                             <td>
                                                                 <a href="{% url 'talks:edit_talk' pk=talk.pk %}"><button style="font-size:12px">Edit <i class="fa fa-edit"></i></button></a>

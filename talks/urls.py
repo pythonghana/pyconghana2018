@@ -1,4 +1,3 @@
-
 from rest_framework import routers
 from django.urls import include, path, re_path
 from talks.views import TalkViewsSets
@@ -19,7 +18,7 @@ urlpatterns = [
     re_path(r'^talk_details/(?P<pk>\d+)', views.TalkDetailView.as_view(), name='talk_details'),
     path('submitted', login_required(views.SuccessView.as_view()), name='submitted'),
     path('uploads', views.home, name='home'),
-    path('submit', views.submit, name='talks'),
+    path('submit', views.submit, name='submit'),
     path('proposing_a_talk', views.proposing, name='proposing'),
     path('recording', views.recording, name='recording'),
     path('uploads_simple', views.simple_upload, name='simple_upload'),
