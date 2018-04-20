@@ -1,0 +1,14 @@
+{% extends "base2.html" %}
+{% load i18n %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Error 404 | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+
+{% block content %}
+<header id="top" class="sub-header">
+    <div class="container">
+    </div>
+</header><br><br>
+    <!-- end .sub-header -->
+
+<h3>Error 404</h3>
+
+{% endblock %}
