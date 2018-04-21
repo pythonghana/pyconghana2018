@@ -38,8 +38,8 @@
                  </div>
                 <div class="panel panel-danger wow fadeInLeft">      
                         <div class="panel-body">
-                            <h5 class="page-title wow fadeInDown">{% firstof user.get_short_name user.get_username %}'s Profile</h5>
                             {% if user_profile %}
+                            <h5 class="page-title wow fadeInDown">{% firstof user.get_short_name user.get_username %}'s Profile</h5>
 
                         <div class="row">
                             
@@ -103,8 +103,9 @@
 
                         {% endfor %}
                         {% else %}
+                        <h5 class="page-title wow fadeInDown">Thanks for Signing up! {% firstof user.get_short_name user.get_username %}</h5>
 
-                                <p>You have not created a profile yet. Please click the button below to create your profile.</p>
+                                <p><br>You have not created a profile yet. Please click the button below to create your profile.</p>
                                 <br>
                                 <p><a class="btn btn-success" href="{% url 'profiles:create_profile' %}">Create Your Profile Now &raquo;</a></p>
                     </div>

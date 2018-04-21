@@ -121,7 +121,7 @@
                         <div><br>
                             <img src="{% static 'images/register_icon.png' %}">
                             <h5>Conference Registration</h5>
-                            <p><a href="#" data-toggle="modal" data-target="#eventbrite-register" class="btn warn">Register for PyCon</a></p>
+                            <p><a href="#" data-toggle="modal" data-target="#eventbrite-register" class="btn warn" disabled>Register for PyCon</a></p>
                             <p>Registration would be opened soon!</p>
                         </div>
                     </div>
@@ -131,7 +131,7 @@
                         <div><br>
                             <img src="{% static 'images/speaker_icon1.png' %}">
                             <h5>Want to be a Speaker</h5>
-                            <p><a href="{% url 'talks:submit_talk' %}" class="btn warn">Submit your Proposal</a></p>
+                            <p><a href="/talks/submit" class="btn warn">Submit your Proposal</a></p>
                             <p>CFP is Opened!</p>
                         </div>
                     </div>

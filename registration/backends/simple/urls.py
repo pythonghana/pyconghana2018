@@ -34,7 +34,7 @@ if getattr(settings, 'INCLUDE_REGISTER_URL', True):
     urlpatterns += [
         url(r'^register/$',
             RegistrationView.as_view(
-                success_url=getattr(settings, 'SIMPLE_BACKEND_REDIRECT_URL', '/'),
+                success_url=getattr(settings, 'SIMPLE_BACKEND_REDIRECT_URL', '/profile'),
             ),
             name='registration_register'),
     ]
