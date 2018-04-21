@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "base.html" %}
 {% load i18n static %}
 {% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Home | Pycon Ghana 2018" %}{% endif %}{% endblock %}
@@ -216,3 +217,223 @@
     </div>
     <!-- //  end .highlight -->
 {% endblock %}
+=======
+{% extends "base.html" %}
+{% load i18n static %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Home | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+
+
+{% block content %}
+
+
+
+     <header id="top" class="header-video-module">
+        <div class="video-container">
+            <div class="header">
+                <div class="container">
+
+                   <div class="header_top-bg">
+                        <div class="logo">
+                            <picture>
+                              <source media="(min-width: 650px)" srcset="{% static 'images/pycon3.png' %}">
+                              <source media="(min-width: 465px)" srcset="{% static 'images/pycon440.png' %}">
+                              <img src="{% static 'images/pycon441.png' %}" alt="" style="width:auto;">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="when_where wow fadeIn" data-wow-delay="0.4s">
+                        <p class="event_when">August 10th - 11th 2018</p>
+                        <p class="event_where"><strong>Accra, Ghana</strong></p>
+                    </div>
+
+                    <div class="header_bottom-bg">
+                <!-- <a class="btn btn-default btn-xl wow zoomIn" data-wow-delay="0.3s" href="#" data-toggle="modal" data-target="#eventbrite-register">RESERVE MY SEAT</a>  -->
+                 <b><p class="cta_urgency wow fadeIn" data-wow-delay="0.5s"><font color="white"><small>A place where Pythonistas meet!</small></font></p></b>
+            </div>
+
+                </div>
+                <!-- end .container -->
+            </div>
+
+            <div class="filter"></div>
+            <video autoplay loop class="fillWidth video-header">
+                <source src="{% static 'video/background.mp4' %}" type="video/mp4" />
+                <source src="{% static 'video/background.webm' %}" type="video/webm" />
+                <source src="video/background.ogg" type="video/ogg" />
+            </video>
+            <div class="poster hidden">
+                <img src="{% static 'video/background.jpg' %}" alt="event video poster" style="width:auto;">
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <!--
+     Highlight Section
+     ====================================== -->
+
+    <section class="highlight" id="about">
+
+        <div class="container">
+            <br><br>
+            <h1><p class="lead text-center">PyCon Ghana is organized by volunteers and python enthusiasts from the python programming community in Ghana. We expect speakers from Africa and the rest of the world.  We will announce the venue soon. The two day conference will bring together students, professionals, experts and enthusiasts who wish to share their knowledge and passion about Python and related technologies. It will comprise of talks, tutorials and sprints. Its purpose is to increase the visibility of developers, organizations, and companies within the community. The conference is suited for all skill levels, from beginners to expert developers.</p></h1>
+
+            <div class="countdown_wrap">
+                <br>
+                <h6 class="countdown_title text-center">EVENT WILL START IN</h6>
+
+                <!-- Countdown JS for the Event Date Starts here.
+    TIP: You can change your event time below in the Same Format.  -->
+
+                <ul id="countdown" data-event-date="10 august 2018 08:00:00">
+                    <li class="wow zoomIn" data-wow-delay="0s"> <span class="days">00</span>
+                        <p class="timeRefDays">days</p>
+                    </li>
+                    <li class="wow zoomIn" data-wow-delay="0.2s"> <span class="hours">00</span>
+                        <p class="timeRefHours">hours</p>
+                    </li>
+                    <li class="wow zoomIn" data-wow-delay="0.4s"> <span class="minutes">00</span>
+                        <p class="timeRefMinutes">minutes</p>
+                    </li>
+                    <li class="wow zoomIn" data-wow-delay="0.6s"> <span class="seconds">00</span>
+                        <p class="timeRefSeconds">seconds</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- end .countdown_wrap -->
+
+            <div class="text-center">
+
+                <!-- Add to Calendar Plugin.
+                     For Customization, Visit https://addtocalendar.com/ -->
+                 <span class="atc-style-theme">
+                     <div title="Add to Calendar" class="addeventatc">
+                        ADD TO MY CALENDAR
+                        <span class="start">08/10/2018 08:00 AM</span>
+                        <span class="end">08/11/2018 06:00 PM</span>
+                        <span class="timezone">Africa/Accra</span>
+                        <span class="title">PyCon Ghana 2018</span>
+                        <span class="description">The Conference for the Python Programming Community in Ghana is organized by Volunteers and Python enthusiasts from the python programming community in Ghana.</span>
+                        <span class="location">Accra, Ghana</span>
+                        <span class="organizer">Python Software Community Ghana</span>
+                        <span class="organizer_email">hello@pyconghana.org</span>
+                    </div>
+                </span>
+            </div>
+
+        </div>
+        <!-- end .container -->
+
+    </section><br>
+    <!-- end section.highlight -->
+<hr><br><br>
+
+      <section>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail wow fadeInUp">
+                        <div><br>
+                            <img src="{% static 'images/register_icon.png' %}">
+                            <h5>Conference Registration</h5>
+                            <p><a href="#" data-toggle="modal" data-target="#eventbrite-register" class="btn warn" disabled>Register for PyCon</a></p>
+                            <p>Registration would be opened soon!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail wow fadeInUp" data-wow-delay="0.3s">
+                        <div><br>
+                            <img src="{% static 'images/speaker_icon1.png' %}">
+                            <h5>Want to be a Speaker</h5>
+                            <p><a href="/talks/submit" class="btn warn">Submit your Proposal</a></p>
+                            <p>CFP is Opened!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0">
+                    <div class="thumbnail wow fadeInUp" data-wow-delay="0.6s">
+                        <div><br>
+                            <img src="{% static 'images/sponsor_icon1.png' %}">
+                            <h5>Sponsor Pycon Ghana!</h5>
+                            <p><a href="/support_us" class="btn warn">Become a Sponsor</a></p>
+                            <p>The companies and organizations who sponsor PyCon Ghana make the conference possible, and get to connect with a wide array of Python programmers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- end .container -->
+    </section>
+<hr>
+    <!--
+     What to Expect : Benefits
+     ====================================== -->
+
+    <!-- TODO: Change Icons to Fonts for better theming. -->
+
+    <section class="benefits">
+
+        <div class="container">
+            <div class="section-title wow fadeInUp">
+                <h4>WHAT TO EXPECT</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="benefit-item wow fadeInLeft">
+                                <h6 class="benefit-title">Great Talks</h6>
+                                <p>We would be expecting speakers from all over to share their experiences, ideas and much more.</p>
+                            </div><br>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="benefit-item wow fadeInRight">
+                                <h6 class="benefit-title">Open Space Conference</h6>
+                                <p>Pycon Ghana would bring Pythonistas together for an informal networking forum where attendees share ideas, discuss interests, network and learn from each other.</p>
+                            </div>
+                           <!-- <div class="benefit-item wow fadeInRight">
+                                <h6 class="benefit-title">Workshop</h6>
+                                <p>Pycon Ghana would be held alongside Django Girls Accra! Are a lady and would love to part of the Python train? <a href="https://djangogirls.org/accra/" target="/">Register for Django Girls Accra here</a></p>
+                            </div>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- end .container -->
+    </section>
+    <!-- end section.benefits -->
+  <hr>
+<!--
+     Mailchimp Subscribe
+     ====================================== -->
+
+    <div class="highlight">
+        <div class="container social-icons">
+            <div class="row">
+                    <div class="form-group col-md-3 hidden-sm">
+                        <h6 class="susbcribe-head wow fadeInLeft"> SUBSCRIBE <small><font color="black">TO OUR NEWSLETTER</font></small></h6>
+                    </div>
+                <form enctype="multipart/form-data" method="post" action="https://gh.pycon.org/newsletter/pycon-ghana/subscribe/">
+                {% csrf_token %}
+                    <div class="form-group col-sm-8 col-md-6 wow fadeInRight">
+                        <input type="email" name="email_field" required="" id="id_email_field" class="form-control input-lg" placeholder="Enter your email"></div>
+                <button id="id_submit" name="submit" class="btn btn btn-success" value="Subscribe" type="submit">Subscribe Now →</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- //  end .highlight -->
+{% endblock %}
+>>>>>>> aaf3d178b65770252c08f12798d546ff6421540e
