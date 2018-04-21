@@ -9,11 +9,9 @@ django-appconf==1.0.2
 django-avatar==4.1.0
 django-crispy-forms==1.7.0
 django-extensions==2.0.6
-django-crispy-forms==1.7.0
-django-environ==0.4.4
 django-jet==1.0.7
 django-markitup==3.0.0
--e git://github.com/dokterbob/django-newsletter.git@d318d2f9904eec4e29bf6351b47f08d0cd56e44c#egg=django_newsletter
+-e git://github.com/dokterbob/django-newsletter.git@15a9f3b1535aa3bc9e61e44de43043805b62eac8#egg=django_newsletter
 django-recaptcha==1.4.0
 django-tinymce==2.7.0
 django-webtest==1.9.2

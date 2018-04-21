@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-from .secrets import *
+#from .secrets import *
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'rest_framework',
     'tinymce',
+    'django_extensions',
     'sorl.thumbnail',
     'newsletter',
     'avatar',
@@ -212,12 +213,8 @@ JET_THEMES = [
 # Path to Google Analytics client_secrets.json
 JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(BASE_DIR, 'client_secrets.json')
 
-
-
 # Using the new No Captcha reCaptcha
 NOCAPTCHA = True
-
-
 
 # All requested actions will be performed without email confirmation.
 NEWSLETTER_CONFIRM_EMAIL = False

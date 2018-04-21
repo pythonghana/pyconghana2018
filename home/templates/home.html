@@ -181,7 +181,7 @@
                         <div class="col-sm-6">
                             <div class="benefit-item wow fadeInRight">
                                 <h6 class="benefit-title">Workshop</h6>
-                                <p>Pycon Ghana would be held alongside Django Girls Accra! Are a lady and would love to part of the Python train? <a href="https://djangogirls.org/accra/" target="/">Register for Django Girls Accra here</a></p>
+                                <p>Pycon Ghana would be held alongside Django Girls Accra! Are you a lady and would love to part of the Python train? <a class="btn btn-lg btn-success" href="https://djangogirls.org/accra/" target="/" role="button">Register for Django Girls Accra here</a></p>
                             </div>
                         </div>
                     </div>
@@ -201,22 +201,19 @@
     <div class="highlight">
         <div class="container social-icons">
             <div class="row">
-                <form action="php/subscribe.php" method="post" class="form subscribe-form" id="subscribeform">
                     <div class="form-group col-md-3 hidden-sm">
                         <h6 class="susbcribe-head wow fadeInLeft"> SUBSCRIBE <small><font color="black">TO OUR NEWSLETTER</font></small></h6>
                     </div>
+                <form enctype="multipart/form-data" method="post" action="http://127.0.0.1:8080/newsletter/pycon-ghana/subscribe/">
+                {% csrf_token %}
                     <div class="form-group col-sm-8 col-md-6 wow fadeInRight">
-                        <label class="sr-only">Email address</label>
-                        <input type="email" class="form-control input-lg" placeholder="Enter your email" name="email" id="email" required>
-                        <div id="js-subscribe-result" class="text-center" data-success-msg="Almost finished. Please check your email and verify." data-error-msg="Oops. Something went wrong."></div>
-                    </div>
-                    <div class="form-group col-sm-4 col-md-3">
-                        <button type="submit" class="btn btn-lg btn-success btn-block" id="js-subscribe-btn">Subscribe Now →</button>
-                    </div>
+                        <input type="email" name="email_field" required="" id="id_email_field" class="form-control input-lg" placeholder="Enter your email"></div>
+                <button id="id_submit" name="submit" class="btn btn btn-success" value="Subscribe" type="submit">Subscribe Now →</button>
                 </form>
             </div>
         </div>
     </div>
-
     <!-- //  end .highlight -->
 {% endblock %}
+
+http://127.0.0.1:8080/newsletter/pycon-ghana/subscribe/
