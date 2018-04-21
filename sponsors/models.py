@@ -12,13 +12,11 @@ class Sponsor(models.Model):
     SPONSOR_TYPE =(('C', 'Corporate Sponsor'),
                    ('I', 'Individual Sponsor'),)
 
-    sponsor_name = models.CharField("sponsor name", max_length=200)
-    contact_name = models.CharField(max_length=200, default='') 
-    contact_email = models.EmailField(max_length=1024, default='', help_text = "We’ll keep it secret, for internal use only.")
+    name = models.CharField("sponsor name", max_length=200)
     category = models.CharField(max_length=15, choices=SPONSOR_PACKAGES)
     logo = models.ImageField(max_length=255, blank=True, null=True)
     type = models.CharField("sponsor type", max_length=1, choices=SPONSOR_TYPE)
-    sponsor_url = models.URLField(default='', help_text='Link to Sponsor website', blank=True,)
+    url = models.URLField(default='', help_text='Link to Sponsor website', blank=True,)
 
     class Meta:
         managed = True

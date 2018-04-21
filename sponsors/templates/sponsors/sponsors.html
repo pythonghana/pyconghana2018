@@ -22,7 +22,7 @@
                             </p>
                             <p>Would you like to join them? <a href="/support_us"><b>See How to sponsor PyCon Ghana.</b></a></p><br><br>
 
-
+                {% if sponsors %}
                      {% if diamond %}
                    
                     <h3 style="color: #000; text-shadow: 2px 2px 3px #b9f2ff"><b>Diamond Sponsors</b></h3>
@@ -99,6 +99,13 @@
                     </div>
                     <br><br>
                     <hr>
+                    {% else %}
+
+                                <br><p>We currently have no Sponsors.</p>
+                                <br>
+                               
+                    </div>
+                     {% endif %}
 
                         </div>
                     </div>
