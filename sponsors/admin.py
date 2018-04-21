@@ -3,7 +3,7 @@ from .models import Sponsor
 
 
 class SponsorAdmin(admin.ModelAdmin):
-    list_display = ("name", "category", "type")
+    list_display = ("sponsor_name", "category", "type")
     list_filter = ["category", "type"]
 
 

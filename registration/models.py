@@ -25,8 +25,8 @@ from django.utils.translation import ugettext_lazy as _
 from .users import UserModel
 from .users import UserModelString
 
+from django.urls import reverse
 from django.contrib.auth.models import User
-
 
 
 logger = logging.getLogger(__name__)
@@ -697,13 +697,14 @@ class SupervisedRegistrationProfile(RegistrationProfile):
         )
 
 
+
 class Profile(models.Model):
     name = models.CharField(max_length=30, default='', blank=False)
     surname = models.CharField(max_length=30, default='', blank=False)
     user = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
     bio = models.TextField(max_length=500, help_text="Tell us a bit about yourself and your work with Python", blank=False)
     city = models.CharField(max_length=30, blank=False)
-    country = models.CharField(max_length=30, blank=False)
+    country = models.CharField(max_length=30, default='', blank=False)
     contact_number = models.CharField(max_length=16, help_text="Please include your country code.", blank=False, null=True)
     website = models.CharField(max_length=255, help_text="Your website/blog URL.", null=True, blank=True)#made this optional
     twitter_handle = models.CharField(max_length=15, blank=True, null=True) #made this optional

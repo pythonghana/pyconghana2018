@@ -1,20 +1,18 @@
-{% extends "base2.html" %}
+{% extends "navbar.html" %}
 {% load i18n static %}
-{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Error 500 | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Page not found | Pycon Ghana 2018" %}{% endif %}{% endblock %}
 
 {% block content %}
-<header id="top" class="sub-header">
-    <div class="container">
-    </div>
-</header><br><br>
-    <!-- end .sub-header -->
 
 <div class="header_top-bg wow fadeInDown img">
-                        <div class="img">
-                            <picture>
-                              <img src="{% static 'images/error.png' %}" alt="" style="width:auto;">
-                            </picture>
-                        </div>
-                    </div>
+        <div class="img" align="center"><br>
+                <picture>
+                    <source media="(min-width: 650px)" srcset="{% static 'images/error5.png' %}">
+                    <source media="(min-width: 465px)" srcset="{% static 'images/error5.png' %}">
+                    <img src="{% static 'images/errorSm.png' %}" alt="" style="width:auto;">
+                </picture>
+                <br><br><br><p><a href="/" class="btn warn" style="font-size:20px">Go back Home <i class="fa fa-home"></i></a></p>
+        </div>
+</div>
 
 {% endblock %}

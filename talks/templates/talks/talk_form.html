@@ -1,12 +1,10 @@
 {% extends "base2.html" %}
-{% load crispy_forms_tags %}
-
+{% load crispy_forms_tags i18n static %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Submit your Talk | Pycon Ghana 2018" %}{% endif %}{% endblock %}
 {% block content %}
 
     <header id="top" class="sub-header">
         <div class="container">
-
-            <h3 class="page-title wow fadeInDown">Submit your talk below, {% firstof user.get_short_name user.get_username %}</small></h3>
         </div>
         <!-- end .container -->
     </header>
@@ -24,7 +22,7 @@
                                <div class="row">
                                         <div class="col-md-10">
                                             <ul>
-                                                <p><a href="/profile" class="btn warn">Back to My Profile</a></p>
+                                                 <p><a href="/profile" >Back to My Profile</a></p>
                                             </ul>
                                         </div>
                                 </div>
@@ -37,14 +35,15 @@
                  </div>
                 <div class="panel panel-danger wow fadeInLeft">      
                       <div class="row">
-                                                <div class="container"> 
-                                                    <div class="nav-center bottom-space-lg">
-                                                 </div>
+                                        <div class="col-md-12">
+                                            <div class="col-md-12">
+                                                 <h5 class="page-title wow fadeInDown">Submit your talk below, {% firstof user.get_short_name user.get_username %}</small></h5><br>
                                                                     <form class="form col-md-8" action="{% url 'talks:submit_talk' %}" method="post">
                                                                             {% crispy form form.helper %}
                                                                                 {% csrf_token %}
                                                                     </form>
-                                                </div>
+                                            </div>
+                                    </div>
                                 </div> 
                 </div>
             </div>

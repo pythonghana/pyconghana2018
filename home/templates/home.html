@@ -7,13 +7,14 @@
 {% block content %}
 
 
+
      <header id="top" class="header-video-module">
         <div class="video-container">
             <div class="header">
                 <div class="container">
 
-                    <div class="header_top-bg wow fadeInDown img">
-                        <div class="img">
+                   <div class="header_top-bg">
+                        <div class="logo">
                             <picture>
                               <source media="(min-width: 650px)" srcset="{% static 'images/pycon3.png' %}">
                               <source media="(min-width: 465px)" srcset="{% static 'images/pycon440.png' %}">
@@ -43,7 +44,7 @@
                 <source src="video/background.ogg" type="video/ogg" />
             </video>
             <div class="poster hidden">
-                <img src="{% static 'video/background.jpg' %}" alt="event video poster">
+                <img src="{% static 'video/background.jpg' %}" alt="event video poster" style="width:auto;">
             </div>
         </div>
 
@@ -59,7 +60,7 @@
 
         <div class="container">
             <br><br>
-            <h1><p class="lead text-center">The conference for the Python programming community in Ghana is organized by volunteers and python enthusiasts from the python programming community in Ghana. We expect speakers from Africa and the rest of the world.  We will announce the venue soon. The two day conference will bring together students, professionals, experts and enthusiasts who wish to share their knowledge and passion about Python and related technologies. It will comprise of talks, tutorials and sprints. Its purpose is to increase the visibility of developers, organizations, and companies within the community. The conference is suited for all skill levels, from beginners to expert developers.</p></h1>
+            <h1><p class="lead text-center">PyCon Ghana is organized by volunteers and python enthusiasts from the python programming community in Ghana. We expect speakers from Africa and the rest of the world.  We will announce the venue soon. The two day conference will bring together students, professionals, experts and enthusiasts who wish to share their knowledge and passion about Python and related technologies. It will comprise of talks, tutorials and sprints. Its purpose is to increase the visibility of developers, organizations, and companies within the community. The conference is suited for all skill levels, from beginners to expert developers.</p></h1>
 
             <div class="countdown_wrap">
                 <br>
@@ -180,7 +181,7 @@
                         <div class="col-sm-6">
                             <div class="benefit-item wow fadeInRight">
                                 <h6 class="benefit-title">Workshop</h6>
-                                <p>Pycon Ghana would be held alongside Django Girls Accra! Are a lady and would love to part of the Python train? <br><a href="" data-toggle="modal" data-target="#djangogirls-register" class="btn warn">Register for Django Girls Accra here</p>
+                                <p>Pycon Ghana would be held alongside Django Girls Accra! Are a lady and would love to part of the Python train? <a href="https://djangogirls.org/accra/" target="/">Register for Django Girls Accra here</a></p>
                             </div>
                         </div>
                     </div>
@@ -198,11 +199,11 @@
      ====================================== -->
 
     <div class="highlight">
-        <div class="container">
+        <div class="container social-icons">
             <div class="row">
                 <form action="php/subscribe.php" method="post" class="form subscribe-form" id="subscribeform">
                     <div class="form-group col-md-3 hidden-sm">
-                        <h6 class="susbcribe-head wow fadeInLeft"> SUBSCRIBE <small>TO OUR NEWSLETTER</small></h6>
+                        <h6 class="susbcribe-head wow fadeInLeft"> SUBSCRIBE <small><font color="black">TO OUR NEWSLETTER</font></small></h6>
                     </div>
                     <div class="form-group col-sm-8 col-md-6 wow fadeInRight">
                         <label class="sr-only">Email address</label>
@@ -216,5 +217,6 @@
             </div>
         </div>
     </div>
+
     <!-- //  end .highlight -->
 {% endblock %}
