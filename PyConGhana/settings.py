@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 
-DEBUG = True
+DEBUG = False
 
 LOGIN_REDIRECT_URL = '/profile'
 SIGNUP_REDIRECT_URL = '/profile'
@@ -33,12 +33,12 @@ LOGOUT_REDIRECT_URL = '/'
 ALLOWED_HOSTS = ["*"]
 
 SITE_TITLE  = 'Pycon Ghana'
-GRAPPELLI_ADMIN_TITLE = "PYCON GHANA"
+ADMIN_TITLE = "PYCON GHANA"
 
 # Application definition
 
 INSTALLED_APPS = [
-    'jet.dashboard',   
+    'jet.dashboard',
     'jet',
     'django.contrib.admin',
     'django.contrib.auth',

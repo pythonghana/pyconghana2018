@@ -17,15 +17,19 @@
                     <div class="section-title wow fadeInUp">
                         <h4>   </h4>
                     </div>
-                    <div class="panel panel-warning wow fadeInRight">   
+                    <div class="panel panel-warning wow fadeInRight">
                             <div class="panel-body">
                                <div class="row">
                                         <div class="col-md-10">
                                             <ul>
+                                                {% if user_profile %}
                                                 <p><a href="{% url 'profiles:update' pk=user.id %}"class="btn warn">Update my Profile</a></p>
                                                 <p><a href="{% url 'profiles:password_change' user.pk %}"class="btn warn">Change Password</a></p>
                                                 <p><a href="{% url 'talks:talk_list' %}"class="btn warn">My Submitted Talks</a></p>
                                                 <p><a href="{% url 'talks:submit_talk' %}"class="btn warn">Submit a new Talk</a></p>
+                                                {% else %}
+                                                <p><a href="{% url 'talks:submit_talk' %}"class="btn warn">Submit a new Talk</a></p>
+                                                {% endif %}
                                             </ul>
                                         </div>
                                 </div>
@@ -34,15 +38,15 @@
             </div>
             <div class="col-sm-12 col-md-8">
                  <div class="section-title wow fadeInUp">
-                   
+
                  </div>
-                <div class="panel panel-danger wow fadeInLeft">      
+                <div class="panel panel-danger wow fadeInLeft">
                         <div class="panel-body">
                             {% if user_profile %}
                             <h5 class="page-title wow fadeInDown">{% firstof user.get_short_name user.get_username %}'s Profile</h5>
 
                         <div class="row">
-                            
+
                             {% for user_p in user_profile %}
                                 {% for detail in details %}
                                 <div class="speaker-info wow fadeIn" data-wow-delay="0.1s">
@@ -57,7 +61,7 @@
                                 </div>
 
                             </div>
-                            
+
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <div class="form-group">
                                     <label>Email Address</label>
@@ -65,14 +69,14 @@
                                 </div>
                             </div>
                              {% endfor %}
-                            
+
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <div class="form-group">
                                         <label>Contact Number</label>
                                         <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="Nos" placeholder="{{ user_p.contact_number }}" readonly></strong></h5>
                                     </div>
                             </div>
-                            
+
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <div class="form-group">
                                         <label>Location</label>
@@ -105,7 +109,7 @@
                         {% else %}
                         <h5 class="page-title wow fadeInDown">Thanks for Signing up! {% firstof user.get_short_name user.get_username %}</h5>
 
-                                <p><br>You have not created a profile yet. Please click the button below to create your profile.</p>
+                                <p><br>Please click the button below to create your profile.</p>
                                 <br>
                                 <p><a class="btn btn-success" href="{% url 'profiles:create_profile' %}">Create Your Profile Now &raquo;</a></p>
                     </div>
@@ -121,5 +125,5 @@
     <!-- end section.speakers -->
 
 
-                         
+
 {% endblock %}

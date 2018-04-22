@@ -17,9 +17,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
-from django.conf.urls import handler404, handler500, handler403, handler400
+from django.conf.urls import handler404, handler500
 from jet.dashboard.dashboard_modules import google_analytics_views
 
+from home import views
 
 urlpatterns = [
     path('', include('home.urls', namespace='home')),
@@ -42,7 +43,7 @@ urlpatterns = [
     path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
     path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
     path('faq/', include('faq.urls', namespace='faqs')),
-    path('admin/', admin.site.urls),
+    path('pyconorganizers/', admin.site.urls),
 ]
 
 if settings.DEBUG:
@@ -53,7 +54,5 @@ if settings.DEBUG:
 # Adds ``STATIC_URL`` to the context of error pages, so that error
 # pages can use JS, CSS and images.
 
-handler400 = 'home.views.bad_request'
-handler403 = 'home.views.permission_denied'
 handler404 = 'home.views.page_not_found'
 handler500 = 'home.views.server_error'

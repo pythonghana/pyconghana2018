@@ -12,7 +12,7 @@
 
     <!-- Page Title -->
     <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
-   
+
 
     <!-- Bootstrap -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
@@ -63,7 +63,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img src="{% static 'images/navbarlogo3.png' %}" alt="Pycon Ghana"> </a>
+                <a class="navbar-brand" href="/"><img src="{% static 'images/navbarlogo3b.png' %}" alt="Pycon Ghana"> </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
 
@@ -85,7 +85,7 @@
                         <ul class="dropdown-menu">
                             <li role="separator" class="divider"></li>
                             <li><a href="/talks/submit">Summit a Talk</a></li>
-                            
+
                             <li role="separator" class="divider"></li>
                         </ul>
                     </li>
@@ -95,8 +95,6 @@
                             <li role="separator" class="divider"></li>
                             <li><a href="/sponsors">Our Sponsors</a></li>
                             <li><a href="/support_us">Support Us</a></li>
-                            <li><a href="/prospectus">Prospectus</a></li>
-                            <li><a href="/"> --- </a></li>
                             <li role="separator" class="divider"></li>
                         </ul>
                     </li>
@@ -125,8 +123,8 @@
                  {% block content %}
 
     		  {% endblock %}
-    </font>        
-    <!-- 
+    </font>
+    <!--
      Footer
      ====================================== -->
 
@@ -137,7 +135,7 @@
             <a target="blank" href="https://github.com/pythonghana" class="wow zoomIn" data-wow-delay="0.4s"><img src="{% static 'images/social/github.png' %}"</i> </a>
             <a target="blank" href="https://join.slack.com/t/pythonghana/shared_invite/enQtMzQzNTQ5NzA4MjcyLTcxOTc2OGE5ZGU2MjY4YjY3N2I0NzE5ZTFjNTQ3MDE3Y2U1ZjkwNDRiYTQ1MzI4ZDhkZGYwYmU5MDZiNzBhZDM" class="wow zoomIn" data-wow-delay="0.4s"><img src="{% static 'images/social/slack.png' %}"</i> </a>
         </div>
-        <p> <small class="text-muted">Copyright © 2018. All rights reserved. Pycon Ghana</small></p>
+        <p> <small class="text-muted">Copyright © 2018.<br> All rights reserved. Pycon Ghana</small></p>
 
     </footer>
 
@@ -146,7 +144,7 @@
     <a href="#top" class="back_to_top"><img src="images/back_to_top.png" alt="back to top"></a>
     <!-- // End .back_to_top -->
 
-    <!-- 
+    <!--
      Javascripts : Nerd Stuff :)
      ====================================== -->
      <div class="modal fade" id="avatar-upload" tabindex="-2" role="dialog">
@@ -195,7 +193,7 @@
     <script src="{% static 'js/plugins/nicescroll.js' %}"></script>
 
     <!-- Google Map -->
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="{% static 'js/plugins/infobox.js' %}"></script>
     <script src="{% static 'js/plugins/google-map.js' %}"></script>
     <script src="{% static 'js/plugins/directions.js' %}"></script>
