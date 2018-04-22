@@ -38,9 +38,9 @@
 
             <div class="filter"></div>
             <video autoplay loop class="fillWidth video-header">
-                <source src="{% static 'video/background.mp4' %}" type="video/mp4" />
-                <source src="{% static 'video/background.webm' %}" type="video/webm" />
-                <source src="video/background.ogg" type="video/ogg" />
+                <source src="{% static 'video/background.mp4' %}" type="video/mp4" style="width:auto;" />
+                <source src="{% static 'video/background.webm' %}" type="video/webm" style="width:auto;" />
+                <source src="video/background.ogg" type="video/ogg" style="width:auto;" />
             </video>
             <div class="poster hidden">
                 <img src="{% static 'video/background.jpg' %}" alt="event video poster" style="width:auto;">
@@ -131,7 +131,7 @@
                             <img src="{% static 'images/speaker_icon1.png' %}">
                             <h5>Want to be a Speaker</h5>
                             <p><a href="/talks/submit" class="btn warn">Submit your Proposal</a></p>
-                            <p>CFP is Opened!</p>
+                            <p>Call For Proposals is Opened!</p>
                         </div>
                     </div>
                 </div>
@@ -209,7 +209,9 @@
                 {% csrf_token %}
                     <div class="form-group col-sm-8 col-md-6 wow fadeInRight">
                         <input type="email" name="email_field" required="" id="id_email_field" class="form-control input-lg" placeholder="Enter your email"></div>
-                <button id="id_submit" name="submit" class="btn btn btn-success" value="Subscribe" type="submit">Subscribe Now →</button>
+                    <div class="form-group col-sm-4 col-md-3">
+                        <button id="id_submit" name="submit" class="btn btn-lg btn-success btn-block" value="Subscribe" type="submit">Subscribe Now →</button>
+                  </div>
                 </form>
             </div>
         </div>

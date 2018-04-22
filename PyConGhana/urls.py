@@ -54,5 +54,4 @@ if settings.DEBUG:
 # Adds ``STATIC_URL`` to the context of error pages, so that error
 # pages can use JS, CSS and images.
 
-handler404 = 'home.views.page_not_found'
-handler500 = 'home.views.server_error'
+handler404 = 'home.views.handler404'

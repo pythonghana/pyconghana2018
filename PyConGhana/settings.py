@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-#from .secrets import *
+from .secrets import *
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
 # Third party apps
+    'cloudinary',
     'captcha',
     'crispy_forms',
     'rest_framework',
@@ -92,15 +93,19 @@ PROJECT_ROOT = BASE_DIR = os.path.dirname(PROJECT_APP_PATH)
 
 ROOT_URLCONF = 'PyConGhana.urls'
 
+MEDIA_URL = '/media/'
+#MEDIA_ROOT = 'home/pyconghana/pyconghana2018/media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 STATIC_URL = '/static/' # the path in url
 STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/static/"))
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
 
 TEMPLATES = [
     {
@@ -113,6 +118,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -168,14 +174,6 @@ ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_EMAIL_SUBJECT_PREFIX = '[PyCon Ghana 2018]'
 SEND_ACTIVATION_EMAIL = True
 REGISTRATION_AUTO_LOGIN = False
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'testsite_app'
-EMAIL_HOST_PASSWORD = 'mys3cr3tp4ssw0rd'
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'Pycon Ghana<noreply@pyconghana.org>'
 
 JET_THEMES = [
     {
@@ -234,5 +232,7 @@ NEWSLETTER_BATCH_SIZE = 100
 # Sets the default site
 SITE_ID = 1
 
-AVATAR_MAX_AVATARS_PER_USER = 2
+AVATAR_MAX_AVATARS_PER_USER = 5
+
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 

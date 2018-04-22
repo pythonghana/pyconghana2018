@@ -9,9 +9,5 @@ def home(request):
     template = 'home.html'
     return render(request, template, context)
 
-
-def page_not_found(request):
-    return render(request, '404.html', status=404)
-
-def server_error(request):
-    return render(request, '500.html', status=500)
+def handler404(request, exception):
+    return render(request, '404.html', locals())
