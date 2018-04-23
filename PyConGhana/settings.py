@@ -9,8 +9,12 @@ https://docs.djangoproject.com/en/2.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
-
 import os
+<<<<<<< HEAD
+=======
+from .secrets import *
+
+>>>>>>> b18953eea674049e9bcf01ae4e90bcd1fd79f2b9
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -35,6 +39,11 @@ ADMIN_TITLE = "PYCON GHANA"
 
 # Application definition
 
+
+CLOUDINARY_CLOUD_NAME = 'pyconghana'
+CLOUDINARY_API_KEY = '625639762594486'
+CLOUDINARY_API_SECRET = 'F9o0-PG2iNGa1Wu2zf7eGE_6ZJA'
+
 INSTALLED_APPS = [
     'jet.dashboard',
     'jet',
@@ -47,6 +56,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
 # Third party apps
+    'cloudinary_storage',
+    'cloudinary',
     'captcha',
     'crispy_forms',
     'rest_framework',
@@ -91,15 +102,20 @@ PROJECT_ROOT = BASE_DIR = os.path.dirname(PROJECT_APP_PATH)
 
 ROOT_URLCONF = 'PyConGhana.urls'
 
-STATIC_URL = '/static/' # the path in url
-STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/static/"))
-
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#MEDIA_ROOT = 'home/pyconghana/pyconghana2018/media'
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
 
 TEMPLATES = [
     {
@@ -112,6 +128,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -170,12 +187,15 @@ REGISTRATION_EMAIL_SUBJECT_PREFIX = '[PyCon Ghana 2018]'
 SEND_ACTIVATION_EMAIL = True
 REGISTRATION_AUTO_LOGIN = False
 
+<<<<<<< HEAD
 # Django Email configuration
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 SENDGRID_API_KEY = ""
 SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 DEFAULT_FROM_EMAIL = 'PyCon Ghana <noreply@gh.pycon.org>'
 
+=======
+>>>>>>> b18953eea674049e9bcf01ae4e90bcd1fd79f2b9
 JET_THEMES = [
     {
         'theme': 'default',  # theme folder name
@@ -233,5 +253,7 @@ NEWSLETTER_BATCH_SIZE = 100
 # Sets the default site
 SITE_ID = 1
 
-AVATAR_MAX_AVATARS_PER_USER = 2
+AVATAR_MAX_AVATARS_PER_USER = 5
+
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 

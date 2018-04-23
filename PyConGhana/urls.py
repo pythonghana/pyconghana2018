@@ -30,6 +30,7 @@ urlpatterns = [
     path('profile/', include('registration.urls', namespace='profiles')),
     # path('accounts/', include('accounts.urls', namespace='accounts')),
     path('avatar/', include('avatar.urls')),
+    path('profilepic/', include('cloudinary_storage.urls')),
     path('coc/', include('coc.urls', namespace='coc')),
     # path('contact/', include('contact.urls', namespace='contact')),
     path('schedule/', include('schedule.urls', namespace='schedule')),
@@ -54,5 +55,4 @@ if settings.DEBUG:
 # Adds ``STATIC_URL`` to the context of error pages, so that error
 # pages can use JS, CSS and images.
 
-handler404 = 'home.views.page_not_found'
-handler500 = 'home.views.server_error'
+handler404 = 'home.views.handler404'

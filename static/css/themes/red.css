@@ -83,13 +83,14 @@ a:focus,
 .nav-pills>li.active>a:hover {
     background-color: #e44948;
 }
-/* 
+/*
   BUTTONS
   ------- */
 
 .btn-default {
     color: #e44948;
     border-color: #FFF;
+
 }
 
 .btn-default:hover,
@@ -102,19 +103,25 @@ a:focus,
 }
 
 .btn-primary {
-    background-color: #5c5c5c;
+    background-color:#e44948;
+    border-color: #e44948;
+
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active {
-    background-color: #3b3b3b;
+    background-color: transparent;
+    border-color:#e44948 ;
+    color: #e44948;
+
 }
+
 
 .btn-success {
     background-color: #e44948;
-    border-color: #e44948;
+    border-color: #FFF;
 }
 
 .btn-success:hover,

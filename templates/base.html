@@ -77,7 +77,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SPEAK AT PYCON GH<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li role="separator" class="divider"></li>
-                            <li><a href="/talks/submit">Summit a Talk</a></li>
+                            <li><a href="/talks/submit">Submit a Talk</a></li>
                             <li role="separator" class="divider"></li>
                         </ul>
                     </li>
@@ -130,7 +130,6 @@
 
     </footer>
 
-    <a href="#top" class="back_to_top"><img src="{% static 'images/back_to_top.png' %}" alt="back to top"></a>
 
     <!--
      Registration Popup (Eventbrite)
@@ -176,7 +175,9 @@
     <script src="{% static 'js/plugins/google-map.js' %}"></script>
     <script src="{% static 'js/plugins/directions.js' %}"></script>
 
-
+    {% load cloudinary %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    {% cloudinary_includes %}
 
     <!-- Main Script -->
     <script src="{% static 'js/main.js' %}"></script>

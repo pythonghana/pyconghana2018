@@ -1,14 +1,18 @@
-{% extends "base2.html" %}
-{% load i18n %}
-{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Error 404 | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+{% extends "navbar.html" %}
+{% load i18n static %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Page not found | Pycon Ghana 2018" %}{% endif %}{% endblock %}
 
 {% block content %}
-<header id="top" class="sub-header">
-    <div class="container">
-    </div>
-</header><br><br>
-    <!-- end .sub-header -->
 
-<h3>Error 404</h3>
+<div class="header_top-bg wow fadeInDown img">
+        <div class="img" align="center"><br>
+                <picture>
+                    <source media="(min-width: 650px)" srcset="{% static 'images/error5.png' %}">
+                    <source media="(min-width: 465px)" srcset="{% static 'images/error5.png' %}">
+                    <img src="{% static 'images/errorSm.png' %}" alt="" style="width:auto;">
+                </picture>
+                <br><br><br><p><a href="/" class="btn warn" style="font-size:20px">Go back Home <i class="fa fa-home"></i></a></p>
+        </div>
+</div>
 
 {% endblock %}
