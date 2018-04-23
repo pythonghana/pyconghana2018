@@ -175,7 +175,9 @@
     <script src="{% static 'js/plugins/google-map.js' %}"></script>
     <script src="{% static 'js/plugins/directions.js' %}"></script>
 
-
+    {% load cloudinary %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    {% cloudinary_includes %}
 
     <!-- Main Script -->
     <script src="{% static 'js/main.js' %}"></script>

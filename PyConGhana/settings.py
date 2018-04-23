@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/2.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
-
 import os
 from .secrets import *
 
@@ -37,6 +36,11 @@ ADMIN_TITLE = "PYCON GHANA"
 
 # Application definition
 
+
+CLOUDINARY_CLOUD_NAME = 'pyconghana'
+CLOUDINARY_API_KEY = '625639762594486'
+CLOUDINARY_API_SECRET = 'F9o0-PG2iNGa1Wu2zf7eGE_6ZJA'
+
 INSTALLED_APPS = [
     'jet.dashboard',
     'jet',
@@ -49,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
 # Third party apps
+    'cloudinary_storage',
     'cloudinary',
     'captcha',
     'crispy_forms',
@@ -95,11 +100,12 @@ ROOT_URLCONF = 'PyConGhana.urls'
 
 MEDIA_URL = '/media/'
 #MEDIA_ROOT = 'home/pyconghana/pyconghana2018/media'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
-STATIC_URL = '/static/' # the path in url
-STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/static/"))
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 
 STATICFILES_DIRS = [
