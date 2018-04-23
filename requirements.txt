@@ -11,7 +11,6 @@ django-appconf==1.0.2
 django-avatar==4.1.0
 django-cloudinary-storage==0.2.3
 django-crispy-forms==1.7.0
-django-environ==0.4.4
 django-extensions==2.0.6
 django-jet==1.0.7
 django-markitup==3.0.0
@@ -48,10 +47,6 @@ pyflakes==1.6.0
 python-card-me==0.9.3
 python-dateutil==2.7.2
 python-http-client==3.0.0
-<<<<<<< HEAD
-=======
-python-magic==0.4.15
->>>>>>> b18953eea674049e9bcf01ae4e90bcd1fd79f2b9
 python3-openid==3.1.0
 pytz==2017.3
 requests==2.18.4
