@@ -35,9 +35,9 @@ ADMIN_TITLE = "PYCON GHANA"
 # Application definition
 
 
-#CLOUDINARY_CLOUD_NAME = 'pyconghana'
-#CLOUDINARY_API_KEY = ''
-#CLOUDINARY_API_SECRET = ''
+CLOUDINARY_CLOUD_NAME = 'pyconghana'
+CLOUDINARY_API_KEY = ''
+CLOUDINARY_API_SECRET = ''
 
 INSTALLED_APPS = [
     'jet.dashboard',
