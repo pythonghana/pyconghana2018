@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-from .secrets import *
-
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-
+SECRET_KEY = ''
 
 DEBUG = True
 
@@ -57,6 +55,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'newsletter',
     'avatar',
+    "anymail",
     # 'markitup',
 
 
@@ -162,20 +161,20 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Sets the default template pack for the project
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+# Registration App account settings
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_EMAIL_SUBJECT_PREFIX = '[PyCon Ghana 2018]'
 SEND_ACTIVATION_EMAIL = True
 REGISTRATION_AUTO_LOGIN = False
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'testsite_app'
-EMAIL_HOST_PASSWORD = 'mys3cr3tp4ssw0rd'
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'Pycon Ghana<noreply@pyconghana.org>'
+# Django Email configuration
+EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+SENDGRID_API_KEY = ""
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False
+DEFAULT_FROM_EMAIL = 'PyCon Ghana <noreply@gh.pycon.org>'
 
 JET_THEMES = [
     {
