@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 
-DEBUG = True
+DEBUG = False
 
 LOGIN_REDIRECT_URL = '/profile'
 SIGNUP_REDIRECT_URL = '/profile'
@@ -35,11 +35,6 @@ SITE_TITLE  = 'Pycon Ghana'
 ADMIN_TITLE = "PYCON GHANA"
 
 # Application definition
-
-
-CLOUDINARY_CLOUD_NAME = 'pyconghana'
-CLOUDINARY_API_KEY = '625639762594486'
-CLOUDINARY_API_SECRET = 'F9o0-PG2iNGa1Wu2zf7eGE_6ZJA'
 
 INSTALLED_APPS = [
     'jet.dashboard',
@@ -53,7 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
 # Third party apps
-    'cloudinary_storage',
+    #'cloudinary_storage',
     'cloudinary',
     'captcha',
     'crispy_forms',
@@ -98,14 +93,24 @@ PROJECT_ROOT = BASE_DIR = os.path.dirname(PROJECT_APP_PATH)
 
 ROOT_URLCONF = 'PyConGhana.urls'
 
-MEDIA_URL = '/media/'
-#MEDIA_ROOT = 'home/pyconghana/pyconghana2018/media'
+
+
+# Absolute filesystem path to the directory that will hold user-uploaded files.
+# Example: "/home/media/media.lawrence.com/media/"
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# trailing slash.
+# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
+MEDIA_URL = 'home/pyconghana/pyconghana2018/media/'
+#MEDIA_ROOT = 'home/pyconghana/pyconghana2018/media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/static/"))
+#STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 
 STATICFILES_DIRS = [
@@ -174,12 +179,15 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Sets the default template pack for the project
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+# Registration App account settings
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_EMAIL_SUBJECT_PREFIX = '[PyCon Ghana 2018]'
 SEND_ACTIVATION_EMAIL = True
 REGISTRATION_AUTO_LOGIN = False
+
 
 JET_THEMES = [
     {
