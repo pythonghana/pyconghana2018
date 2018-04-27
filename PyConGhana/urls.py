@@ -25,8 +25,8 @@ from home import views
 urlpatterns = [
     path('', include('home.urls', namespace='home')),
     path('about/', include('about.urls', namespace='about')),
-    #path('accounts/', include('registration.backends.default.urls')),
-    path('accounts/', include('registration.backends.simple.urls')),
+    path('accounts/', include('registration.backends.default.urls')),
+    #path('accounts/', include('registration.backends.simple.urls')),
     path('profile/', include('registration.urls', namespace='profiles')),
     # path('accounts/', include('accounts.urls', namespace='accounts')),
     path('avatar/', include('avatar.urls')),

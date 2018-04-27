@@ -29,15 +29,15 @@ LOGOUT_REDIRECT_URL = '/'
 
 ALLOWED_HOSTS = ["*"]
 
-SITE_TITLE = 'Pycon Ghana'
+SITE_TITLE  = 'Pycon Ghana'
 ADMIN_TITLE = "PYCON GHANA"
 
 # Application definition
 
 
 CLOUDINARY_CLOUD_NAME = 'pyconghana'
-CLOUDINARY_API_KEY = ''
-CLOUDINARY_API_SECRET = ''
+CLOUDINARY_API_KEY = '625639762594486'
+CLOUDINARY_API_SECRET = 'F9o0-PG2iNGa1Wu2zf7eGE_6ZJA'
 
 INSTALLED_APPS = [
     'jet.dashboard',
@@ -97,13 +97,13 @@ PROJECT_ROOT = BASE_DIR = os.path.dirname(PROJECT_APP_PATH)
 ROOT_URLCONF = 'PyConGhana.urls'
 
 MEDIA_URL = '/media/'
-#MEDIA_ROOT = 'home/pyconghana/pyconghana2018/media'
+MEDIA_ROOT = 'home/pyconghana/pyconghana2018/media'
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+#STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 
 STATICFILES_DIRS = [
