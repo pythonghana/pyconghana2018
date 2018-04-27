@@ -19,7 +19,7 @@ class Proposal(models.Model):
                         ('IP', 'Intermediate Programmers'),
                         ('EP', 'Expert Programmers'))
 
-
+    email = models.EmailField( help_text="It will be kept secretly from the Public")
     title = models.CharField(  help_text="Public title. What topic/project is it all about?", max_length=1024)
     talk_type = models.CharField(choices=TALK_TYPES, max_length=20)
     proposal_id = models.AutoField(primary_key=True, default=None)
