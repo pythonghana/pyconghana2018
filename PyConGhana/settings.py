@@ -236,6 +236,10 @@ JET_THEMES = [
 # Path to Google Analytics client_secrets.json
 JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(BASE_DIR, 'client_secrets.json')
 
+# Google Recaptcha API Keys
+RECAPTCHA_PRIVATE_KEY = ''
+RECAPTCHA_PUBLIC_KEY = ''
+
 # Using the new No Captcha reCaptcha
 NOCAPTCHA = True
 
@@ -258,3 +262,4 @@ NEWSLETTER_BATCH_SIZE = 100
 SITE_ID = 1
 
 AVATAR_MAX_AVATARS_PER_USER = 5
+
