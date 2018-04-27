@@ -91,15 +91,14 @@ PROJECT_ROOT = BASE_DIR = os.path.dirname(PROJECT_APP_PATH)
 
 ROOT_URLCONF = 'PyConGhana.urls'
 
-<<<<<<< HEAD
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'home/pyconghana/pyconghana2018/media'
-=======
 
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
->>>>>>> 803c3615c81b6c7a3407c23e626d30d712bdc271
+
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
@@ -112,10 +111,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 STATIC_URL = '/static/'
-<<<<<<< HEAD
-=======
+
 STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/static/"))
->>>>>>> 803c3615c81b6c7a3407c23e626d30d712bdc271
+
 #STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 
@@ -194,14 +192,13 @@ REGISTRATION_EMAIL_SUBJECT_PREFIX = '[PyCon Ghana 2018]'
 SEND_ACTIVATION_EMAIL = True
 REGISTRATION_AUTO_LOGIN = False
 
-<<<<<<< HEAD
+
 # Django Email configuration
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 SENDGRID_API_KEY = ""
 SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 DEFAULT_FROM_EMAIL = 'PyCon Ghana <noreply@gh.pycon.org>'
-=======
->>>>>>> 803c3615c81b6c7a3407c23e626d30d712bdc271
+
 
 JET_THEMES = [
     {
