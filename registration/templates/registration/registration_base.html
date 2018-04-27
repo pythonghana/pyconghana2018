@@ -45,12 +45,11 @@
     <!-- Subtle Loading bar -->
     <script src="{% static 'js/plugins/pace.js' %}"></script>
 </head>
-
 <body>
     <!--Preloader div-->
     <div class="preloader"></div>
 
-    <!-- Fixed navbar -->
+ <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -60,7 +59,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img src="{% static 'images/navbarlogoo.png' %}" alt="Pycon Ghana"> </a>
+                <a class="navbar-brand" href="/"><img src="{% static 'images/navbarlogo3b.png' %}" alt="Pycon Ghana"> </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
 
@@ -76,25 +75,22 @@
                             <li role="separator" class="divider"></li>
                         </ul>
                     </li>
-                    <li><a href="/#schedule">Schedule</a></li>
+                    <li><a href="/schedule">Schedule</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SPEAK AT PYCON GH<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li role="separator" class="divider"></li>
-                            <li><a href="{% url 'talks:submit_talk' %}">Summit a Talk</a></li>
-                            
+                            <li><a href="/talks/submit">Submit a Talk</a></li>
+
                             <li role="separator" class="divider"></li>
                         </ul>
                     </li>
-                    <li><a href="/#pricing">Pricing</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sponsors<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li role="separator" class="divider"></li>
-                            <li><a href="/about">Our Sponsors</a></li>
-                            <li><a href="/coc">Prospectus</a></li>
-                            <li><a href="/privacypolicy">Privacy Policy</a></li>
-                            <li><a href="/faq">FAQ</a></li>
+                            <li><a href="/sponsors">Our Sponsors</a></li>
+                            <li><a href="/support_us">Support Us</a></li>
                             <li role="separator" class="divider"></li>
                         </ul>
                     </li>
@@ -118,6 +114,7 @@
     </nav>
     <!-- // End Fixed navbar -->
 
+
     <!-- Red header -->
     <header id="top" class="sub-header">
     </header>
@@ -127,18 +124,22 @@
 
             <div class="nav-center bottom-space-lg">
                 <!-- Nav tabs -->
+                   <font color="black">
                  {% block content %}
 
     		{% endblock %}
+    		</font>
 
             </div>
         </div>
-    
+
+
+
     <!-- Back to Top -->
     <a href="#top" class="back_to_top"><img src="images/back_to_top.png" alt="back to top"></a>
     <!-- // End .back_to_top -->
 
-    <!-- 
+    <!--
      Javascripts : Nerd Stuff :)
      ====================================== -->
 

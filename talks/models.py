@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Proposal(models.Model):
     TALK_TYPES = (
         ('Short Talk', "Short Talk - 30 mins"),
-        ('Keynote', "Keynote Talk - 45 mins"),
+        ('Long Talk', "Long Talk - 45 mins"),
     )
 
     STATUS = (('S', 'Submitted'),
@@ -19,13 +19,11 @@ class Proposal(models.Model):
                         ('IP', 'Intermediate Programmers'),
                         ('EP', 'Expert Programmers'))
 
-    
-    email = models.EmailField(max_length=1024, default='', help_text = "We’ll keep it secret, for internal use only.")
+
     title = models.CharField(  help_text="Public title. What topic/project is it all about?", max_length=1024)
     talk_type = models.CharField(choices=TALK_TYPES, max_length=20)
     proposal_id = models.AutoField(primary_key=True, default=None)
     Tell_the_audience_about_your_talk = models.TextField(max_length=255, help_text = "Describe your Talk to your targeted audience . Please include the requirements: libraries and Python version to be installed, required experience with topics/libraries, etc.", blank=False)
-    url = models.URLField(default='', help_text='Got a video? If you have a recording of you giving a talk or leading a workshop, you can paste the link here.')
     abstract = models.TextField(default='', help_text = "Your Abstract.", blank=True, null=True
                              )
     user = models.ForeignKey(User, related_name="proposals", default='', on_delete=models.CASCADE)
