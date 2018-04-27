@@ -4,11 +4,27 @@
 {% block title %}{% trans "Account Activation Resent" %}{% endblock %}
 
 {% block content %}
-<p>
-  {% blocktrans %}
-  We have sent an email to {{ email }} with further instructions.
-  {% endblocktrans %}
-</p>
+<div class="col-md-6 col-md-offset-3"><h3>Account Activation Resent</h3>
+                                    <div class="thumbnail wow fadeInUp">
+                                        <div class="caption">
+                                           <div class="row">
+                                                    <div class="col-md-3">
+
+                                                    </div>
+                                                    <div>
+                                                <br>
+                                                 <p>
+                                                  {% blocktrans %}
+                                                  We have sent an email to <b>{{ email }}</b> with further instructions.
+                                                  <br>Thanks.
+                                                  {% endblocktrans %}
+                                                </p>
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
 {% endblock %}
 
 
