@@ -4,12 +4,29 @@
 {% block title %}{% trans "Account Activated" %}{% endblock %}
 
 {% block content %}
-<p>
-    {% trans "Your account is now activated." %}
-    {% if not user.is_authenticated %}
-    {% trans "You can log in." %}
-    {% endif %}
-</p>
+<div class="col-md-6 col-md-offset-3"><h3>Account Activated</h3><p>
+														    
+														</p>
+                                    <div class="thumbnail wow fadeInUp">
+                                        <div class="caption">
+                                           <div class="row">
+                                                    <div class="col-md-3">
+                                                    	
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                <br>
+                                                 <p>
+												    {% trans "Your account is now activated." %}<br>
+												    {% if not user.is_authenticated %}
+												      {% blocktrans %}<a href="/accounts/login"><b>log in here</b></a>{% endblocktrans %}
+												    {% endif %}
+												</p>
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
 {% endblock %}
 
 

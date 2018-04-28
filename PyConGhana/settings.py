@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 import os
+from .secrets import *
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -18,8 +20,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
 
 DEBUG = True
 
@@ -193,13 +193,6 @@ SEND_ACTIVATION_EMAIL = True
 REGISTRATION_AUTO_LOGIN = False
 
 
-# Django Email configuration
-EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-SENDGRID_API_KEY = ""
-SENDGRID_SANDBOX_MODE_IN_DEBUG = False
-DEFAULT_FROM_EMAIL = 'PyCon Ghana <noreply@gh.pycon.org>'
-
-
 JET_THEMES = [
     {
         'theme': 'default',  # theme folder name
@@ -236,9 +229,6 @@ JET_THEMES = [
 # Path to Google Analytics client_secrets.json
 JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(BASE_DIR, 'client_secrets.json')
 
-# Google Recaptcha API Keys
-RECAPTCHA_PRIVATE_KEY = ''
-RECAPTCHA_PUBLIC_KEY = ''
 
 # Using the new No Captcha reCaptcha
 NOCAPTCHA = True
@@ -262,4 +252,3 @@ NEWSLETTER_BATCH_SIZE = 100
 SITE_ID = 1
 
 AVATAR_MAX_AVATARS_PER_USER = 5
-

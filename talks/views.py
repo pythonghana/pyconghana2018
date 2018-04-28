@@ -47,9 +47,9 @@ def submit_talk(request):
             subject = "Talk Successfully Submitted"
             message = "\
                         Dear {}, \
-                        Your talk to PyConGhana 2018 was Successfully submitted.Thank You!\
+                        Your talk to PyConGhana 2018 was Successfully Submitted.Thank You!\
                         \
-                        These are overview of your talk:\
+                        These are the overview of your Submission:\
                         Talk Title: {} \
                         Talk Type: {} \
                         Intended Audience: {} \
