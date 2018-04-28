@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = ''
 
-DEBUG = False
+DEBUG = True
 
 LOGIN_REDIRECT_URL = '/profile'
 SIGNUP_REDIRECT_URL = '/profile'
