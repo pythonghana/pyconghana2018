@@ -46,18 +46,20 @@ def submit_talk(request):
             obj.save()
             subject = "[PyCon Ghana 2018] Talk Successfully Submitted"
             message = '''\nDear {},
-                        \nYour talk to PyConGhana 2018 was Successfully Submitted.Thank You!
-
+                        \nYour talk to PyConGhana 2018 was Successfully Submitted. Thank You!
+                        \n
+                        \n
                         \nThese are the overview of your Submission:
                         \nTalk Title: {} 
                         \nTalk Type: {} 
                         \nIntended Audience: {}  
                         \nTalk Description: {} 
                         \nAbstract: {}
-
+                        \n
+                        \n
                         \nSincerely, 
                         \nPycon Ghana Management.
-                        '''.format(obj.username, obj.title, obj.talk_type, obj.Tell_the_audience_about_your_talk, obj.intended_audience, obj.abstract)
+                        '''.format(obj.username, obj.title, obj.talk_type, obj.intended_audience, obj.Tell_the_audience_about_your_talk, obj.abstract)
             try:
                 send_mail(subject, message,'noreply@gh.pycon.org', [obj.email, ])
             except BadHeaderError:

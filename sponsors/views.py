@@ -19,6 +19,7 @@ def sponsors(request):
     gold = Sponsor.objects.filter(category="Gold")
     silver = Sponsor.objects.filter(category="Silver")
     bronze = Sponsor.objects.filter(category="Bronze")
+    special = Sponsor.objects.filter(category="Special")
     individuals = Sponsor.objects.filter(type="I")
 
     return render(
@@ -30,6 +31,7 @@ def sponsors(request):
             'gold': gold,
             'silver': silver,
             'bronze': bronze,
+            'special': special,
             'individuals': individuals,
         }
     )

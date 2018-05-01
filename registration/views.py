@@ -219,7 +219,7 @@ class CreateProfileView(TemplateView):
             # process the data in request_form.cleaned_data as required
             obj = Profile()  # gets new object
             obj.user_id = self.request.user.pk
-           # obj.image = profile_form.cleaned_data['image']
+            obj.avatar = profile_form.cleaned_data['avatar']
             obj.name = profile_form.cleaned_data['name']
             obj.surname = profile_form.cleaned_data['surname']
             obj.bio = profile_form.cleaned_data['bio']

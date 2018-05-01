@@ -8,6 +8,7 @@ class Proposal(models.Model):
     TALK_TYPES = (
         ('Short Talk', "Short Talk - 30 mins"),
         ('Long Talk', "Long Talk - 45 mins"),
+        ('Tutorial', "Tutorial - 2 hours or more"),
     )
 
     STATUS = (('S', 'Submitted'),
@@ -15,9 +16,10 @@ class Proposal(models.Model):
               ('W', 'Waiting List'),
               ('R', 'Rejected'),)
 
-    PROGRAMMING_EXPERIENCE = (('BP','Beginners'),
-                        ('IP', 'Intermediate Programmers'),
-                        ('EP', 'Expert Programmers'))
+    PROGRAMMING_EXPERIENCE = (('BP','Beginners, no prior knowledge of Python required'),
+                        ('IP', 'Intermediate Programmers, some prior knowledge of Python required'),
+                        ('EP', 'Expert Programmers, Experienced Python programmers level'))
+    
 
     email = models.EmailField( help_text="It will be kept secretly from the Public")
     title = models.CharField(  help_text="Public title. What topic/project is it all about?", max_length=1024)

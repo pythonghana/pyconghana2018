@@ -699,6 +699,7 @@ class SupervisedRegistrationProfile(RegistrationProfile):
 
 
 class Profile(models.Model):
+    #avatar = models.ImageField(upload_to="profile/avatars/", default='profile/avatar1.jpg', max_length=255, blank=True, null=True)
     name = models.CharField(max_length=30, default='', blank=False)
     surname = models.CharField(max_length=30, default='', blank=False)
     user = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
