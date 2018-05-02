@@ -6,11 +6,11 @@ coverage==4.4.2
 coveralls==1.2.0
 defusedxml==0.5.0
 Django==2.0.1
+django-anymail==2.2
 django-appconf==1.0.2
 django-avatar==4.1.0
 django-cloudinary-storage==0.2.3
 django-crispy-forms==1.7.0
-django-environ==0.4.4
 django-extensions==2.0.6
 django-jet==1.0.7
 django-markitup==3.0.0
@@ -47,7 +47,6 @@ pyflakes==1.6.0
 python-card-me==0.9.3
 python-dateutil==2.7.2
 python-http-client==3.0.0
-python-magic==0.4.15
 python3-openid==3.1.0
 pytz==2017.3
 requests==2.18.4

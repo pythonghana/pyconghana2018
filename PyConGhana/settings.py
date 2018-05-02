@@ -17,13 +17,11 @@ from .secrets import *
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-# Quick-start development settings - unsuitable for production
+# Quick-start development settingss - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
 
-
-DEBUG = False
+DEBUG = True
 
 LOGIN_REDIRECT_URL = '/profile'
 SIGNUP_REDIRECT_URL = '/profile'
@@ -49,7 +47,7 @@ INSTALLED_APPS = [
 
 # Third party apps
     #'cloudinary_storage',
-    'cloudinary',
+    #'cloudinary',
     'captcha',
     'crispy_forms',
     'rest_framework',
@@ -93,23 +91,35 @@ PROJECT_ROOT = BASE_DIR = os.path.dirname(PROJECT_APP_PATH)
 ROOT_URLCONF = 'PyConGhana.urls'
 
 
-
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
+
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
+<<<<<<< HEAD
 #MEDIA_URL = 'home/pyconghana/pyconghana2018/media/'
 #MEDIA_ROOT = 'home/pyconghana/pyconghana2018/media'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 #MEDIA_ROOT = os.path.join(BASE_DIR, *MEDIA_URL.strip("/").split("/"))
 MEDIA_URL = '/media/'
+=======
+
+
+#MEDIA_URL = 'home/pyconghana/pyconghana2018/media/'
+#MEDIA_ROOT = 'home/pyconghana/pyconghana2018/media'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+>>>>>>> 04a3f00734f44a87e626b3c84103ba70b39063fd
 
 
 STATIC_URL = '/static/'
+
 STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/static/"))
+
 #STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 
@@ -225,6 +235,7 @@ JET_THEMES = [
 # Path to Google Analytics client_secrets.json
 JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(BASE_DIR, 'client_secrets.json')
 
+
 # Using the new No Captcha reCaptcha
 NOCAPTCHA = True
 
@@ -244,9 +255,6 @@ NEWSLETTER_BATCH_DELAY = 60
 NEWSLETTER_BATCH_SIZE = 100
 
 # Sets the default site
-SITE_ID = 1
+SITE_ID = 3
 
 AVATAR_MAX_AVATARS_PER_USER = 5
-
-SENDGRID_SANDBOX_MODE_IN_DEBUG = False
-

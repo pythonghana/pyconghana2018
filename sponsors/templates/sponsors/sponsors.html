@@ -22,90 +22,107 @@
                             </p>
                             <p>Would you like to join them? <a href="/support_us"><b>See How to sponsor PyCon Ghana.</b></a></p><br><br>
 
-                {% if sponsors %}
                      {% if diamond %}
                    
                     <h3 style="color: #000; text-shadow: 2px 2px 3px #b9f2ff"><b>Diamond Sponsors</b></h3>
                     <br><br>
                      <div class="container-fluid">
                        {% for sponsor in diamond %}
-                            <div class="col-xs-2">
+                            <div class="col-xs-6">
                                 <p><a href="{{ sponsor.url }}" target="blank"><img src="{{ sponsor.logo.url }}" class='img-responsive'></a></p>
+                                <p><br>
+                                {{ sponsor.description }}
+                            </p>
                             </div>
                         {% endfor %}
-                          </div>
+                          </div><br><br>
                     {% endif %}
 
-
-
-
-                    <br><br>
 
                      {% if gold %}
                     <h4 style="color: #000; text-shadow: 2px 2px 3px #FFD700"><b>Gold Sponsors</b></h4>
                     <br />
                     <div class="container">
                     {% for sponsor in gold %}
-                        <div class="col-xs-2">
+                        <div class="col-xs-6">
                             <a href="{{ sponsor.url }}" target="_blank"><img src="{{ sponsor.logo.url }}" class='img-responsive'></a>
+                            <p><br>
+                                {{ sponsor.description }}
+                            </p>
                         </div>
                         {% endfor %}
                         </div>
+                        <br><br>
                     {% endif %}
 
-                    <br /><br>
+                    
 
                      {% if silver %}
                     <h5 style="color: #000; text-shadow: 2px 2px 3px #C0C0C0"><b>Silver Sponsors<b></h5>
                     <br />
                     <div class="container">
                     {% for sponsor in silver %}
-                        <div class="col-xs-2">
+                        <div class="col-xs-6">
                             <a href="{{ sponsor.url }}" target="_blank"><img src="{{ sponsor.logo.url }}" class='img-responsive'></a>
+                            <p><br>
+                                {{ sponsor.description }}
+                            </p>
                         </div>
                         {% endfor %}
                         </div>
+                        <br><br>
                     {% endif %}
 
 
-                    <br><br>
 
                          {% if bronze %}
                     <h6 style="color: #000; text-shadow: 2px 2px 3px #cd7f32"><b>Bronze Sponsors</b></h6>
                     <br />
                     <div class="container">
                     {% for sponsor in bronze %}
-                        <div class="col-xs-2">
+                        <div class="col-xs-6">
                             <a href="{{ sponsor.url }}" target="_blank"><img src="{{ sponsor.logo.url }}" class='img-responsive'></a>
+                            <p><br>
+                                {{ sponsor.description }}
+                            </p>
                         </div>
                         {% endfor %}
-                        </div>
+                        </div><br><br>
                     {% endif %}
 
+                       {% if special %}
+                    <h6 style="color: #000; text-shadow: 2px 2px 3px #cd7012"><b>Special Sponsors</b></h6>
+                    <br />
+                    <div class="container">
+                    {% for sponsor in special %}
+                        <div class="col-xs-4">
+                            <a href="{{ sponsor.url }}" target="_blank"><img src="{{ sponsor.logo.url }}" class='img-responsive'></a>
+                            <p><br>
+                                {{ sponsor.description }}
+                            </p>
+                        </div>
+                        {% endfor %}
+                        </div><br><br>
+                    {% endif %}
 
-                     <br><br>
                     <hr>
+
+                            {% if individuals %}
                     <h6 style="color: #000; text-shadow: 2px 2px 3px "><b>Individual Sponsors</b></h6>
                     <div class="container-fluid">
                         <div class="row">
-                            {% if individuals %}
                                 {% for individual in individuals %}
                                 <div class="col-xs-2">
                                     <h6><a href="{{ individual.url }}" target="_blank">{{ individual.name }}</a></h6>
                                 </div>
                                 {% endfor %}
-                            {% endif %}
+                            
                         </div>
                     </div>
+                    {% endif %}
                     <br><br>
-                    <hr>
-                    {% else %}
-
-                                <br><p>We currently have no Sponsors.</p>
-                                <br>
                                
                     </div>
-                     {% endif %}
 
                         </div>
                     </div>

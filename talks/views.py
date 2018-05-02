@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect, HttpRequest
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView, UpdateView, ListView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core.mail import send_mail, BadHeaderError
 
 from django.shortcuts import render, redirect
 from django.conf import settings
@@ -34,6 +35,8 @@ def submit_talk(request):
             # process the data in form.cleaned_data as required
             obj = Proposal()  # gets new object
             obj.user_id = request.user.pk
+            obj.username = request.user.username
+            obj.email = form.cleaned_data['email']
             obj.title = form.cleaned_data['title']
             obj.Tell_the_audience_about_your_talk = form.cleaned_data['Tell_the_audience_about_your_talk']
             obj.talk_type = form.cleaned_data['talk_type']
@@ -41,7 +44,26 @@ def submit_talk(request):
             obj.abstract = form.cleaned_data['abstract']
             # finally save the object in db
             obj.save()
-
+            subject = "[PyCon Ghana 2018] Talk Successfully Submitted"
+            message = '''\nDear {},
+                        \nYour talk to PyConGhana 2018 was Successfully Submitted. Thank You!
+                        \n
+                        \n
+                        \nThese are the overview of your Submission:
+                        \nTalk Title: {} 
+                        \nTalk Type: {} 
+                        \nIntended Audience: {}  
+                        \nTalk Description: {} 
+                        \nAbstract: {}
+                        \n
+                        \n
+                        \nSincerely, 
+                        \nPycon Ghana Management.
+                        '''.format(obj.username, obj.title, obj.talk_type, obj.intended_audience, obj.Tell_the_audience_about_your_talk, obj.abstract)
+            try:
+                send_mail(subject, message,'noreply@gh.pycon.org', [obj.email, ])
+            except BadHeaderError:
+                return HttpResponse('Invalid Header Found')
             return HttpResponseRedirect(reverse('talks:submitted'))
 
     else:

@@ -2,8 +2,41 @@
 
 {% load i18n %}
 
-{% block title %}{% trans "Newsletter" %} {{ newsletter.title }} {{ action }} {% trans "activate" %}{% endblock title %}
 
+<<<<<<< HEAD
+{% block title %}
+{% trans "Newsletter" %} {{ newsletter.title }} {{ action }} {% trans "activate" %}
+{% endblock title %}
+
+
+{% block body %}
+<br><br><br><br><br><br>
+<section>
+   
+ <div class="col-md-12">
+       
+ <div class="panel panel-danger wow fadeInLeft">
+          
+  <div class="container">
+    			
+<div class="row ">
+                      
+  <h5 class="page-title wow fadeInDown">{{ newsletter.title }} Newsletter Activation<br></h5><br>
+
+  
+                      <div class="col-xs-15">
+                      
+      <p>Your subscription has successfully been activated. Thanks</p><br>
+   
+                     </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+</section><br><br><br><br><br>
+{% endblock body %}
+=======
 {% block body %}
 <br><br><br><br><br><br>
 <section>
@@ -23,3 +56,4 @@
 </section><br><br><br><br><br>
 {% endblock body %}
 
+>>>>>>> b18953eea674049e9bcf01ae4e90bcd1fd79f2b9

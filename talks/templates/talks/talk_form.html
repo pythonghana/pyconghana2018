@@ -1,5 +1,5 @@
 {% extends "base2.html" %}
-{% load crispy_forms_tags i18n static %}
+{% load crispy_forms_tags i18n static avatar_tags  %}
 {% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Submit your Talk | Pycon Ghana 2018" %}{% endif %}{% endblock %}
 {% block content %}
 
@@ -34,8 +34,9 @@
                     <h4>  </h4>
                  </div>
                 <div class="panel panel-danger wow fadeInLeft">      
-                      <div class="row">
-                                        <div class="col-md-12">
+                        <div class="row">
+
+                            <div class="col-md-12">
                                             <div class="col-md-12">
                                                  <h5 class="page-title wow fadeInDown">Submit your talk below, {% firstof user.get_short_name user.get_username %}</small></h5><br>
                                                                     <form class="form col-md-8" action="{% url 'talks:submit_talk' %}" method="post">
@@ -43,8 +44,8 @@
                                                                                 {% csrf_token %}
                                                                     </form>
                                             </div>
-                                    </div>
-                                </div> 
+                                </div>
+                        </div> 
                 </div>
             </div>
 
