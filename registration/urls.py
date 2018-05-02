@@ -1,4 +1,6 @@
 from django.conf.urls import url
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib.auth.decorators import login_required
 
 from .views import UpdateProfileView, ProfileView, UpdateLoginView, CreateProfileView, PasswordView, SuccessView
@@ -14,3 +16,7 @@ urlpatterns = [
     url(r'login_details/(?P<pk>\d+)/$', login_required(UpdateLoginView.as_view()), name='login_details'),
     url(r'profile_update/$', login_required(SuccessView.as_view()), name='profile_update'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

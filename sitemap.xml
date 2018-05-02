@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://gh.pycon.org/</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/about/</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/coc/</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/privacypolicy/</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/faq/</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/schedule/</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/talks/submit</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/sponsors/</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/support_us/</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/accounts/login/</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/avatar/</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/accounts/login/?next=/avatar/change/</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/accounts/login/?next=/talks/submit_talk</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/talks/recording</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/accounts/login/?next=/profile/</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/talks/proposing_a_talk</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/static/files/Prospectus.pdf</loc>
+  <lastmod>2018-04-27T15:26:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/accounts/register/</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gh.pycon.org/accounts/password/reset/</loc>
+  <lastmod>2018-04-29T10:34:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

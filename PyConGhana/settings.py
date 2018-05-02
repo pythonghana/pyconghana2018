@@ -90,7 +90,6 @@ PROJECT_APP_PATH = os.path.dirname(os.path.abspath(__file__))
 PROJECT_APP = os.path.basename(PROJECT_APP_PATH)
 PROJECT_ROOT = BASE_DIR = os.path.dirname(PROJECT_APP_PATH)
 
-
 ROOT_URLCONF = 'PyConGhana.urls'
 
 
@@ -102,10 +101,11 @@ ROOT_URLCONF = 'PyConGhana.urls'
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = 'home/pyconghana/pyconghana2018/media/'
+#MEDIA_URL = 'home/pyconghana/pyconghana2018/media/'
 #MEDIA_ROOT = 'home/pyconghana/pyconghana2018/media'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+#MEDIA_ROOT = os.path.join(BASE_DIR, *MEDIA_URL.strip("/").split("/"))
+MEDIA_URL = '/media/'
 
 
 STATIC_URL = '/static/'
@@ -125,11 +125,11 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.media',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media',
             ],
         },
     },
