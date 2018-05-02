@@ -28,8 +28,11 @@
                     <br><br>
                      <div class="container-fluid">
                        {% for sponsor in diamond %}
-                            <div class="col-xs-2">
+                            <div class="col-xs-6">
                                 <p><a href="{{ sponsor.url }}" target="blank"><img src="{{ sponsor.logo.url }}" class='img-responsive'></a></p>
+                                <p><br>
+                                {{ sponsor.description }}
+                            </p>
                             </div>
                         {% endfor %}
                           </div><br><br>
@@ -41,8 +44,11 @@
                     <br />
                     <div class="container">
                     {% for sponsor in gold %}
-                        <div class="col-xs-2">
+                        <div class="col-xs-6">
                             <a href="{{ sponsor.url }}" target="_blank"><img src="{{ sponsor.logo.url }}" class='img-responsive'></a>
+                            <p><br>
+                                {{ sponsor.description }}
+                            </p>
                         </div>
                         {% endfor %}
                         </div>
@@ -56,8 +62,11 @@
                     <br />
                     <div class="container">
                     {% for sponsor in silver %}
-                        <div class="col-xs-2">
+                        <div class="col-xs-6">
                             <a href="{{ sponsor.url }}" target="_blank"><img src="{{ sponsor.logo.url }}" class='img-responsive'></a>
+                            <p><br>
+                                {{ sponsor.description }}
+                            </p>
                         </div>
                         {% endfor %}
                         </div>
@@ -71,8 +80,11 @@
                     <br />
                     <div class="container">
                     {% for sponsor in bronze %}
-                        <div class="col-xs-2">
+                        <div class="col-xs-6">
                             <a href="{{ sponsor.url }}" target="_blank"><img src="{{ sponsor.logo.url }}" class='img-responsive'></a>
+                            <p><br>
+                                {{ sponsor.description }}
+                            </p>
                         </div>
                         {% endfor %}
                         </div><br><br>
@@ -85,7 +97,7 @@
                     {% for sponsor in special %}
                         <div class="col-xs-4">
                             <a href="{{ sponsor.url }}" target="_blank"><img src="{{ sponsor.logo.url }}" class='img-responsive'></a>
-                            <p>
+                            <p><br>
                                 {{ sponsor.description }}
                             </p>
                         </div>

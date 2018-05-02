@@ -47,7 +47,7 @@ INSTALLED_APPS = [
 
 # Third party apps
     #'cloudinary_storage',
-    'cloudinary',
+    #'cloudinary',
     'captcha',
     'crispy_forms',
     'rest_framework',
@@ -248,6 +248,6 @@ NEWSLETTER_BATCH_DELAY = 60
 NEWSLETTER_BATCH_SIZE = 100
 
 # Sets the default site
-SITE_ID = 1
+SITE_ID = 3
 
 AVATAR_MAX_AVATARS_PER_USER = 5
