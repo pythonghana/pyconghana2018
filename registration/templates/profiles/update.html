@@ -36,7 +36,7 @@
                                             <div class="col-md-10">
                                             <h5 class="page-title wow fadeInDown">Update your Profile  {% firstof user.get_short_name user.get_username %}<br></h5>
                                                 <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
-                                                    <br><h5><a href="/avatar/change" data-toggle="modal" data-target="#avatarC-upload" class="btn warn">Change your Avatar</a></h5><br>
+                                                    <br><h5><a href="/avatar/change" data-toggle="modal" data-target="#avatarC-upload" class="btn warn">Click here to change your Avatar</a></h5><br>
                                                         {% crispy form form.helper %}
                                                 </form>
                                             </div>

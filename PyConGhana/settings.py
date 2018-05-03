@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 
-DEBUG = True
+DEBUG = False
 
 LOGIN_REDIRECT_URL = '/profile'
 SIGNUP_REDIRECT_URL = '/profile'
@@ -90,42 +90,37 @@ PROJECT_ROOT = BASE_DIR = os.path.dirname(PROJECT_APP_PATH)
 
 ROOT_URLCONF = 'PyConGhana.urls'
 
+# URL prefix for static files.
+# Example: "http://media.lawrence.com/static/"
+STATIC_URL = "/static/"
 
-# Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/home/media/media.lawrence.com/media/"
+# Absolute path to the directory static files should be collected to.
+# Don't put anything in this directory yourself; store your static files
+# in apps' "static/" subdirectories and in STATICFILES_DIRS.
+# Example: "/home/media/media.lawrence.com/static/"
+STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# List of finder classes that know how to find static files in
+# various locations.
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-<<<<<<< HEAD
-#MEDIA_URL = 'home/pyconghana/pyconghana2018/media/'
-#MEDIA_ROOT = 'home/pyconghana/pyconghana2018/media'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-#MEDIA_ROOT = os.path.join(BASE_DIR, *MEDIA_URL.strip("/").split("/"))
-MEDIA_URL = '/media/'
-=======
+MEDIA_URL = STATIC_URL + "media/"
 
-
-#MEDIA_URL = 'home/pyconghana/pyconghana2018/media/'
-#MEDIA_ROOT = 'home/pyconghana/pyconghana2018/media'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
->>>>>>> 04a3f00734f44a87e626b3c84103ba70b39063fd
-
-
-STATIC_URL = '/static/'
-
-STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/static/"))
+# Absolute filesystem path to the directory that will hold user-uploaded files.
+# Example: "/home/media/media.lawrence.com/media/"
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
 
 #STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
 
 
 TEMPLATES = [
@@ -255,6 +250,6 @@ NEWSLETTER_BATCH_DELAY = 60
 NEWSLETTER_BATCH_SIZE = 100
 
 # Sets the default site
-SITE_ID = 3
+SITE_ID = 1
 
 AVATAR_MAX_AVATARS_PER_USER = 5
