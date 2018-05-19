@@ -205,7 +205,7 @@ class ProfileView(TemplateView):
 
 class CreateProfileView(TemplateView):
     template_name = "profiles/create_profile.html"
-    
+
     def get_context_data(self, **kwargs):
         context = super(CreateProfileView, self).get_context_data(**kwargs)
         context['title'] = 'Create Profile'
@@ -219,7 +219,6 @@ class CreateProfileView(TemplateView):
             # process the data in request_form.cleaned_data as required
             obj = Profile()  # gets new object
             obj.user_id = self.request.user.pk
-            obj.avatar = profile_form.cleaned_data['avatar']
             obj.name = profile_form.cleaned_data['name']
             obj.surname = profile_form.cleaned_data['surname']
             obj.bio = profile_form.cleaned_data['bio']
@@ -232,7 +231,7 @@ class CreateProfileView(TemplateView):
             # finally save the object in db
             obj.save()
             return HttpResponseRedirect(reverse_lazy('profiles:profile_home'))
-            
+
         else:
             return HttpResponseRedirect(reverse_lazy('profiles:create_profile'))
 

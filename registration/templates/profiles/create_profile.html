@@ -38,7 +38,7 @@
                                                 <div class="col-md-10">
                                                     <h5 class="page-title wow fadeInDown">Create your Profile below, {% firstof user.get_short_name user.get_username %}<br></h5>
                                                     <form action="{% url 'profiles:create_profile' %}" enctype='multipart/form-data' method='Post'>{% csrf_token %}
-                                                        <br><h4><a href="/avatar/add" data-toggle="modal" data-target="#avatar-upload" class="btn warn">Upload your Avatar Here</a></h4><br>
+                                                       <br><h4><a href="/avatar/add" data-toggle="modal" data-target="#avatar-upload" class="btn warn">Upload your Avatar Here</a></h4><br>
                                                         {% crispy form form.helper %}
 
                                                     </form>
