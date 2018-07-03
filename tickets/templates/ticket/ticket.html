@@ -1,0 +1,78 @@
+{% extends "base2.html" %}
+{% load i18n %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Tickets | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+
+{% block content %}
+<header id="top" class="sub-header">
+        <div class="container">
+        </div>
+        <!-- end .container -->
+    </header><br><br>
+    <!-- end .sub-header -->
+    <!-- 
+     Our Schedule
+     ====================================== -->
+
+    <section class="schedule" id="schedule">
+        <div class="col-md-12">
+            <div class="panel panel-danger wow fadeInLeft">
+                <div class="container">
+                    <h5 class="page-title wow fadeInDown">Register for PyCon Ghana</h5><br>
+                        <div>
+                            <section class="section1"><h5>Ticket Types</h5>
+                                <table WIDTH="50%" cellspacing="5" cellpadding="2">
+                                    <tbody>
+                                        <tr>
+                                          <th><span>Conference registration</span></th>
+                                          <th><span>Early Bird<sup>*</sup></span></th>
+                                          <th><span>Regular</span></th>
+                                          <!-- <th><span>On the day</span><br /> (cash only)</th> -->
+                                        </tr>
+                                        <tr>
+                                          <td class="title">Corporate</td><td>Ghs 60</td><td>Ghs 80</td><!-- <td>Ghs 100</td> -->
+                                        </tr>
+                                        <tr>
+                                          <td class="title">Individual</td><td>Ghs 80</td><td>Ghs 100</td><!-- <td>R 120</td> -->
+                                        </tr>
+                                        <tr>
+                                          <td class="title">Student</td><td>Ghs 130</td><td>Ghs 150</td><!-- <td>R 170</td> -->
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p style="margin-top: 0.5em; font-size: small; color:#666;"><sup>*</sup> Early Bird tickets are handled on a first come, first serve basis.</p>
+                            </section>
+                            <div align="center">
+                                <a class="btn btn-default btn-xl wow zoomIn" href="/tickets/register">RESERVE YOUR SEAT HERE</a>  
+                            </div>
+                            <br><br>
+                            <section class="section1"><h5>What does the cost include?</h5>
+                                <p>PyConGH conference registration includes a light lunch and morning and afternoon break refreshments on the two conference days (Thursday and Friday).</p>
+                            </section>
+                            <section class="section1"><h5>Corporate Rate</h5>
+                                <p>If your company is paying for you to attend PyConGH, you should register at the corporate rate. Government employees should also register at the corporate rate.</p>
+                            </section>
+                            <section class="section1"><h5>Individual Rate</h5>
+                            <p>If you are paying for yourself to attend PyConGH, feel free to come as an individual. Employees of non-profits may register at the individual rate.</p>
+                            </section>
+                            <section class="section1"><h5>Student Rate</h5>
+                            <p>This rate is for full-time students and scholars (please note student cards will be requested at registration).</p>
+                            </section>
+                            <section class="section1"><h5>Pensioner Rate</h5>
+                            <p>This rate is for individuals over the age of 60 (please note that ID may be requested at registration).</p>
+                            </section>
+                            <section class="section1"><h5>Queries and Changes</h5>
+                            <p>For queries regarding invoices and the ticketing process, please contact support@quicket.co.za</p>
+                            <p>For ticket name and dietary changes please contact team@za.pycon.org.</p>
+                            </section>
+                              
+                        </div>
+                </div>
+                <!-- end .container -->
+            </div>
+        </div>
+
+    </section>
+    <!-- end section.schedule -->
+
+
+{% endblock %}

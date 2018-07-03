@@ -1,0 +1,69 @@
+{% extends "base2.html" %}
+{% load i18n %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Financial Aid | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+
+{% block content %}
+<header id="top" class="sub-header">
+        <div class="container">
+        </div>
+        <!-- end .container -->
+</header><br><br>
+    <!-- end .sub-header -->
+    <!--
+     Our Schedule
+     ====================================== -->
+
+    <section class="schedule" id="schedule">
+        <div class="col-md-12">
+            <div class="panel panel-danger wow fadeInLeft">
+                <div class="container">
+                    <h5 class="page-title wow fadeInDown">Financial Aid</h5>
+                            <br>
+                            <div class="col-xs-12">
+                                <p>We want PyCon Ghana to be as accessible as possible.
+                                    Financial Aid is meant for anyone who is not able to attend PyCon GH because of their financial situation. It may cover ticket and/or accommodation and/or travel costs.</p>
+                            </div><br><br>
+                            <h6 class="faq-title">Timeline.</h6>
+                            <div class="col-xs-12">
+                                    <p>Financial aid applications open on 8th June and close on 27th June.
+                                    After that we will carefully examine each application and inform all applicants privately before the end of June about the result.</p>
+                            </div><br>
+                                <div align="center">
+                                <a class="btn btn-default btn-xl wow zoomIn disabled" href="https://docs.google.com/forms/d/e/1FAIpQLSfFmFM43irqQxDMvhOmKa-76jdbKBMisAzTcRHUTTvtyElUwQ/viewform?usp=pp_url">Apply for Financial Aid</a>
+                            </div>
+                            <br>
+
+            <h6 class="faq-title">Philosophy &amp;&nbsp;Outreach</h6>
+            <div class="col-xs-12">
+            <p>Our primary goal is to make PyCon Ghana accessible to everyone, irrespective of their financial situation. For this reason, we provide multiple tiers of ticket prices, Early-Bird, Student, Individual and Corporate. This is based on the principle that those who can afford to pay for tickets subsidize those who cannot. This structure enables us to include major diversity and outreach programmes such as DjangoGirls, reward and encourage active participation in the PyCon Ghana event organization, and fund PyCon Ghana’s Financial Aid programme.</p>
+
+            <p>PyCon Ghana’s financial aid programme aims to provide funds to help people attend PyCon Ghana. Financial aid recipients have some part of their expenses (which may include travel, accommodation, or ticket registration) paid for by the PyCon Ghana budget. We actively encourage people to apply for financial aid. While we can’t cover all expenses for everyone, we try our best to optimally allocate our budget. Optimal is, of course, an ambiguous property.</p>
+
+            <p>Since PyCon is a well positioned international Python conference in West Africa, it’s a meeting place for Python developers from all around the globe. Therefore, the process is designed to benefit people that we believe make PyCon Ghana better, particularly speakers and workshop tutors, as well as notable open source contributors.</p>
+
+            <p>This way, the process attempts to promote a more diverse community event.</p>
+
+            <p>Finally, the process tries to help people with relatively lower incomes, be it because of their location (lower income countries or regions) or their profession (such as students, or the unemployed).</p>
+
+            <p>In short, we use the financial aid budget to help individuals who would otherwise not be able to attend the conference or whose presence will bring a justifiably positive impact for other attendees.</p>
+
+            <p>The financial aid programme supports the community by making it more accessible at PyCon Ghana. It is true to the spirit of PyCon to make the information and interactions available to everyone.</p>
+
+            <p>PyCon Ghana aims to be the largest annual gathering for the Python community in the Ghana, focused on honoring and supporting awesome people teaching, learning and innovating with Python in the Ghana and surrounding countries. The Python Software Foundation, the parent PyCon event organizer and sponsor, aims to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. We believe that the financial aid programme is perfectly aligned with these goals.</p>
+
+            <p>Note well that our <a href="/coc">Code of Conduct</a> is strictly enforced during all official PyCon Ghana event activities. All recipients of financial aid cited for a CoC violations will be immediately disqualified for all funding awards.</p>
+
+            <p>Please do not hesitate to email us at <a href="mailto:hello@pyconghana.org">hello@pyconghana.org</a></p>
+        </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end section.schedule -->
+
+
+{% endblock %}

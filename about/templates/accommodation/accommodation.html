@@ -1,0 +1,115 @@
+{% extends "base2.html" %}
+{% load i18n static %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Accommodation | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+
+{% block content %}
+<header id="top" class="sub-header">
+        <div class="container">
+        </div>
+        <!-- end .container -->
+    </header><br><br>
+    <!-- end .sub-header -->
+    <!--
+     Our Schedule
+     ====================================== -->
+
+    <section class="schedule" id="schedule">
+        <div class="col-md-12">
+            <div class="panel panel-danger wow fadeInLeft">
+                <div class="container">
+                    <h5 class="page-title wow fadeInDown">Accommodation</h5><br>
+                    <!-- Accommodation
+                    ==================================== -->
+                    <section class="highlight accommodation">
+                        <div class="container">
+                             <div class="wow fadeInUp">
+                                <h6><strong>Where to stay</strong></h6>
+                                <p>This year, We have tried our best to host the event where accommodation won't be a problem for the attendees. All hotels/hostels are conveniently located and are within walking distance.
+                                Finding a good hotel/hostels can be tricky. So here are some of our favorite hotels/hostels nearby the event location</p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="thumbnail wow fadeInUp">
+                                        <img src="{% static 'images/hotel.jpg' %}" alt="Atholl Palace Hotel">
+                                        <div class="caption">
+                                            <h6 class="caption-title">******* Hostel</h6>
+                                            <p class="caption-text">From GHC*** per night</p>
+                                            <p class="text-center"><a href="#" class="btn btn-outline" role="button">Visit Website</a> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="thumbnail wow fadeInUp" data-wow-delay="0.3s">
+                                        <img src="{% static 'images/hotel.jpg' %}" alt="The Four Seasons Hotel">
+                                        <div class="caption">
+                                            <h6 class="caption-title">******* Hotel</h6>
+                                            <p class="caption-text">From GHC*** per night</p>
+                                            <p class="text-center"><a href="#" class="btn btn-outline" role="button">Visit Website</a> </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-sm-offset-3">
+                                    <div class="thumbnail wow fadeInUp" data-wow-delay="0.6s">
+                                        <img src="{% static 'images/hotel.jpg' %}" alt="The Gleneagles Hotel">
+                                        <div class="caption">
+                                            <h6 class="caption-title">******* Hotel</h6>
+                                            <p class="caption-text">From GHC*** per night</p>
+                                            <p class="text-center"><a href="#" class="btn btn-outline" role="button">Visit Website</a> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-sm-offset-3">
+                                    <div class="thumbnail wow fadeInUp" data-wow-delay="0.6s">
+                                        <img src="{% static 'images/hotel.jpg' %}" alt="The Gleneagles Hotel">
+                                        <div class="caption">
+                                            <h6 class="caption-title">******* Hotel</h6>
+                                            <p class="caption-text">From GHC*** per night</p>
+                                            <p class="text-center"><a href="#" class="btn btn-outline" role="button">Visit Website</a> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-sm-offset-3">
+                                    <div class="thumbnail wow fadeInUp" data-wow-delay="0.6s">
+                                        <img src="{% static 'images/hotel.jpg' %}" alt="The Gleneagles Hotel">
+                                        <div class="caption">
+                                            <h6 class="caption-title">******* Hotel</h6>
+                                            <p class="caption-text">From GHC*** per night</p>
+                                            <p class="text-center"><a href="#" class="btn btn-outline" role="button">Visit Website</a> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-sm-offset-3">
+                                    <div class="thumbnail wow fadeInUp" data-wow-delay="0.6s">
+                                        <img src="{% static 'media/accommodation/GIMPA.JPG' %}" alt="GIMPA International Hostel">
+                                        <div class="caption">
+                                            <h6 class="caption-title">GIMPA Executive Hostel</h6>
+                                            <p class="caption-text">From GHC*** per night</p>
+                                            <p class="text-center"><a href="#" class="btn btn-outline" role="button">Visit Website</a> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end .container -->
+                    </section>
+                    <!-- end section.accommodation -->
+                <h6 class="faq-title">Questions.</small></h6>
+                            <div class="col-xs-12">
+                                <p>Are you looking for a roommate to share the cost of a hotel/hostel room? Head over to the <a href="https://groups.google.com/forum/#!forum/pycon-ghana-public">Room Sharing page</a>
+                                to find other members of the community who are also looking to share!</p><br>
+                                <p>
+                                    If you have questions or issues with Hotel/Hostel bookings, please send an email to:<a href="mailto:organizers@pyconghana.org"> organizers@pyconghana.org</a>
+                                </p>
+                            </div>
+                </div>
+                <!-- end .container -->
+            </div>
+        </div>
+
+    </section>
+    <!-- end section.schedule -->
+
+{% endblock %}

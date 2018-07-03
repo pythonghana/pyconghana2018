@@ -9,8 +9,10 @@ DAY_SESSIONS = (
     ('Afternoon', 'Afternoon'),
     ('Evening', 'Evening'),
 )
-ROOMS = (('Room 1', 'Room 1'),
-         ('Room 2', 'Room 2'))
+ROOMS = (('Prof. Ebenezer Oduro Owusu', 'Prof. Ebenezer Oduro Owusu'),
+         ('H. E. K Amissah Arthur Seminar Room', 'H. E. K Amissah Arthur Seminar Room'),
+         ('The Foyer','The Foyer'),
+         ('Dr. Ernest Addison Seminar Room', 'Dr. Ernest Addison Seminar Room'))
 
 
 class Day(models.Model):
@@ -29,7 +31,7 @@ class TalkSchedule(models.Model):
     start_time = models.DateTimeField(default=timezone.now)
     end_time = models.DateTimeField(default=timezone.now)
     day_session = models.CharField(max_length=10, choices=DAY_SESSIONS, default='')
-    room = models.CharField(max_length=10, choices=ROOMS, default='')
+    room = models.CharField(max_length=100, choices=ROOMS, default='')
 
     class Meta:
         managed = True

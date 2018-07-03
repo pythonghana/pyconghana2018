@@ -1,0 +1,80 @@
+{% extends "base2.html" %}
+{% load i18n %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Tickets | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+.table {
+        width: 100%;
+         -webkit-overflow-scrolling: touch;
+        overflow-x: auto;
+        display: block;
+    }
+{% block content %}
+
+<header id="top" class="sub-header">
+        <div class="container">
+        </div>
+        <!-- end .container -->
+    </header><br><br>
+    <!-- end .sub-header -->
+    <!--
+     Our Schedule
+     ====================================== -->
+
+    <section class="schedule" id="schedule">
+        <div class="col-md-12">
+            <div class="panel panel-danger wow fadeInLeft">
+                <div class="container">
+                    <h5 class="page-title wow fadeInDown">Register for PyCon Ghana</h5><br>
+                        <div>
+                            <section class="section1"><h5>Ticket Types</h5>
+                                <table class="table" WIDTH="50%" cellspacing="5" cellpadding="2">
+                                    <tbody>
+                                        <tr>
+                                          <th><span>Conference registration</span></th>
+                                          <th><span>Early Bird<sup>*</sup></span></th>
+                                          <th><span>Regular</span></th>
+                                          <!-- <th><span>On the day</span><br /> (cash only)</th> -->
+                                        </tr>
+                                        <tr>
+                                          <td class="title">Corporate</td><td>Ghs 130 - USD 28</td><td>Ghs 150 - USD 32</td><!-- <td>Ghs 170</td> -->
+                                        </tr>
+                                        <tr>
+                                          <td class="title">Individual</td><td>Ghs 80 - USD 17</td><td>Ghs 100 - USD 21</td><!-- <td>Ghs 120</td> -->
+                                        </tr>
+                                        <tr>
+                                          <td class="title">Student</td><td>Ghs 60 - USD 13</td><td>Ghs 80 - USD 17</td><!-- <td>Ghs 100</td> -->
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p style="margin-top: 0.5em; font-size: small; color:#666;"><b><sup>*</sup>USD rate used was 4.78 as of 28th June 2018 <br><sup>*</sup> Early Bird tickets are handled on a first come, first serve basis as we have a limit and it closes on the 1st of July 2018.</b></p>
+                            </section>
+                            <p>Please those within Ghana who would love to use Mobile Money can send it directly to this number <b>0546998280 (Name: Mannie Young )</b> Please send an sms to the same number using your <b>email address and Transaction Id</b> as your Reference.</p>
+
+
+                            <div align="center">
+                                <a class="btn btn-default btn-xl wow zoomIn" href="http://bit.ly/egopyconGH18">RESERVE YOUR SEAT HERE</a>
+                            </div>
+
+
+
+                            <br><br>
+                            <section class="section1"><h5>What does the cost include?</h5>
+                                <p>Registration costs go towards offsetting costs for catering, audio visual, recording, internet, and other miscellaneous costs. By offsetting those costs, we can offer attendees reasonable registration rates and offer a financial aid program to those that need it.  Furthermore, the revenue that PyCon generates is used to run the Python Software Community in Ghana. It also includes a full breakfast, full lunch, and both morning and afternoon break refreshments on the two conference days (Friday and Saturday).</p>
+                            <br><h5>Corporate Rate</h5>
+                                <p>If your company is paying for you to attend PyConGH, you should register at the corporate rate. Government employees should also register at the corporate rate.</p>
+                            <br><h5>Individual Rate</h5>
+                            <p>If you are paying for yourself to attend PyConGH, feel free to come as an individual. Employees of non-profits may register at the individual rate.</p>
+                            <br><h5>Student Rate</h5>
+                            <p>This rate is for full-time students and scholars (please note student cards will be <strong>required</strong> during registration at the event, failure to present one requires payment for the individual ticket).</p>
+                            </section>
+
+                        </div>
+                </div>
+                <!-- end .container -->
+            </div>
+        </div>
+
+    </section>
+    <!-- end section.schedule -->
+
+
+{% endblock %}
