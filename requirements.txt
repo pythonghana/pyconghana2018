@@ -60,7 +60,7 @@ tox==2.9.1
 tox-travis==0.10
 unicodecsv==0.14.1
 uritemplate==3.0.0
-urllib3==1.22
+urllib3==1.26.5
 virtualenv==15.1.0
 waitress==1.1.0
 WebOb==1.8.1
