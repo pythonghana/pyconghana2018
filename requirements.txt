@@ -5,7 +5,7 @@ cloudinary==1.11.0
 coverage==4.4.2
 coveralls==1.2.0
 defusedxml==0.5.0
-Django==2.0.1
+Django==2.2.24
 django-anymail==2.2
 django-appconf==1.0.2
 django-avatar==4.1.0
