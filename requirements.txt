@@ -62,6 +62,6 @@ unicodecsv==0.14.1
 uritemplate==3.0.0
 urllib3==1.22
 virtualenv==15.1.0
-waitress==1.1.0
+waitress==2.1.1
 WebOb==1.8.1
 WebTest==2.0.29
